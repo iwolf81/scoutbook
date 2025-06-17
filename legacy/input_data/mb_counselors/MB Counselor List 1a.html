@@ -1,0 +1,1029 @@
+
+		<!DOCTYPE html>
+	 
+<html>
+	<head> 
+	<title>MB Counselor List</title>
+	<meta name="description" content="">
+	<link rel="canonical" href="https://scoutbook.scouting.org/mobile/dashboard/admin/counselorresults.asp" />
+	<style>
+	/* ensures the increment/decrement arrows always display */
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button {
+	  opacity: 1;
+	}
+	</style>
+	
+	<!-- SB-3251 -->
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TPJ8GC3');</script>
+	<!-- End Google Tag Manager -->
+	
+				<meta name="robots" content="index, follow" />
+				
+	<!--JAL, 122117 -->
+	<meta charset="utf-8" />
+	<meta http-equiv="content-language" content="en-us" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> 
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 
+    <!-- Disable phone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+
+	<!-- START SB-2163 Google Sign In -->
+	<meta name="google-signin-client_id" content="364170442919-3teb9cg74dt5583vog2brqvnhu8qlkd5.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61696943-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-61696943-1', { cookie_flags: 'SameSite=None;Secure' });
+       gtag('config', 'UA-61696943-1', { cookie_flags: 'SameSite=None;Secure',
+            'page_title': document.title,
+            'page_path': window.location.href
+        });
+    </script>
+
+
+
+	<link rel="apple-touch-startup-image" href="/startup.png">
+
+	<!-- non-retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-57x57-precomposed.png?version=2.54" sizes="57x57">
+	<!-- non-retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-72x72-precomposed.png?version=2.54" sizes="72x72">
+	<!-- non-retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-76x76-precomposed.png?version=2.54" sizes="76x76">
+	<!-- retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-114x114-precomposed.png?version=2.54" sizes="114x114">
+	<!-- retina iPhone iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-120x120-precomposed.png?version=2.54" sizes="120x120">
+	<!-- retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-144x144-precomposed.png?version=2.54" sizes="144x144">
+	<!-- retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon-152x152-precomposed.png?version=2.54" sizes="152x152">
+
+	 <!-- Startup images -->
+ 
+    <!-- iOS 6 & 7 iPad (retina, portrait) -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-1536x2008.png"
+            media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+ 
+    <!-- iOS 6 & 7 iPad (retina, landscape) -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-2048x1496.png"
+            media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+ 
+    <!-- iOS 6 iPad (portrait) -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-768x1004.png"
+            media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+            rel="apple-touch-startup-image">
+ 
+    <!-- iOS 6 iPad (landscape) -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-1024x748.png"
+            media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+            rel="apple-touch-startup-image">
+ 
+    <!-- iOS 6 & 7 iPhone 5 -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-640x1096.png"
+            media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+ 
+    <!-- iOS 6 & 7 iPhone (retina) -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-640x920.png"
+            media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
+ 
+    <!-- iOS 6 iPhone -->
+    <link href="/mobile/images/startup/apple-touch-startup-image-320x460.png"
+            media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+            rel="apple-touch-startup-image">
+
+
+	<link href="/favicon.ico?version=2.54" type="image/x-icon" rel="shortcut icon" />
+	
+	<!-- SB-2453 Apple Signin -->
+	<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+	
+    <link rel="stylesheet" href="/includes/mobile-concat.css" />
+    <script src="/includes/mobile-concat.js"></script>
+	
+	<!-- Mobiscroll JS and CSS Includes -->
+	<script  src="/includes/jquery/mobiscroll/js/mobiscroll.javascript.min.js"></script>
+    <link href="/includes/jquery/mobiscroll/css/mobiscroll.javascript.min.css" rel="stylesheet" />
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfTMNwZAAAAADifUGxySeEhrlIh6antOMlOlAIF"></script>
+		
+	
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAwKabAL4PJJb7uub99DOief-YJxTDp6Y&sensor=false"></script>
+	
+		<script type=text/javascript>
+            var myCookie;
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            window.setInterval(function () {
+                if (document.cookie.indexOf('LoginStatus') == -1) {
+                    // cookie doesn't exist					
+                }
+                else {
+                    // cookie exist					
+                    myCookie = getCookie("LoginStatus")
+                    if (myCookie == null || myCookie == '') {
+                        window.location.href = "https://scoutbook.scouting.org";
+                    }
+                }
+            }, 1000)
+		</script>
+	
+</head> 
+<body>
+	 
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPJ8GC3"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+<div data-role="page" id="Page26892" data-cache="never" data-theme="h">
+    
+	
+	<script type="text/javascript">
+        function slideStop() { window.console && console.log('slideStop() reset from mobile_jsInit'); }
+        function popupAfterClosed() { window.console && console.log('popupAfterClosed() reset from mobile_jsInit'); }
+        function popupAfterOpen() { window.console && console.log('popupAfterOpen() reset from mobile_jsInit'); }
+        function enableToggle() { window.console && console.log('enableToggle() reset from mobile_jsInit'); }
+        function swapCache() { window.console && console.log('swapCache() reset from mobile_jsInit'); }
+        function offlineInit() { window.console && console.log('offlineInit() reset from mobile_jsInit'); }
+        function pageInit() { window.console && console.log('pageInit() reset from mobile_jsInit'); }
+        function pageShow() { window.console && console.log('pageShow() reset from mobile_jsInit'); }
+        function pageHide() { window.console && console.log('pageHide() reset from mobile_jsInit'); }
+        function headerInit() { window.console && console.log('headerInit() reset from mobile_jsInit'); }
+	</script>
+	
+	<div data-role="header" class="topHeader i-bar-h" data-position="fixed" data-theme="h" data-tap-toggle="false" id="Page26892Header" data-id="Page26892Header">
+		
+			<h1>
+				
+					<span style="display: inline-block; width: 20px; height: 20px; margin-right: 22px; position: relative; ">
+						<a id="quickNav" href="#quickNavPopup" data-rel="popup" data-transition="slidedown"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/menu100bsa.png" style="width: 20px; position: absolute; top: -4px; left: 0; width: 20px; height: 20px; padding: 8px;" title="Quick Navigation" /></a>
+					</span>
+				
+				<span style="display: inline-block; width: 20px; height: 20px; margin-right: 22px; position: relative; ">
+					<a id="goBack" href="#" data-rel="back" data-direction="reverse"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/back100bsa.png" style="position: absolute; top: -4px; left: 0px; width: 20px; padding: 8px; " title="Go Back" /></a>
+				</span>
+				
+					<span style="display: inline-block; width: 20px; height: 20px; margin-right: 24px; position: relative; ">
+						<a id="goHome" href="/mobile/" data-transition="slide" data-direction="reverse"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/home100bsa.png" style="position: absolute; top: -4px; left: 0px; height: 20px; padding: 7px; " title="Go Home" /></a>
+					</span>	
+				
+					<span style="display: inline-block; width: 20px; height: 20px; margin-right: 22px; position: relative; ">
+						<a id="myDashboard" href="/mobile/dashboard/" data-transition="slide" data-direction="reverse"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/dashboardbsa100.png" style="position: absolute; top: -4px; left: 0px; height: 20px; padding: 7px; " title="My Dashboard" /></a>
+					</span>	
+				
+
+				<span style="margin-left: 5px; ">
+					
+						<a id="goToUnit" href="/mobile/dashboard/admin/unit.asp?UnitID=82190" class="text" data-direction="reverse">Troop 32 B</a>
+						MB Counselor List
+				</span>
+			</h1>
+		
+	</div>
+
+	
+
+	<div data-role="popup" id="loginPopup" data-overlay-theme="a" data-theme="c" data-transition="fade" data-history="false" class="ui-corner-all"></div>
+	<div data-role="popup" id="profilePopup" data-overlay-theme="a" data-theme="c" data-transition="fade" data-history="false" class="ui-corner-all"></div>
+	<div data-role="popup" id="quickNavPopup" data-theme="d" data-transition="fade" data-history="false" class="ui-corner-all">
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+		<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d" class="ui-icon-alt">
+			<li data-role="divider" data-theme="a">
+				
+					<div style="position: relative;">
+						<div style="position: absolute; top: -10px; right: 15px; ">
+							<!-- <div class="g-signin2"></div> -->
+							<a href="#" id="buttonLogout" data-role="button" data-mini="true" data-icon="lock" data-theme="g" class="ui-icon-nodisc" data-iconshadow="false" >Logout</a>
+						</div>
+					</div>
+				
+				Quick Nav
+			</li>
+
+			<li><a href="/mobile/dashboard/"><div>My Dashboard<span style="position: relative; "><img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/dashboardorange48.png" alt="dashboard" title="Dashboard" style="position: absolute; left: 6px; top: -3px; width: 24px;" /></span></div></a></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+
+        function headerInit() {
+
+			
+
+	        // called from mobile.js after page is loaded
+	        
+
+
+			$('#loginButton', '#Page26892').click(function () {
+			    // load login content
+				
+					$('#loginPopup', '#Page26892').load('/mobile/login.asp', function (data) {
+						  $('#loginPopup', '#Page26892').trigger('create').popup('open');
+					});
+							});
+
+            $('#buttonRefresh', '#Page26892').click(function () {
+                $.mobile.changePage(
+					
+                    'https://scoutbook.scouting.org/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&DenID=&PatrolID=&Refresh=1',
+					
+                    {
+                        allowSamePageTransition: true,
+                        transition: 'none',
+                        showLoadMsg: true,
+                        reloadPage: true
+                    }
+                );
+            });
+
+            $('#logoutButton, #buttonLogout', '#Page26892').click(function () {
+                
+                // disabled the button
+                //$(this).attr('disabled', true);
+                $.mobile.loading("show", { theme: "a", text: "loading..." });
+
+					
+                    $.get('https://my.scouting.org/vim2/webscript/output/proxy.aspx?Method=ExecuteScriptSet&ScriptSetCode=DiscourseSSOAgent&ScriptCode=ProcessSSOLogout&SessionToken=FAD6BD65A5454303A6450223152625894D249C7D02E6409D9126590737371619');
+					
+
+	            var url = '/default.asp';
+                var formPost = '';
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+                    data: 'Action=Logout',
+					
+	error: function (xhr, ajaxOptions, thrownError) {
+		location.href = '/mobile/500.asp?Error=' + escape('url: ' + url + ' Status: ' + xhr.status + ' thrownError: ' + thrownError + ' responseText: ' + xhr.responseText.substring(0, 400))
+	}
+	,
+                    success: function (data) {
+                        $.mobile.loading("show", { theme: "a", text: "loading..." });
+                        window.location.href = "https://scoutbook.scouting.org";
+
+                    }
+	        });
+        });
+
+        $('a[data-login=1]', '#Page26892').click(function () {
+            var href = $(this).attr('href');
+            // popup up the login box
+            $('#loginPopup').load('/mobile/login.asp?Redir=' + escape(href), function (data) {
+                $('#loginPopup').trigger('create').popup('open');
+            });
+            return false;
+        });
+
+        $('#tip7CloseButton', '#Page26892').click(function () {
+            var tipid = $(this).attr('data-tipid');
+            $(this).closest('li.tipDIV').slideUp('slow');
+            $.get('/mobile/includes/ajax.asp?Action=DismissTip&TipID=' + tipid);
+            return false;
+        });
+
+        $('[data-dismissable="True"]').append('<div class="closeButton" title="Dismiss this banner message">&#10006;</div>');
+        $('.closeButton').click(function () {
+            var bannerID = $('[data-dismissable="True"]').attr('id');
+            $(this).closest('div[data-role="content"]').hide();
+            // set cookie
+            $.get('/includes/ajax.asp?Action=SetHttpCookie&CookieName=BannerID' + bannerID + '_Dismissed&CookieValue=1&Secure=1&HttpOnly=1');
+        });
+
+	   }
+	</script>
+	
+		<div data-role="header" data-theme="c">
+			<div style="padding: 3px; ">
+			
+				<a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&formCouncilID=181&Availability=Available&isformZipNull=False&zip=01720&formFName=&formDistrictID=430&formWorldwide=&formLName=&Page=1&Proximity=Any" data-role="button" data-theme="d" data-mini="true" data-icon="delete" data-iconpos="right" data-inline="true" class="ui-icon-alt" style="margin: 0 1px 0 0; " data-transition="none">5 mi</a>
+				
+				<a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&formCouncilID=181&isformZipNull=False&zip=01720&formFName=&formDistrictID=430&formWorldwide=&formLName=&Page=1&Availability=Both" data-role="button" data-theme="d" data-mini="true" data-icon="delete" data-iconpos="right" data-inline="true" class="ui-icon-alt" style="margin: 0 1px 0 0; " data-transition="none">Available</a>
+				
+			</div>
+		</div>
+	
+
+	<div class="ui-content">	
+		
+				<div class="mobileNavigation">
+					<span data-role="controlgroup" data-type="horizontal" data-mini="true"><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=1" data-role="button" data-theme="c" data-transition="fade">1</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=2" data-role="button" data-theme="d" data-transition="fade">2</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=3" data-role="button" data-theme="d" data-transition="fade">3</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=4" data-role="button" data-theme="d" data-transition="fade">4</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=5" data-role="button" data-theme="d" data-transition="fade">5</a></span>
+					<br>
+					<div style="display: table;align-self: center;justify-content: center;margin:auto;">
+						<div style="display: table-row;">
+							<!-- <div style="display: table-cell;"><label for="pageNumber">Page Number: </label></div> -->
+							<div style="display: table-cell;width:80px;"><input type="number" name="PageNumber" id="pageNumber" value="1" /></div>
+							<div style="display: table-cell;" ><input type="button" name="gotoPageNumber" id="gotopageNumber" value="Go to Page" data-theme="g" /></div>  
+							<!-- <div style="display: table-cell;"><label for="pageNumber">&nbsp;&nbsp</div> -->
+						</div>
+					</div>					
+				</div>
+			
+			<div style="float: left; font-weight: normal; color: gray; ">Results: <strong>43</strong></div>
+            <input type="hidden" name="pageCount" id="pageCount" value="5" />
+			
+				<div style="float: right; font-weight: normal; color: gray; ">From Zip: <strong>01720</strong></div>
+			
+
+			<div class="clearBoth"></div>
+
+			<ul data-role="listview" data-inset="true" data-count-theme="f" style="margin-top: 0;" class="ui-icon-alt">
+			
+				
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="332238" data-memberid="127690610"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 11/22/2025
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Karen MacQuilken
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 263-4038<br>Mobile (508) 782-8502<br>
+									<a href="MAILTO:kmacquil@comcast.net">kmacquil@comcast.net</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Coin Collecting</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Cooking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Golf</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Painting</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Skating</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="947521" data-memberid="12091388"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 12/27/2026
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Christopher (Christopher) White
+
+								<div class="address">
+									Acton, MA 01720<br>Mobile (508) 517-0939<br>
+									<a href="MAILTO:christopher.white@outlook.com">christopher.white@outlook.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in Society</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the Community</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the Nation</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the World</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Communication</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Family Life</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Genealogy</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Personal Management</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+										<div style="font-size: 12px; ">Working with 9 Scouts</div>
+										
+										
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="947537" data-memberid="130241455"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 12/5/2026
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Jason (Jason) Fitzgerald
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 266-2842<br>Mobile (617) 306-2536<br>
+									<a href="MAILTO:fitz1j@gmail.com">fitz1j@gmail.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Camping</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Cooking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Cycling</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Hiking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Personal Fitness</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="1020091" data-memberid="126709748"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 12/27/2026
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Joshua (Josh) Haines
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 263-3618<br>Mobile (978) 746-1525<br>
+									<a href="MAILTO:jhaines@thetwelfth.com">jhaines@thetwelfth.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Engineering</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Environmental Science</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Family Life</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Gardening</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Personal Management</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Woodwork</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+										<div style="font-size: 12px; ">Working with 8 Scouts</div>
+										
+										
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="1301500" data-memberid="133470354"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 11/9/2025
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Dennis Burianek
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 266-3744<br>Mobile (978) 881-4511<br>
+									<a href="MAILTO:daburian@alum.mit.edu">daburian@alum.mit.edu</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the Community</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/users/1393000/1392086.A298C7E018.100.jpg" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="1392086" data-memberid="132661198"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 11/13/2025
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Alison Barker
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 263-5760<br>Mobile (617) 510-7987<br>
+									<a href="MAILTO:alisonkbarker@outlook.com">alisonkbarker@outlook.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">American Cultures</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Collections</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Family Life</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Personal Fitness</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Scouting Heritage</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+										<div style="font-size: 12px; ">Working with 3 Scouts</div>
+										
+										
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/users/1762000/1761928.8120559179.100.jpg" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="1761928" data-memberid="13679111"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 5/17/2026
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Herbert Philpott
+
+								<div class="address">
+									Acton, MA 01720<br>Mobile (617) 699-4877<br>
+									<a href="MAILTO:herb@philpott.org">herb@philpott.org</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">American Business</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">American Cultures</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">American Heritage</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">American Labor</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Bugling</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in Society</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the Community</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the Nation</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in the World</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Communication</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Digital Technology</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Family Life</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Genealogy</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Music</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Personal Management</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Pets</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Photography</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Public Speaking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Skating</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Theater</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="1809293" data-memberid="134430837"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 12/5/2026
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								John Bobiak
+
+								<div class="address">
+									Acton, MA 01720<br>Mobile (610) 368-9894<br>
+									<a href="MAILTO:jbobiak@gmail.com">jbobiak@gmail.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Backpacking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Camping</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Chemistry</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Cooking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Hiking</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="1884447" data-memberid="13634122"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 12/7/2025
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Michelle (Michelle) Shoemaker
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 635-1891<br>Mobile (617) 699-4826<br>
+									<a href="MAILTO:aclarinut@gmail.com">aclarinut@gmail.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Art</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Bugling</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Citizenship in Society</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Music</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+										<div style="font-size: 12px; ">Working with 5 Scouts</div>
+										
+										
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+					<li data-theme="d">
+						<div>
+							
+								<span class="miles ui-btn-corner-all">0.0 mi</span>
+							
+							<div class="photoDIV">
+								
+									<img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/icons/scoutorange48.png" class="imageSmall ui-corner-all ui-shadow profilePopup" data-userid="2352958" data-memberid="126108128"/>
+								
+								<div><div class="councilPatchDIV" title="Heart of New England Council"><img class="councilPatch size1" src="https://d1kn0x9vzr5n76.cloudfront.net/images/councils/230_150.png" alt="Heart of New England Council Image" data-url="230/nashua-valley-council/" /></div><div class="unitNumbersDIV" title=" "></div></div>
+
+								<div style="text-align: center; font-size: 10px; margin-top: 1em; ">
+									<div class="yptDate">
+										<img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/ypt100.png" title="This counselor has current Youth Protection Training verified by the BSA" />Expires: 11/12/2025
+									</div>
+
+									
+								</div>
+							</div>
+							<div style="margin-left: 65px; ">
+								Carol (Carol) Chytil
+
+								<div class="address">
+									Acton, MA 01720<br>Home (978) 263-1485<br>Mobile (978) 870-7812<br>
+									<a href="MAILTO:carol.chytil@gmail.com">carol.chytil@gmail.com</a>
+								</div>
+
+								
+									<div class="listedWith">Approved by the Heart of New England Council</div>
+									
+										<div class="listedWith">Counselor for Heart of New England Council</div>
+										
+
+								<div class="mbContainer">
+									
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Family Life</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Kayaking</div>
+											
+											<div class="mb ui-corner-all ui-shadow"><img src="https://d1kn0x9vzr5n76.cloudfront.net/images/icons/checkboxapproved48.png" class="mbCheckbox" title="Approved by Heart of New England Council">Snow Sports</div>
+											
+								</div>
+							
+								<div class="workingWith">
+									
+								</div>
+							</div>
+							<div style="clear: both; "></div>
+						</div>
+					</li>
+					
+			</ul>
+
+			
+				<div class="mobileNavigation">
+					<span data-role="controlgroup" data-type="horizontal" data-mini="true"><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=1" data-role="button" data-theme="c" data-transition="fade">1</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=2" data-role="button" data-theme="d" data-transition="fade">2</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=3" data-role="button" data-theme="d" data-transition="fade">3</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=4" data-role="button" data-theme="d" data-transition="fade">4</a><a href="/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&Proximity=5&Availability=Available&zip=01720&formCouncilID=181&formDistrictID=430&formFName=&formLName=&isformZipNull=False&formWorldwide=&Page=5" data-role="button" data-theme="d" data-transition="fade">5</a></span>
+					<br>
+					<div style="display: table;align-self: center;justify-content: center;margin:auto;">
+						<div style="display: table-row;">
+							<!-- <div style="display: table-cell;"><label for="pageNumber">Page Number: </label></div> -->
+							<div style="display: table-cell;width:80px;"><input type="number" name="PageNumber2" id="pageNumber2" value="1" /></div>
+							<div style="display: table-cell;"><input type="button" name="gotoPageNumber2" id="gotopageNumber2" value="Go to Page" data-theme="g" /></div> 
+							<!-- <div style="display: table-cell;"><label for="pageNumber">&nbsp;&nbsp</div> -->
+						</div>
+					</div>					
+				</div>
+			
+
+		<div id="footer" align="center">
+			
+	
+	<div style="margin-top: 6px;">&copy; 2025 Boy Scouts of America &bull; <a href="https://www.scouting.org/legal/privacy-policy/" target="_Blank">Privacy</a></div>
+	<div><a href="/" data-ajax="false"><img src="https://d1kn0x9vzr5n76.cloudfront.net/mobile/images/scoutbookbsalogo400.png" width="200"></a></div>
+    <div style="color:#d2cab6">AWSWEBSBPD2A</div>            
+	
+		</div>
+
+	</div><!-- /content -->
+
+	<style type="text/css">
+		#Page26892 .photoDIV				{ float: left; width: 50px; }
+		#Page26892 .photoDIV .imageSmall	{ width: 50px; height: 50px; border: 1px solid #656565; }
+		#Page26892 .imageSmall2	{ width: 30px; height: 30px; border: 1px solid #bfbfbf; }
+		#Page26892 .miles		{ float: right; color: white; border-style: none; text-shadow: none; background-color: #A4A8A7; background-image: none; font-size: 14px; font-weight: bold; padding: .2em .8em; }
+		#Page26892 .address		{ font-weight: normal; font-size: 12px; }
+		#Page26892 .mb			{ display: inline-block; margin-right: 6px; background-color: #eeeeee; padding: 2px 7px; margin-bottom: 7px; }
+		#Page26892 .mbCheckbox	{ width: 16px; height: 16px; margin-right: 5px; vertical-align: -4px; }
+		#Page26892 .mbContainer	{ margin-top: 5px; font-size: 11px; color: gray; font-weight: normal; overflow: initial; text-overflow: initial; white-space: normal; }
+		#Page26892 .listedWith	{ font-size: 12px; font-weight: bold; white-space: normal; }
+		#Page26892 .yptDate { text-align: center; }
+		#Page26892 .yptDate img { width: 40px; margin: 0 auto; }
+	</style>
+
+	<script type="text/javascript">
+		var formPost;
+
+		function pageInit() {
+			$('#gotopageNumber', '#Page26892').click(function () {
+				var pagevalue = $("#pageNumber").val();
+				if (parseInt(pagevalue) < 1) {
+					pagevalue = 1;
+				}
+				else if (parseInt(pagevalue) > parseInt($("#pageCount").val() )){
+					pagevalue = $("#pageCount").val();
+				}
+				$.mobile.changePage("/mobile/dashboard/admin/counselorresults.asp?formCouncilID=181&UnitID=82190&MeritBadgeID=&formfname=&formlname=&zip=01720&formWorldwide=&formCouncilID=181&formDistrictID=430&isformZipNull=False&Proximity=5&Availability=Available&Page=" + pagevalue);
+				return false;
+			});
+			
+			$('#gotopageNumber2', '#Page26892').click(function () {
+				var pagevalue2 = parseInt($("#pageNumber2").val());
+				if (parseInt(pagevalue2) < 1) {
+					pagevalue2 = 1;
+				}
+				else if (parseInt(pagevalue2) > parseInt($("#pageCount").val()) ) {
+					pagevalue2 = $("#pageCount").val();
+				}
+				$.mobile.changePage("/mobile/dashboard/admin/counselorresults.asp?formCouncilID=181&UnitID=82190&MeritBadgeID=&formfname=&formlname=&zip=01720&formWorldwide=&formCouncilID=181&formDistrictID=430&isformZipNull=False&Proximity=5&Availability=Available&Page=" + pagevalue2);
+				return false;
+			});
+
+		}
+	</script>
+
+</div><!-- /page -->
+</body>
+</html>
+

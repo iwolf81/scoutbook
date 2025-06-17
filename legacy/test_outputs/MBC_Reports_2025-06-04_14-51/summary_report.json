@@ -1,0 +1,17 @@
+{
+  "generation_time": "2025-06-04T14:51:52.486386",
+  "statistics": {
+    "total_merit_badges": 139,
+    "eagle_required_badges": 18,
+    "troop_counselors": 8,
+    "non_counselor_leaders": 61,
+    "eagle_badges_covered": 12,
+    "eagle_badges_not_covered": 6,
+    "total_badges_covered": 40
+  },
+  "validation": {
+    "total_adults_processed": 69,
+    "merit_badge_html_processed": true,
+    "web_data_retrieved": true
+  }
+}

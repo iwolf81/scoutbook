@@ -1,0 +1,92 @@
+2025-06-17 10:33:56,453 - INFO - Starting Merit Badge Counselor processing...
+2025-06-17 10:33:56,453 - INFO - Created output directory: MBC_Reports_2025-06-17_10-33
+2025-06-17 10:33:56,453 - INFO - Step 1: Fetching merit badge lists...
+2025-06-17 10:33:56,453 - INFO - Fetching all merit badges from scouting.org...
+2025-06-17 10:33:56,657 - WARNING - Failed to fetch all merit badges from web: HTTP Error 403: Forbidden
+2025-06-17 10:33:56,657 - INFO - Using cached merit badge list
+2025-06-17 10:33:56,658 - INFO - Fetching Eagle-required merit badges from scouting.org...
+2025-06-17 10:33:56,722 - WARNING - Failed to fetch Eagle-required badges from web: HTTP Error 403: Forbidden
+2025-06-17 10:33:56,723 - INFO - Using cached Eagle-required badge list
+2025-06-17 10:33:56,723 - INFO - Step 2: Processing roster files...
+2025-06-17 10:33:56,725 - INFO - Parsed 66 members from ../input_data/troop_rosters/T7012_Roster_Report.csv
+2025-06-17 10:33:56,727 - INFO - Parsed 108 members from ../input_data/troop_rosters/T32_Roster_Report.csv
+2025-06-17 10:33:56,727 - INFO - Step 3: Processing merit badge counselor HTML files...
+2025-06-17 10:33:56,728 - INFO - Processing 5 HTML files...
+2025-06-17 10:33:56,728 - INFO - Processing HTML 1/5: ../input_data/mb_counselors/MB Counselor List 1a.html
+2025-06-17 10:33:56,745 - INFO -   Found 10 counselor entries in ../input_data/mb_counselors/MB Counselor List 1a.html
+2025-06-17 10:33:56,746 - INFO -   Extracted counselor: Karen MacQuilken - 5 badges
+2025-06-17 10:33:56,746 - INFO -   Extracted counselor: Christopher White - 8 badges
+2025-06-17 10:33:56,746 - INFO -   Extracted counselor: Jason Fitzgerald - 5 badges
+2025-06-17 10:33:56,746 - INFO -   Extracted counselor: Joshua Haines - 6 badges
+2025-06-17 10:33:56,746 - INFO -   Extracted counselor: Dennis Burianek - 1 badges
+2025-06-17 10:33:56,747 - INFO -   Extracted counselor: Alison Barker - 5 badges
+2025-06-17 10:33:56,747 - INFO -   Extracted counselor: Herbert Philpott - 20 badges
+2025-06-17 10:33:56,747 - INFO -   Extracted counselor: John Bobiak - 5 badges
+2025-06-17 10:33:56,747 - INFO -   Extracted counselor: Michelle Shoemaker - 4 badges
+2025-06-17 10:33:56,747 - INFO -   Extracted counselor: Carol Chytil - 3 badges
+2025-06-17 10:33:56,747 - INFO - Processing HTML 2/5: ../input_data/mb_counselors/MB Counselor List 2a.html
+2025-06-17 10:33:56,757 - INFO -   Found 10 counselor entries in ../input_data/mb_counselors/MB Counselor List 2a.html
+2025-06-17 10:33:56,757 - INFO -   Extracted counselor: John Atherton - 3 badges
+2025-06-17 10:33:56,757 - INFO -   Extracted counselor: Victoria Campbell - 16 badges
+2025-06-17 10:33:56,757 - INFO -   Extracted counselor: Jonathan Campbell - 19 badges
+2025-06-17 10:33:56,757 - INFO -   Extracted counselor: Darren Jones - 3 badges
+2025-06-17 10:33:56,757 - INFO -   Extracted counselor: William zoldak - 4 badges
+2025-06-17 10:33:56,757 - INFO -   Extracted counselor: Carrie McMillen - 5 badges
+2025-06-17 10:33:56,758 - INFO -   Extracted counselor: FENGHUA LI - 1 badges
+2025-06-17 10:33:56,758 - INFO -   Extracted counselor: Sarah Burianek - 1 badges
+2025-06-17 10:33:56,758 - INFO -   Extracted counselor: Christopher Martyn - 5 badges
+2025-06-17 10:33:56,758 - INFO -   Extracted counselor: Kevin Santos - 1 badges
+2025-06-17 10:33:56,758 - INFO - Processing HTML 3/5: ../input_data/mb_counselors/MB Counselor List 3a.html
+2025-06-17 10:33:56,767 - INFO -   Found 10 counselor entries in ../input_data/mb_counselors/MB Counselor List 3a.html
+2025-06-17 10:33:56,767 - INFO -   Extracted counselor: Roland Bourdon - 1 badges
+2025-06-17 10:33:56,767 - INFO -   Extracted counselor: Andrew Heiniluoma - 1 badges
+2025-06-17 10:33:56,767 - INFO -   Extracted counselor: Tammy Klatt - 12 badges
+2025-06-17 10:33:56,767 - INFO -   Extracted counselor: Vishal Shukla - 4 badges
+2025-06-17 10:33:56,767 - INFO -   Extracted counselor: Donald Beltrami - 8 badges
+2025-06-17 10:33:56,768 - INFO -   Extracted counselor: Daniel Kane - 16 badges
+2025-06-17 10:33:56,768 - INFO -   Extracted counselor: Brandon LaVoie - 3 badges
+2025-06-17 10:33:56,768 - INFO -   Extracted counselor: Dulcey Lacroix - 19 badges
+2025-06-17 10:33:56,768 - INFO -   Extracted counselor: Sandra Clyde - 7 badges
+2025-06-17 10:33:56,768 - INFO -   Extracted counselor: Linus Kneeland - 8 badges
+2025-06-17 10:33:56,768 - INFO - Processing HTML 4/5: ../input_data/mb_counselors/MB Counselor List 4a.html
+2025-06-17 10:33:56,776 - INFO -   Found 10 counselor entries in ../input_data/mb_counselors/MB Counselor List 4a.html
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Louis Soracco - 3 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Bradford Laing - 6 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Gary Lacroix - 16 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Janice Branco - 9 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Michael LeDuc - 8 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: John Hagberg - 4 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Mark Hollinger - 1 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Peter Crory - 2 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Timothy Roberts - 8 badges
+2025-06-17 10:33:56,776 - INFO -   Extracted counselor: Thomas Kneeland - 6 badges
+2025-06-17 10:33:56,776 - INFO - Processing HTML 5/5: ../input_data/mb_counselors/MB Counselor List 5a.html
+2025-06-17 10:33:56,780 - INFO -   Found 3 counselor entries in ../input_data/mb_counselors/MB Counselor List 5a.html
+2025-06-17 10:33:56,780 - INFO -   Extracted counselor: Marcus Boyer - 7 badges
+2025-06-17 10:33:56,780 - INFO -   Extracted counselor: Robert Pitkin - 4 badges
+2025-06-17 10:33:56,780 - INFO -   Extracted counselor: Sloan Craven - 4 badges
+2025-06-17 10:33:56,780 - INFO - HTML processing complete: extracted 43 total merit badge counselors
+2025-06-17 10:33:56,780 - INFO - Sample of extracted counselors:
+2025-06-17 10:33:56,780 - INFO -   1. Karen MacQuilken - 5 badges: ['Coin Collecting', 'Cooking', 'Golf']...
+2025-06-17 10:33:56,780 - INFO -   2. Christopher White - 8 badges: ['Citizenship in Society', 'Citizenship in the Community', 'Citizenship in the Nation']...
+2025-06-17 10:33:56,780 - INFO -   3. Jason Fitzgerald - 5 badges: ['Camping', 'Cooking', 'Cycling']...
+2025-06-17 10:33:56,780 - INFO -   4. Joshua Haines - 6 badges: ['Engineering', 'Environmental Science', 'Family Life']...
+2025-06-17 10:33:56,780 - INFO -   5. Dennis Burianek - 1 badges: ['Citizenship in the Community']
+2025-06-17 10:33:56,780 - INFO - Step 4: Cross-referencing data...
+2025-06-17 10:33:56,780 - INFO - Found 106 adult leaders across both troops
+2025-06-17 10:33:56,781 - INFO - Found 8 troop members who are also merit badge counselors
+2025-06-17 10:33:56,781 - INFO - === STARTING find_non_counselor_leaders() ===
+2025-06-17 10:33:56,781 - INFO - TOTAL ADULT ENTRIES FROM ROSTERS: 106
+2025-06-17 10:33:56,781 - INFO - UNIQUE ADULTS AFTER MERGING: 69
+2025-06-17 10:33:56,781 - INFO - MERIT BADGE COUNSELOR NAMES FOUND: 56
+2025-06-17 10:33:56,781 - INFO - === STARTING PERSON-BY-PERSON ANALYSIS ===
+2025-06-17 10:33:56,782 - INFO - ADULTS EXCLUDED AS COUNSELORS: 8
+2025-06-17 10:33:56,782 - INFO - FINAL NON-COUNSELOR LEADERS: 61
+2025-06-17 10:33:56,782 - INFO - === FINISHED find_non_counselor_leaders() ===
+2025-06-17 10:33:56,782 - INFO - Coverage report: 12 Eagle badges with counselors, 6 Eagle badges without counselors
+2025-06-17 10:33:56,782 - INFO - Step 5: Generating reports...
+2025-06-17 10:33:56,782 - INFO - Saved T12/T32 Merit Badge Counselors to MBC_Reports_2025-06-17_10-33/html/troop_counselors.html
+2025-06-17 10:33:56,782 - INFO - Saved T12/T32 Leaders not Merit Badge Counselors to MBC_Reports_2025-06-17_10-33/html/non_counselors.html
+2025-06-17 10:33:56,782 - INFO - Saved T12/T32 Merit Badge Counselor Coverage to MBC_Reports_2025-06-17_10-33/html/coverage_report.html
+2025-06-17 10:33:56,783 - INFO - Saved summary report to MBC_Reports_2025-06-17_10-33/summary_report.json
+2025-06-17 10:33:56,783 - INFO - Processing complete! Reports saved to: MBC_Reports_2025-06-17_10-33

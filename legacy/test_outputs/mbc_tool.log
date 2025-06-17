@@ -1,0 +1,1158 @@
+2025-06-04 14:51:52,334 - INFO - Starting Merit Badge Counselor processing...
+2025-06-04 14:51:52,335 - INFO - Created output directory: MBC_Reports_2025-06-04_14-51
+2025-06-04 14:51:52,335 - INFO - Step 1: Fetching merit badge lists...
+2025-06-04 14:51:52,335 - INFO - Fetching all merit badges from scouting.org...
+2025-06-04 14:51:52,397 - WARNING - Failed to fetch all merit badges from web: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>
+2025-06-04 14:51:52,397 - INFO - Using cached merit badge list
+2025-06-04 14:51:52,397 - INFO - Fetching Eagle-required merit badges from scouting.org...
+2025-06-04 14:51:52,431 - WARNING - Failed to fetch Eagle-required badges from web: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>
+2025-06-04 14:51:52,431 - INFO - Using cached Eagle-required badge list
+2025-06-04 14:51:52,431 - INFO - Step 2: Processing roster files...
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Vaishvi Allapalli - Youth Member
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Sachi Amatya - Committee Member
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Zen Andersen-Smith - Youth Member
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Nitin Arora - Committee Member
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Alison Barker - Committee Member
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Amelia Blankenship - Youth Member
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Georgia Blunt - Unit Participant
+2025-06-04 14:51:52,431 - DEBUG - Processed roster entry: Timothy Bradbury - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Jonathan Campbell - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Victoria Campbell - Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Lillian Caulfield - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Brett deBlonk - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Catherine Duffy-Reichert - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Charlotte Duhamel - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Kaitleen Duhamel - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Eva Dunckel - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Robert Finley - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Robert Finley - Unit Advancement Chair
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Abigail Fitzgerald - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: David Fitzgerald - Unit Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Christa Frey - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Elizabeth Fuller - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Eleanor Gacioch - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: William Garnett - Committee Chair
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Theresa Green - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Leah Greenberg - Unit College Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Sean Guarino - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Clara Hall - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Catherine Hatfield - Executive Officer
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Andrew Heiniluoma - Unit Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Anna Heiniluoma - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Maria Heiniluoma - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Stephen Hoff - Chartered Organization Rep.
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Rishika Kalavagunta - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Arianne Kewley - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Gie Lee - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Mark Matson - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Jeffrey Maxwell - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Anna McMillen - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Carrie McMillen - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Sarah McMillen - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Christopher Obrien - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Saravanan Parthasarathy - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Herbert Philpott - Unit Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Kathryn Philpott - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Vasilisa Porubova - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Hilary Reid - Unit Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Katharine Sandler-Frey - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Mary Curran Schiefelbein - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Michelle Shoemaker - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Ryan Shoemaker - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Abhinav Shukla - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Ronita Shukla - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Tanya Shukla - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Vishal Shukla - Unit Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Lily Sloutsky - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Adam Smith - Unit Scouter Reserve
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Livia Sunshine - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Jasmine Swydan - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: John Uhrich - Key 3 Delegate
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: John Uhrich - Committee Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: John Uhrich - COR/CUR Delegate
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Ingretia Walsh - Youth Member
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Timothy Werner - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Ira Wolf - Assistant Scoutmaster
+2025-06-04 14:51:52,432 - DEBUG - Processed roster entry: Anuradha Yadav - Youth Member
+2025-06-04 14:51:52,433 - INFO - Parsed 66 members from Data/T7012_Roster_Report.csv
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Alexander Akey - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Austin Akey - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Venkateswar Alla - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Sachi Amatya - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Aaryan Arora - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Arjun Arora - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Nitin Arora - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Shweta Arora - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Alison Barker - New Member Coordinator
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Aditya Bhatia - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Vishal Bhatia - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Timothy Bradbury - Assistant Scoutmaster
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Jonathan Campbell - Scoutmaster
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Peter Campbell - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Victoria Campbell - Assistant Scoutmaster
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Ruchi Chauhan - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Brett deBlonk - Assistant Scoutmaster
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Garrett Dobbs - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Catherine Duffy-Reichert - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Kaitleen Duhamel - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Megha Durukkar - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Om Durukkar - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Shital Durukkar - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Abhiram Eadala - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Jenny Fialkoff - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Reuben Fialkoff - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: David Ficociello - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Robert Finley - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Christa Frey - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Elizabeth Fuller - Assistant Scoutmaster
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: David Gacioch - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Henry Garnett - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Katharine Garnett - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: William Garnett - Committee Chair
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Adamya Gaur - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Matthew Glenn - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: David Goetz - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Reyansh Gokak - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Samantha Guarino - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Sean Guarino - Committee Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Vincent Guarino - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Catherine Hatfield - Executive Officer
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Andrew Heiniluoma - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Maria Heiniluoma - Assistant Scoutmaster
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: James Hodge - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Stephen Hoff - Chartered Organization Rep.
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Jackson Huber - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Trevor Huber - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Soham Kalavagunta - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Ayan Kumar - Youth Member
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Malay Kumar - Unit Scouter Reserve
+2025-06-04 14:51:52,433 - DEBUG - Processed roster entry: Smita Kumar - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Ethan Lee - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Gie Lee - Assistant Scoutmaster
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Mark Matson - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Jeffrey Maxwell - Assistant Scoutmaster
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Oscar Maxwell - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Carrie McMillen - Assistant Scoutmaster
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Zachary Miller - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Praneeth Mulamalla - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Vihaan Nambiar - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Reid Nelson - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: William Newsham - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Theodore O'Brien - Unit Participant
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Christopher Obrien - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Sundarapandiyan Palanivelu - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Saravanan Parthasarathy - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: August Patterson - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Benjamin Patterson - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Silvia Piccinotti - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Sarah Pikcilingis - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Orion Pikcilingis-hodge - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Lara Pitwood - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Luke Pitwood - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Timothy Pitwood - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Henry Reichert - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: James Reichert - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Thomas Reichert - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Kristin Sandler - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: James Sandler-Frey - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Shakthi Saravanan - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Henry Schiefelbein - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: John Schiefelbein - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Mary Curran Schiefelbein - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Elliott Shoemaker - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Michelle Shoemaker - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Ryan Shoemaker - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Abhinav Shukla - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Ari Shukla - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Prakhar Shukla - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Vishal Shukla - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Sebastian Sloutsky - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Sangeetha Subramani - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Aditya Sundarapandiyan - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Aniket Suresh - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Rangan Suresh - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Paul Swydan - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Xander Swydan - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Suzanne Tompkins - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Cody Torma - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: John Uhrich - Key 3 Delegate
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: John Uhrich - Committee Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: John Uhrich - COR/CUR Delegate
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Margaret Werner - Unit Scouter Reserve
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Robert Werner - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Timothy Werner - Assistant Scoutmaster
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Harrison Wolf - Youth Member
+2025-06-04 14:51:52,434 - DEBUG - Processed roster entry: Ira Wolf - Assistant Scoutmaster
+2025-06-04 14:51:52,434 - INFO - Parsed 108 members from Data/T32_Roster_Report.csv
+2025-06-04 14:51:52,435 - INFO - Step 3: Processing merit badge counselor HTML files...
+2025-06-04 14:51:52,435 - INFO - Processing 5 HTML files...
+2025-06-04 14:51:52,435 - INFO - Processing HTML 1/5: Data/MB Counselor List 1.html
+2025-06-04 14:51:52,442 - INFO -   Found 10 counselor entries in Data/MB Counselor List 1.html
+2025-06-04 14:51:52,443 - DEBUG -     Parsed name: Karen () MacQuilken
+2025-06-04 14:51:52,443 - DEBUG -     Found home phone: (978) 263-4038
+2025-06-04 14:51:52,443 - DEBUG -     Found mobile phone: (508) 782-8502
+2025-06-04 14:51:52,443 - DEBUG -     Found email: kmacquil@comcast.net
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Coin Collecting
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Golf
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Painting
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Skating
+2025-06-04 14:51:52,443 - DEBUG -     Final counselor: {'firstname': 'Karen', 'alt_firstname': '', 'lastname': 'MacQuilken', 'phones': ['(978) 263-4038', '(508) 782-8502'], 'emails': ['kmacquil@comcast.net'], 'merit_badges': ['Coin Collecting', 'Cooking', 'Golf', 'Painting', 'Skating']}
+2025-06-04 14:51:52,443 - INFO -   Extracted counselor: Karen MacQuilken - 5 badges
+2025-06-04 14:51:52,443 - DEBUG -     Parsed name: Christopher (Christopher) White
+2025-06-04 14:51:52,443 - DEBUG -     Found mobile phone: (508) 517-0939
+2025-06-04 14:51:52,443 - DEBUG -     Found email: christopher.white@outlook.com
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Genealogy
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,443 - DEBUG -     Final counselor: {'firstname': 'Christopher', 'alt_firstname': 'Christopher', 'lastname': 'White', 'phones': ['(508) 517-0939'], 'emails': ['christopher.white@outlook.com'], 'merit_badges': ['Citizenship in Society', 'Citizenship in the Community', 'Citizenship in the Nation', 'Citizenship in the World', 'Communication', 'Family Life', 'Genealogy', 'Personal Management']}
+2025-06-04 14:51:52,443 - INFO -   Extracted counselor: Christopher White - 8 badges
+2025-06-04 14:51:52,443 - DEBUG -     Parsed name: Jason (Jason) Fitzgerald
+2025-06-04 14:51:52,443 - DEBUG -     Found home phone: (978) 266-2842
+2025-06-04 14:51:52,443 - DEBUG -     Found mobile phone: (617) 306-2536
+2025-06-04 14:51:52,443 - DEBUG -     Found email: fitz1j@gmail.com
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Cycling
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,443 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,443 - DEBUG -     Final counselor: {'firstname': 'Jason', 'alt_firstname': 'Jason', 'lastname': 'Fitzgerald', 'phones': ['(978) 266-2842', '(617) 306-2536'], 'emails': ['fitz1j@gmail.com'], 'merit_badges': ['Camping', 'Cooking', 'Cycling', 'Hiking', 'Personal Fitness']}
+2025-06-04 14:51:52,443 - INFO -   Extracted counselor: Jason Fitzgerald - 5 badges
+2025-06-04 14:51:52,443 - DEBUG -     Parsed name: Joshua (Josh) Haines
+2025-06-04 14:51:52,443 - DEBUG -     Found home phone: (978) 263-3618
+2025-06-04 14:51:52,443 - DEBUG -     Found mobile phone: (978) 746-1525
+2025-06-04 14:51:52,444 - DEBUG -     Found email: jhaines@thetwelfth.com
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Engineering
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Environmental Science
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Gardening
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Woodwork
+2025-06-04 14:51:52,444 - DEBUG -     Final counselor: {'firstname': 'Joshua', 'alt_firstname': 'Josh', 'lastname': 'Haines', 'phones': ['(978) 263-3618', '(978) 746-1525'], 'emails': ['jhaines@thetwelfth.com'], 'merit_badges': ['Engineering', 'Environmental Science', 'Family Life', 'Gardening', 'Personal Management', 'Woodwork']}
+2025-06-04 14:51:52,444 - INFO -   Extracted counselor: Joshua Haines - 6 badges
+2025-06-04 14:51:52,444 - DEBUG -     Parsed name: Dennis () Burianek
+2025-06-04 14:51:52,444 - DEBUG -     Found home phone: (978) 266-3744
+2025-06-04 14:51:52,444 - DEBUG -     Found mobile phone: (978) 881-4511
+2025-06-04 14:51:52,444 - DEBUG -     Found email: daburian@alum.mit.edu
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,444 - DEBUG -     Final counselor: {'firstname': 'Dennis', 'alt_firstname': '', 'lastname': 'Burianek', 'phones': ['(978) 266-3744', '(978) 881-4511'], 'emails': ['daburian@alum.mit.edu'], 'merit_badges': ['Citizenship in the Community']}
+2025-06-04 14:51:52,444 - INFO -   Extracted counselor: Dennis Burianek - 1 badges
+2025-06-04 14:51:52,444 - DEBUG -     Parsed name: Alison () Barker
+2025-06-04 14:51:52,444 - DEBUG -     Found home phone: (978) 263-5760
+2025-06-04 14:51:52,444 - DEBUG -     Found mobile phone: (617) 510-7987
+2025-06-04 14:51:52,444 - DEBUG -     Found email: alisonkbarker@outlook.com
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: American Cultures
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Collections
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Scouting Heritage
+2025-06-04 14:51:52,444 - DEBUG -     Final counselor: {'firstname': 'Alison', 'alt_firstname': '', 'lastname': 'Barker', 'phones': ['(978) 263-5760', '(617) 510-7987'], 'emails': ['alisonkbarker@outlook.com'], 'merit_badges': ['American Cultures', 'Collections', 'Family Life', 'Personal Fitness', 'Scouting Heritage']}
+2025-06-04 14:51:52,444 - INFO -   Extracted counselor: Alison Barker - 5 badges
+2025-06-04 14:51:52,444 - DEBUG -     Parsed name: Herbert () Philpott
+2025-06-04 14:51:52,444 - DEBUG -     Found mobile phone: (617) 699-4877
+2025-06-04 14:51:52,444 - DEBUG -     Found email: herb@philpott.org
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: American Business
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: American Cultures
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: American Heritage
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: American Labor
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Bugling
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,444 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Digital Technology
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Genealogy
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Music
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Pets
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Photography
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Public Speaking
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Skating
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Theater
+2025-06-04 14:51:52,445 - DEBUG -     Final counselor: {'firstname': 'Herbert', 'alt_firstname': '', 'lastname': 'Philpott', 'phones': ['(617) 699-4877'], 'emails': ['herb@philpott.org'], 'merit_badges': ['American Business', 'American Cultures', 'American Heritage', 'American Labor', 'Bugling', 'Citizenship in Society', 'Citizenship in the Community', 'Citizenship in the Nation', 'Citizenship in the World', 'Communication', 'Digital Technology', 'Family Life', 'Genealogy', 'Music', 'Personal Management', 'Pets', 'Photography', 'Public Speaking', 'Skating', 'Theater']}
+2025-06-04 14:51:52,445 - INFO -   Extracted counselor: Herbert Philpott - 20 badges
+2025-06-04 14:51:52,445 - DEBUG -     Parsed name: John () Bobiak
+2025-06-04 14:51:52,445 - DEBUG -     Found mobile phone: (610) 368-9894
+2025-06-04 14:51:52,445 - DEBUG -     Found email: jbobiak@gmail.com
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Backpacking
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Chemistry
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,445 - DEBUG -     Final counselor: {'firstname': 'John', 'alt_firstname': '', 'lastname': 'Bobiak', 'phones': ['(610) 368-9894'], 'emails': ['jbobiak@gmail.com'], 'merit_badges': ['Backpacking', 'Camping', 'Chemistry', 'Cooking', 'Hiking']}
+2025-06-04 14:51:52,445 - INFO -   Extracted counselor: John Bobiak - 5 badges
+2025-06-04 14:51:52,445 - DEBUG -     Parsed name: Michelle (Michelle) Shoemaker
+2025-06-04 14:51:52,445 - DEBUG -     Found home phone: (978) 635-1891
+2025-06-04 14:51:52,445 - DEBUG -     Found mobile phone: (617) 699-4826
+2025-06-04 14:51:52,445 - DEBUG -     Found email: aclarinut@gmail.com
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Art
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Bugling
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Music
+2025-06-04 14:51:52,445 - DEBUG -     Final counselor: {'firstname': 'Michelle', 'alt_firstname': 'Michelle', 'lastname': 'Shoemaker', 'phones': ['(978) 635-1891', '(617) 699-4826'], 'emails': ['aclarinut@gmail.com'], 'merit_badges': ['Art', 'Bugling', 'Citizenship in Society', 'Music']}
+2025-06-04 14:51:52,445 - INFO -   Extracted counselor: Michelle Shoemaker - 4 badges
+2025-06-04 14:51:52,445 - DEBUG -     Parsed name: Carol (Carol) Chytil
+2025-06-04 14:51:52,445 - DEBUG -     Found home phone: (978) 263-1485
+2025-06-04 14:51:52,445 - DEBUG -     Found mobile phone: (978) 870-7812
+2025-06-04 14:51:52,445 - DEBUG -     Found email: carol.chytil@gmail.com
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Kayaking
+2025-06-04 14:51:52,445 - DEBUG -     Found merit badge: Snow Sports
+2025-06-04 14:51:52,445 - DEBUG -     Final counselor: {'firstname': 'Carol', 'alt_firstname': 'Carol', 'lastname': 'Chytil', 'phones': ['(978) 263-1485', '(978) 870-7812'], 'emails': ['carol.chytil@gmail.com'], 'merit_badges': ['Family Life', 'Kayaking', 'Snow Sports']}
+2025-06-04 14:51:52,445 - INFO -   Extracted counselor: Carol Chytil - 3 badges
+2025-06-04 14:51:52,445 - INFO - Processing HTML 2/5: Data/MB Counselor List 2.html
+2025-06-04 14:51:52,452 - INFO -   Found 10 counselor entries in Data/MB Counselor List 2.html
+2025-06-04 14:51:52,452 - DEBUG -     Parsed name: John () Atherton
+2025-06-04 14:51:52,452 - DEBUG -     Found home phone: (978) 656-2633
+2025-06-04 14:51:52,452 - DEBUG -     Found mobile phone: (978) 995-7227
+2025-06-04 14:51:52,452 - DEBUG -     Found email: john_s_atherton@hotmail.com
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Backpacking
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,452 - DEBUG -     Final counselor: {'firstname': 'John', 'alt_firstname': '', 'lastname': 'Atherton', 'phones': ['(978) 656-2633', '(978) 995-7227'], 'emails': ['john_s_atherton@hotmail.com'], 'merit_badges': ['Backpacking', 'Citizenship in the World', 'Hiking']}
+2025-06-04 14:51:52,452 - INFO -   Extracted counselor: John Atherton - 3 badges
+2025-06-04 14:51:52,452 - DEBUG -     Parsed name: Victoria (Tori) Campbell
+2025-06-04 14:51:52,452 - DEBUG -     Found mobile phone: (253) 254-9996
+2025-06-04 14:51:52,452 - DEBUG -     Found email: vjhcampbell@gmail.com
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Backpacking
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Disabilities Awareness
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Genealogy
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Geocaching
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Orienteering
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,452 - DEBUG -     Found merit badge: Wilderness Survival
+2025-06-04 14:51:52,452 - DEBUG -     Final counselor: {'firstname': 'Victoria', 'alt_firstname': 'Tori', 'lastname': 'Campbell', 'phones': ['(253) 254-9996'], 'emails': ['vjhcampbell@gmail.com'], 'merit_badges': ['Backpacking', 'Camping', 'Citizenship in the Community', 'Citizenship in the Nation', 'Citizenship in the World', 'Communication', 'Cooking', 'Disabilities Awareness', 'Emergency Preparedness', 'Family Life', 'Genealogy', 'Geocaching', 'Hiking', 'Orienteering', 'Personal Fitness', 'Wilderness Survival']}
+2025-06-04 14:51:52,452 - INFO -   Extracted counselor: Victoria Campbell - 16 badges
+2025-06-04 14:51:52,452 - DEBUG -     Parsed name: Jonathan (Jon) Campbell
+2025-06-04 14:51:52,452 - DEBUG -     Found mobile phone: (253) 254-9997
+2025-06-04 14:51:52,452 - DEBUG -     Found email: T32-Scoutmaster@actonscouts.org
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: American Cultures
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Backpacking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Bugling
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Home Repairs
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Orienteering
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Pioneering
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Safety
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Search and Rescue
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Snow Sports
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Wilderness Survival
+2025-06-04 14:51:52,453 - DEBUG -     Final counselor: {'firstname': 'Jonathan', 'alt_firstname': 'Jon', 'lastname': 'Campbell', 'phones': ['(253) 254-9997'], 'emails': ['T32-Scoutmaster@actonscouts.org'], 'merit_badges': ['American Cultures', 'Backpacking', 'Bugling', 'Camping', 'Citizenship in the Nation', 'Citizenship in the World', 'Cooking', 'Emergency Preparedness', 'Family Life', 'Hiking', 'Home Repairs', 'Orienteering', 'Personal Fitness', 'Personal Management', 'Pioneering', 'Safety', 'Search and Rescue', 'Snow Sports', 'Wilderness Survival']}
+2025-06-04 14:51:52,453 - INFO -   Extracted counselor: Jonathan Campbell - 19 badges
+2025-06-04 14:51:52,453 - DEBUG -     Parsed name: Darren () Jones
+2025-06-04 14:51:52,453 - DEBUG -     Found home phone: (978) 263-1009
+2025-06-04 14:51:52,453 - DEBUG -     Found mobile phone: (978) 206-4670
+2025-06-04 14:51:52,453 - DEBUG -     Found email: darrenbjones0827@gmail.com
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Environmental Science
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Sustainability
+2025-06-04 14:51:52,453 - DEBUG -     Final counselor: {'firstname': 'Darren', 'alt_firstname': '', 'lastname': 'Jones', 'phones': ['(978) 263-1009', '(978) 206-4670'], 'emails': ['darrenbjones0827@gmail.com'], 'merit_badges': ['Environmental Science', 'Personal Management', 'Sustainability']}
+2025-06-04 14:51:52,453 - INFO -   Extracted counselor: Darren Jones - 3 badges
+2025-06-04 14:51:52,453 - DEBUG -     Parsed name: William (Will) zoldak
+2025-06-04 14:51:52,453 - DEBUG -     Found home phone: (781) 486-5999
+2025-06-04 14:51:52,453 - DEBUG -     Found mobile phone: (781) 526-1263
+2025-06-04 14:51:52,453 - DEBUG -     Found email: will@zoldak.net
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Backpacking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,453 - DEBUG -     Final counselor: {'firstname': 'William', 'alt_firstname': 'Will', 'lastname': 'zoldak', 'phones': ['(781) 486-5999', '(781) 526-1263'], 'emails': ['will@zoldak.net'], 'merit_badges': ['Backpacking', 'Camping', 'Cooking', 'Hiking']}
+2025-06-04 14:51:52,453 - INFO -   Extracted counselor: William zoldak - 4 badges
+2025-06-04 14:51:52,453 - DEBUG -     Parsed name: Carrie () McMillen
+2025-06-04 14:51:52,453 - DEBUG -     Found home phone: (617) 447-4333
+2025-06-04 14:51:52,453 - DEBUG -     Found email: carriemcmillen@gmail.com
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Architecture
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Backpacking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,453 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,454 - DEBUG -     Final counselor: {'firstname': 'Carrie', 'alt_firstname': '', 'lastname': 'McMillen', 'phones': ['(617) 447-4333'], 'emails': ['carriemcmillen@gmail.com'], 'merit_badges': ['Architecture', 'Backpacking', 'Camping', 'Cooking', 'Hiking']}
+2025-06-04 14:51:52,454 - INFO -   Extracted counselor: Carrie McMillen - 5 badges
+2025-06-04 14:51:52,454 - DEBUG -     Parsed name: FENGHUA (Fraser) LI
+2025-06-04 14:51:52,454 - DEBUG -     Found home phone: (813) 774-0973
+2025-06-04 14:51:52,454 - DEBUG -     Found email: lbblmm@hotmail.com
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,454 - DEBUG -     Final counselor: {'firstname': 'FENGHUA', 'alt_firstname': 'Fraser', 'lastname': 'LI', 'phones': ['(813) 774-0973'], 'emails': ['lbblmm@hotmail.com'], 'merit_badges': ['Camping']}
+2025-06-04 14:51:52,454 - INFO -   Extracted counselor: FENGHUA LI - 1 badges
+2025-06-04 14:51:52,454 - DEBUG -     Parsed name: Sarah () Burianek
+2025-06-04 14:51:52,454 - DEBUG -     Found home phone: (978) 266-3744
+2025-06-04 14:51:52,454 - DEBUG -     Found mobile phone: (508) 361-1081
+2025-06-04 14:51:52,454 - DEBUG -     Found email: sarahburianek@msn.com
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,454 - DEBUG -     Final counselor: {'firstname': 'Sarah', 'alt_firstname': '', 'lastname': 'Burianek', 'phones': ['(978) 266-3744', '(508) 361-1081'], 'emails': ['sarahburianek@msn.com'], 'merit_badges': ['Communication']}
+2025-06-04 14:51:52,454 - INFO -   Extracted counselor: Sarah Burianek - 1 badges
+2025-06-04 14:51:52,454 - DEBUG -     Parsed name: Christopher () Martyn
+2025-06-04 14:51:52,454 - DEBUG -     Found home phone: (267) 240-4329
+2025-06-04 14:51:52,454 - DEBUG -     Found mobile phone: (267) 240-4329
+2025-06-04 14:51:52,454 - DEBUG -     Found email: christopher.m.martyn@gmail.com
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Aviation
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Entrepreneurship
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Fishing
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,454 - DEBUG -     Final counselor: {'firstname': 'Christopher', 'alt_firstname': '', 'lastname': 'Martyn', 'phones': ['(267) 240-4329', '(267) 240-4329'], 'emails': ['christopher.m.martyn@gmail.com'], 'merit_badges': ['Aviation', 'Emergency Preparedness', 'Entrepreneurship', 'Fishing', 'Personal Management']}
+2025-06-04 14:51:52,454 - INFO -   Extracted counselor: Christopher Martyn - 5 badges
+2025-06-04 14:51:52,454 - DEBUG -     Parsed name: Kevin () Santos
+2025-06-04 14:51:52,454 - DEBUG -     Found home phone: (617) 549-8683
+2025-06-04 14:51:52,454 - DEBUG -     Found mobile phone: (202) 277-5558
+2025-06-04 14:51:52,454 - DEBUG -     Found email: kevinsantos.kns@gmail.com
+2025-06-04 14:51:52,454 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,454 - DEBUG -     Final counselor: {'firstname': 'Kevin', 'alt_firstname': '', 'lastname': 'Santos', 'phones': ['(617) 549-8683', '(202) 277-5558'], 'emails': ['kevinsantos.kns@gmail.com'], 'merit_badges': ['Communication']}
+2025-06-04 14:51:52,454 - INFO -   Extracted counselor: Kevin Santos - 1 badges
+2025-06-04 14:51:52,454 - INFO - Processing HTML 3/5: Data/MB Counselor List 3.html
+2025-06-04 14:51:52,461 - INFO -   Found 10 counselor entries in Data/MB Counselor List 3.html
+2025-06-04 14:51:52,461 - DEBUG -     Parsed name: Roland () Bourdon
+2025-06-04 14:51:52,462 - DEBUG -     Found home phone: (978) 263-1984
+2025-06-04 14:51:52,462 - DEBUG -     Found email: rbourdon3@hotmail.com
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,462 - DEBUG -     Final counselor: {'firstname': 'Roland', 'alt_firstname': '', 'lastname': 'Bourdon', 'phones': ['(978) 263-1984'], 'emails': ['rbourdon3@hotmail.com'], 'merit_badges': ['Citizenship in the Community']}
+2025-06-04 14:51:52,462 - INFO -   Extracted counselor: Roland Bourdon - 1 badges
+2025-06-04 14:51:52,462 - DEBUG -     Parsed name: Andrew (Andy) Heiniluoma
+2025-06-04 14:51:52,462 - DEBUG -     Found mobile phone: (978) 340-1028
+2025-06-04 14:51:52,462 - DEBUG -     Found email: andy@andy.fi
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,462 - DEBUG -     Final counselor: {'firstname': 'Andrew', 'alt_firstname': 'Andy', 'lastname': 'Heiniluoma', 'phones': ['(978) 340-1028'], 'emails': ['andy@andy.fi'], 'merit_badges': ['Citizenship in the Community']}
+2025-06-04 14:51:52,462 - INFO -   Extracted counselor: Andrew Heiniluoma - 1 badges
+2025-06-04 14:51:52,462 - DEBUG -     Parsed name: Tammy () Klatt
+2025-06-04 14:51:52,462 - DEBUG -     Found home phone: (978) 263-9810
+2025-06-04 14:51:52,462 - DEBUG -     Found mobile phone: (978) 760-0382
+2025-06-04 14:51:52,462 - DEBUG -     Found email: tklatt01719@gmail.com
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Coin Collecting
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Collections
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Digital Technology
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Dog Care
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Gardening
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Home Repairs
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Pets
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Programming
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Reading
+2025-06-04 14:51:52,462 - DEBUG -     Final counselor: {'firstname': 'Tammy', 'alt_firstname': '', 'lastname': 'Klatt', 'phones': ['(978) 263-9810', '(978) 760-0382'], 'emails': ['tklatt01719@gmail.com'], 'merit_badges': ['Citizenship in Society', 'Coin Collecting', 'Collections', 'Cooking', 'Digital Technology', 'Dog Care', 'Family Life', 'Gardening', 'Home Repairs', 'Pets', 'Programming', 'Reading']}
+2025-06-04 14:51:52,462 - INFO -   Extracted counselor: Tammy Klatt - 12 badges
+2025-06-04 14:51:52,462 - DEBUG -     Parsed name: Vishal () Shukla
+2025-06-04 14:51:52,462 - DEBUG -     Found home phone: (781) 249-6509
+2025-06-04 14:51:52,462 - DEBUG -     Found mobile phone: (781) 249-6509
+2025-06-04 14:51:52,462 - DEBUG -     Found email: vshukla@hbs.edu
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Chess
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Digital Technology
+2025-06-04 14:51:52,462 - DEBUG -     Final counselor: {'firstname': 'Vishal', 'alt_firstname': '', 'lastname': 'Shukla', 'phones': ['(781) 249-6509', '(781) 249-6509'], 'emails': ['vshukla@hbs.edu'], 'merit_badges': ['Chess', 'Citizenship in the Community', 'Citizenship in the World', 'Digital Technology']}
+2025-06-04 14:51:52,462 - INFO -   Extracted counselor: Vishal Shukla - 4 badges
+2025-06-04 14:51:52,462 - DEBUG -     Parsed name: Donald (Donald) Beltrami
+2025-06-04 14:51:52,462 - DEBUG -     Found home phone: (978) 506-5110
+2025-06-04 14:51:52,462 - DEBUG -     Found mobile phone: (978) 394-3556
+2025-06-04 14:51:52,462 - DEBUG -     Found email: donbeltrami@yahoo.com
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,462 - DEBUG -     Found merit badge: Canoeing
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: First Aid
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Fishing
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Wilderness Survival
+2025-06-04 14:51:52,463 - DEBUG -     Final counselor: {'firstname': 'Donald', 'alt_firstname': 'Donald', 'lastname': 'Beltrami', 'phones': ['(978) 506-5110', '(978) 394-3556'], 'emails': ['donbeltrami@yahoo.com'], 'merit_badges': ['Camping', 'Canoeing', 'Citizenship in the Community', 'Cooking', 'Emergency Preparedness', 'First Aid', 'Fishing', 'Wilderness Survival']}
+2025-06-04 14:51:52,463 - INFO -   Extracted counselor: Donald Beltrami - 8 badges
+2025-06-04 14:51:52,463 - DEBUG -     Parsed name: Daniel (Dan) Kane
+2025-06-04 14:51:52,463 - DEBUG -     Found home phone: (978) 742-9007
+2025-06-04 14:51:52,463 - DEBUG -     Found mobile phone: (617) 429-8927
+2025-06-04 14:51:52,463 - DEBUG -     Found email: danielkanern@gmail.com
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: American Heritage
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Fire Safety
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: First Aid
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Geocaching
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Medicine (2018 - Discontinued 12/31/2021)
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Public Speaking
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Safety
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Scouting Heritage
+2025-06-04 14:51:52,463 - DEBUG -     Final counselor: {'firstname': 'Daniel', 'alt_firstname': 'Dan', 'lastname': 'Kane', 'phones': ['(978) 742-9007', '(617) 429-8927'], 'emails': ['danielkanern@gmail.com'], 'merit_badges': ['American Heritage', 'Citizenship in Society', 'Citizenship in the Community', 'Citizenship in the Nation', 'Citizenship in the World', 'Communication', 'Emergency Preparedness', 'Family Life', 'Fire Safety', 'First Aid', 'Geocaching', 'Medicine (2018 - Discontinued 12/31/2021)', 'Personal Fitness', 'Public Speaking', 'Safety', 'Scouting Heritage']}
+2025-06-04 14:51:52,463 - INFO -   Extracted counselor: Daniel Kane - 16 badges
+2025-06-04 14:51:52,463 - DEBUG -     Parsed name: Brandon (Brandon) LaVoie
+2025-06-04 14:51:52,463 - DEBUG -     Found home phone: (914) 319-5456
+2025-06-04 14:51:52,463 - DEBUG -     Found mobile phone: (978) 427-0181
+2025-06-04 14:51:52,463 - DEBUG -     Found email: 67bboss@gmail.com
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Automotive Maintenance
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,463 - DEBUG -     Final counselor: {'firstname': 'Brandon', 'alt_firstname': 'Brandon', 'lastname': 'LaVoie', 'phones': ['(914) 319-5456', '(978) 427-0181'], 'emails': ['67bboss@gmail.com'], 'merit_badges': ['Automotive Maintenance', 'Citizenship in the Nation', 'Citizenship in the World']}
+2025-06-04 14:51:52,463 - INFO -   Extracted counselor: Brandon LaVoie - 3 badges
+2025-06-04 14:51:52,463 - DEBUG -     Parsed name: Dulcey (Dulcey) Lacroix
+2025-06-04 14:51:52,463 - DEBUG -     Found home phone: (978) 394-4217
+2025-06-04 14:51:52,463 - DEBUG -     Found mobile phone: (978) 577-8692
+2025-06-04 14:51:52,463 - DEBUG -     Found email: dulcey.lacroix@gmail.com
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Architecture
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Bird Study
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Collections
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Disabilities Awareness
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Dog Care
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Drafting
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Engineering
+2025-06-04 14:51:52,463 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Genealogy
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Music
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Nature
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Pets
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Public Health
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Reading
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Safety
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Signs, Signals, and Codes
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Theater
+2025-06-04 14:51:52,464 - DEBUG -     Final counselor: {'firstname': 'Dulcey', 'alt_firstname': 'Dulcey', 'lastname': 'Lacroix', 'phones': ['(978) 394-4217', '(978) 577-8692'], 'emails': ['dulcey.lacroix@gmail.com'], 'merit_badges': ['Architecture', 'Bird Study', 'Citizenship in Society', 'Citizenship in the Community', 'Collections', 'Disabilities Awareness', 'Dog Care', 'Drafting', 'Engineering', 'Family Life', 'Genealogy', 'Music', 'Nature', 'Pets', 'Public Health', 'Reading', 'Safety', 'Signs, Signals, and Codes', 'Theater']}
+2025-06-04 14:51:52,464 - INFO -   Extracted counselor: Dulcey Lacroix - 19 badges
+2025-06-04 14:51:52,464 - DEBUG -     Parsed name: Sandra (Sandy) Clyde
+2025-06-04 14:51:52,464 - DEBUG -     Found home phone: (978) 486-0479
+2025-06-04 14:51:52,464 - DEBUG -     Found mobile phone: (978) 303-7470
+2025-06-04 14:51:52,464 - DEBUG -     Found email: jhighway13@verizon.net
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,464 - DEBUG -     Final counselor: {'firstname': 'Sandra', 'alt_firstname': 'Sandy', 'lastname': 'Clyde', 'phones': ['(978) 486-0479', '(978) 303-7470'], 'emails': ['jhighway13@verizon.net'], 'merit_badges': ['Citizenship in the Community', 'Citizenship in the Nation', 'Citizenship in the World', 'Communication', 'Family Life', 'Personal Fitness', 'Personal Management']}
+2025-06-04 14:51:52,464 - INFO -   Extracted counselor: Sandra Clyde - 7 badges
+2025-06-04 14:51:52,464 - DEBUG -     Parsed name: Linus (Linus) Kneeland
+2025-06-04 14:51:52,464 - DEBUG -     Found home phone: (978) 952-6485
+2025-06-04 14:51:52,464 - DEBUG -     Found mobile phone: (978) 952-6485
+2025-06-04 14:51:52,464 - DEBUG -     Found email: iuchiha.6485@gmail.com
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Engineering
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Fingerprinting
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Graphic Arts
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Leatherwork
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Photography
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Programming
+2025-06-04 14:51:52,464 - DEBUG -     Found merit badge: Reading
+2025-06-04 14:51:52,464 - DEBUG -     Final counselor: {'firstname': 'Linus', 'alt_firstname': 'Linus', 'lastname': 'Kneeland', 'phones': ['(978) 952-6485', '(978) 952-6485'], 'emails': ['iuchiha.6485@gmail.com'], 'merit_badges': ['Camping', 'Engineering', 'Fingerprinting', 'Graphic Arts', 'Leatherwork', 'Photography', 'Programming', 'Reading']}
+2025-06-04 14:51:52,464 - INFO -   Extracted counselor: Linus Kneeland - 8 badges
+2025-06-04 14:51:52,464 - INFO - Processing HTML 4/5: Data/MB Counselor List 4.html
+2025-06-04 14:51:52,471 - INFO -   Found 10 counselor entries in Data/MB Counselor List 4.html
+2025-06-04 14:51:52,471 - DEBUG -     Parsed name: Louis (Lou) Soracco
+2025-06-04 14:51:52,471 - DEBUG -     Found home phone: (978) 486-0037
+2025-06-04 14:51:52,471 - DEBUG -     Found mobile phone: (978) 501-0884
+2025-06-04 14:51:52,471 - DEBUG -     Found email: Lousoracco@verizon.net
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Forestry
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Swimming
+2025-06-04 14:51:52,471 - DEBUG -     Final counselor: {'firstname': 'Louis', 'alt_firstname': 'Lou', 'lastname': 'Soracco', 'phones': ['(978) 486-0037', '(978) 501-0884'], 'emails': ['Lousoracco@verizon.net'], 'merit_badges': ['Forestry', 'Personal Fitness', 'Swimming']}
+2025-06-04 14:51:52,471 - INFO -   Extracted counselor: Louis Soracco - 3 badges
+2025-06-04 14:51:52,471 - DEBUG -     Parsed name: Bradford () Laing
+2025-06-04 14:51:52,471 - DEBUG -     Found home phone: (978) 486-4524
+2025-06-04 14:51:52,471 - DEBUG -     Found mobile phone: (781) 727-0141
+2025-06-04 14:51:52,471 - DEBUG -     Found email: alynate24@gmail.com
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Canoeing
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Fishing
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Motorboating
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Plumbing
+2025-06-04 14:51:52,471 - DEBUG -     Final counselor: {'firstname': 'Bradford', 'alt_firstname': '', 'lastname': 'Laing', 'phones': ['(978) 486-4524', '(781) 727-0141'], 'emails': ['alynate24@gmail.com'], 'merit_badges': ['Camping', 'Canoeing', 'Family Life', 'Fishing', 'Motorboating', 'Plumbing']}
+2025-06-04 14:51:52,471 - INFO -   Extracted counselor: Bradford Laing - 6 badges
+2025-06-04 14:51:52,471 - DEBUG -     Parsed name: Gary (Gary) Lacroix
+2025-06-04 14:51:52,471 - DEBUG -     Found home phone: (978) 486-0406
+2025-06-04 14:51:52,471 - DEBUG -     Found mobile phone: (978) 505-9252
+2025-06-04 14:51:52,471 - DEBUG -     Found email: gaduzabe@yahoo.com
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: American Heritage
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Architecture
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Chess
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Citizenship in the Nation
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Engineering
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Environmental Science
+2025-06-04 14:51:52,471 - DEBUG -     Found merit badge: Golf
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Public Speaking
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Soil and Water Conservation
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Sports
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Sustainability
+2025-06-04 14:51:52,472 - DEBUG -     Final counselor: {'firstname': 'Gary', 'alt_firstname': 'Gary', 'lastname': 'Lacroix', 'phones': ['(978) 486-0406', '(978) 505-9252'], 'emails': ['gaduzabe@yahoo.com'], 'merit_badges': ['American Heritage', 'Architecture', 'Chess', 'Citizenship in the Nation', 'Citizenship in the World', 'Communication', 'Emergency Preparedness', 'Engineering', 'Environmental Science', 'Golf', 'Personal Fitness', 'Personal Management', 'Public Speaking', 'Soil and Water Conservation', 'Sports', 'Sustainability']}
+2025-06-04 14:51:52,472 - INFO -   Extracted counselor: Gary Lacroix - 16 badges
+2025-06-04 14:51:52,472 - DEBUG -     Parsed name: Janice (Jan) Branco
+2025-06-04 14:51:52,472 - DEBUG -     Found home phone: (978) 486-4190
+2025-06-04 14:51:52,472 - DEBUG -     Found mobile phone: (978) 760-2702
+2025-06-04 14:51:52,472 - DEBUG -     Found email: janbranco@verizon.net
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: American Cultures
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Citizenship in the Community
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Pets
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Reading
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Scholarship
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Skating
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Snow Sports
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Swimming
+2025-06-04 14:51:52,472 - DEBUG -     Final counselor: {'firstname': 'Janice', 'alt_firstname': 'Jan', 'lastname': 'Branco', 'phones': ['(978) 486-4190', '(978) 760-2702'], 'emails': ['janbranco@verizon.net'], 'merit_badges': ['American Cultures', 'Citizenship in Society', 'Citizenship in the Community', 'Pets', 'Reading', 'Scholarship', 'Skating', 'Snow Sports', 'Swimming']}
+2025-06-04 14:51:52,472 - INFO -   Extracted counselor: Janice Branco - 9 badges
+2025-06-04 14:51:52,472 - DEBUG -     Parsed name: Michael (Mike) LeDuc
+2025-06-04 14:51:52,472 - DEBUG -     Found home phone: (508) 344-5960
+2025-06-04 14:51:52,472 - DEBUG -     Found mobile phone: (978) 840-1555
+2025-06-04 14:51:52,472 - DEBUG -     Found email: michael.p.leduc@gmail.com
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Coin Collecting
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Cycling
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Dog Care
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Pets
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Wilderness Survival
+2025-06-04 14:51:52,472 - DEBUG -     Final counselor: {'firstname': 'Michael', 'alt_firstname': 'Mike', 'lastname': 'LeDuc', 'phones': ['(508) 344-5960', '(978) 840-1555'], 'emails': ['michael.p.leduc@gmail.com'], 'merit_badges': ['Camping', 'Coin Collecting', 'Cooking', 'Cycling', 'Dog Care', 'Hiking', 'Pets', 'Wilderness Survival']}
+2025-06-04 14:51:52,472 - INFO -   Extracted counselor: Michael LeDuc - 8 badges
+2025-06-04 14:51:52,472 - DEBUG -     Parsed name: John () Hagberg
+2025-06-04 14:51:52,472 - DEBUG -     Found home phone: (781) 504-8583
+2025-06-04 14:51:52,472 - DEBUG -     Found mobile phone: (781) 504-8583
+2025-06-04 14:51:52,472 - DEBUG -     Found email: jhagberg@gmail.com
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Sustainability
+2025-06-04 14:51:52,472 - DEBUG -     Final counselor: {'firstname': 'John', 'alt_firstname': '', 'lastname': 'Hagberg', 'phones': ['(781) 504-8583', '(781) 504-8583'], 'emails': ['jhagberg@gmail.com'], 'merit_badges': ['Communication', 'Cooking', 'Personal Management', 'Sustainability']}
+2025-06-04 14:51:52,472 - INFO -   Extracted counselor: John Hagberg - 4 badges
+2025-06-04 14:51:52,472 - DEBUG -     Parsed name: Mark () Hollinger
+2025-06-04 14:51:52,472 - DEBUG -     Found home phone: (978) 337-3581
+2025-06-04 14:51:52,472 - DEBUG -     Found email: mark@thehollingers.net
+2025-06-04 14:51:52,472 - DEBUG -     Found merit badge: Aviation
+2025-06-04 14:51:52,472 - DEBUG -     Final counselor: {'firstname': 'Mark', 'alt_firstname': '', 'lastname': 'Hollinger', 'phones': ['(978) 337-3581'], 'emails': ['mark@thehollingers.net'], 'merit_badges': ['Aviation']}
+2025-06-04 14:51:52,472 - INFO -   Extracted counselor: Mark Hollinger - 1 badges
+2025-06-04 14:51:52,473 - DEBUG -     Parsed name: Peter () Crory
+2025-06-04 14:51:52,473 - DEBUG -     Found home phone: (978) 952-8894
+2025-06-04 14:51:52,473 - DEBUG -     Found mobile phone: (978) 314-6594
+2025-06-04 14:51:52,473 - DEBUG -     Found email: peterfcrory@yahoo.com
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Family Life
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,473 - DEBUG -     Final counselor: {'firstname': 'Peter', 'alt_firstname': '', 'lastname': 'Crory', 'phones': ['(978) 952-8894', '(978) 314-6594'], 'emails': ['peterfcrory@yahoo.com'], 'merit_badges': ['Family Life', 'Personal Fitness']}
+2025-06-04 14:51:52,473 - INFO -   Extracted counselor: Peter Crory - 2 badges
+2025-06-04 14:51:52,473 - DEBUG -     Parsed name: Timothy (Tim) Roberts
+2025-06-04 14:51:52,473 - DEBUG -     Found home phone: (978) 742-9873
+2025-06-04 14:51:52,473 - DEBUG -     Found mobile phone: (617) 790-2081
+2025-06-04 14:51:52,473 - DEBUG -     Found email: Tim_roberts53@hotmail.com
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Cycling
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Digital Technology
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Dog Care
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Kayaking
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Programming
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Snow Sports
+2025-06-04 14:51:52,473 - DEBUG -     Final counselor: {'firstname': 'Timothy', 'alt_firstname': 'Tim', 'lastname': 'Roberts', 'phones': ['(978) 742-9873', '(617) 790-2081'], 'emails': ['Tim_roberts53@hotmail.com'], 'merit_badges': ['Cycling', 'Digital Technology', 'Dog Care', 'Kayaking', 'Personal Fitness', 'Personal Management', 'Programming', 'Snow Sports']}
+2025-06-04 14:51:52,473 - INFO -   Extracted counselor: Timothy Roberts - 8 badges
+2025-06-04 14:51:52,473 - DEBUG -     Parsed name: Thomas (Tom) Kneeland
+2025-06-04 14:51:52,473 - DEBUG -     Found home phone: (978) 952-6485
+2025-06-04 14:51:52,473 - DEBUG -     Found mobile phone: (978) 729-9289
+2025-06-04 14:51:52,473 - DEBUG -     Found email: tomkf116@gmail.com
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Citizenship in Society
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Emergency Preparedness
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Fire Safety
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: First Aid
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Programming
+2025-06-04 14:51:52,473 - DEBUG -     Found merit badge: Woodwork
+2025-06-04 14:51:52,473 - DEBUG -     Final counselor: {'firstname': 'Thomas', 'alt_firstname': 'Tom', 'lastname': 'Kneeland', 'phones': ['(978) 952-6485', '(978) 729-9289'], 'emails': ['tomkf116@gmail.com'], 'merit_badges': ['Citizenship in Society', 'Emergency Preparedness', 'Fire Safety', 'First Aid', 'Programming', 'Woodwork']}
+2025-06-04 14:51:52,473 - INFO -   Extracted counselor: Thomas Kneeland - 6 badges
+2025-06-04 14:51:52,473 - INFO - Processing HTML 5/5: Data/MB Counselor List 5.html
+2025-06-04 14:51:52,477 - INFO -   Found 3 counselor entries in Data/MB Counselor List 5.html
+2025-06-04 14:51:52,477 - DEBUG -     Parsed name: Marcus () Boyer
+2025-06-04 14:51:52,477 - DEBUG -     Found home phone: (315) 552-4006
+2025-06-04 14:51:52,477 - DEBUG -     Found mobile phone: (215) 527-6435
+2025-06-04 14:51:52,477 - DEBUG -     Found email: boyer.m@gmail.com
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Citizenship in the World
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Communication
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Personal Fitness
+2025-06-04 14:51:52,477 - DEBUG -     Found merit badge: Personal Management
+2025-06-04 14:51:52,477 - DEBUG -     Final counselor: {'firstname': 'Marcus', 'alt_firstname': '', 'lastname': 'Boyer', 'phones': ['(315) 552-4006', '(215) 527-6435'], 'emails': ['boyer.m@gmail.com'], 'merit_badges': ['Camping', 'Citizenship in the World', 'Communication', 'Cooking', 'Hiking', 'Personal Fitness', 'Personal Management']}
+2025-06-04 14:51:52,477 - INFO -   Extracted counselor: Marcus Boyer - 7 badges
+2025-06-04 14:51:52,477 - DEBUG -     Parsed name: Robert () Pitkin
+2025-06-04 14:51:52,477 - DEBUG -     Found home phone: (978) 397-4387
+2025-06-04 14:51:52,477 - DEBUG -     Found mobile phone: (978) 397-4387
+2025-06-04 14:51:52,478 - DEBUG -     Found email: pitkin.robert@gmail.com
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Camping
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Cooking
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Hiking
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Snow Sports
+2025-06-04 14:51:52,478 - DEBUG -     Final counselor: {'firstname': 'Robert', 'alt_firstname': '', 'lastname': 'Pitkin', 'phones': ['(978) 397-4387', '(978) 397-4387'], 'emails': ['pitkin.robert@gmail.com'], 'merit_badges': ['Camping', 'Cooking', 'Hiking', 'Snow Sports']}
+2025-06-04 14:51:52,478 - INFO -   Extracted counselor: Robert Pitkin - 4 badges
+2025-06-04 14:51:52,478 - DEBUG -     Parsed name: Sloan () Craven
+2025-06-04 14:51:52,478 - DEBUG -     Found home phone: (978) 587-1109
+2025-06-04 14:51:52,478 - DEBUG -     Found mobile phone: (978) 587-1109
+2025-06-04 14:51:52,478 - DEBUG -     Found email: sloan.craven@gmail.com
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Archaeology
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Archery
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Fishing
+2025-06-04 14:51:52,478 - DEBUG -     Found merit badge: Fly Fishing
+2025-06-04 14:51:52,478 - DEBUG -     Final counselor: {'firstname': 'Sloan', 'alt_firstname': '', 'lastname': 'Craven', 'phones': ['(978) 587-1109', '(978) 587-1109'], 'emails': ['sloan.craven@gmail.com'], 'merit_badges': ['Archaeology', 'Archery', 'Fishing', 'Fly Fishing']}
+2025-06-04 14:51:52,478 - INFO -   Extracted counselor: Sloan Craven - 4 badges
+2025-06-04 14:51:52,478 - INFO - HTML processing complete: extracted 43 total merit badge counselors
+2025-06-04 14:51:52,478 - INFO - Sample of extracted counselors:
+2025-06-04 14:51:52,478 - INFO -   1. Karen MacQuilken - 5 badges: ['Coin Collecting', 'Cooking', 'Golf']...
+2025-06-04 14:51:52,478 - INFO -   2. Christopher White - 8 badges: ['Citizenship in Society', 'Citizenship in the Community', 'Citizenship in the Nation']...
+2025-06-04 14:51:52,478 - INFO -   3. Jason Fitzgerald - 5 badges: ['Camping', 'Cooking', 'Cycling']...
+2025-06-04 14:51:52,478 - INFO -   4. Joshua Haines - 6 badges: ['Engineering', 'Environmental Science', 'Family Life']...
+2025-06-04 14:51:52,478 - INFO -   5. Dennis Burianek - 1 badges: ['Citizenship in the Community']
+2025-06-04 14:51:52,478 - INFO - Step 4: Cross-referencing data...
+2025-06-04 14:51:52,478 - INFO - Found 106 adult leaders across both troops
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Alison Barker from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Jonathan Campbell from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Victoria Campbell from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Andrew Heiniluoma from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Carrie McMillen from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Herbert Philpott from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Michelle Shoemaker from T12
+2025-06-04 14:51:52,478 - DEBUG - Matched counselor: Vishal Shukla from T12
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Alison Barker from T32
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Jonathan Campbell from T32
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Victoria Campbell from T32
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Andrew Heiniluoma from T32
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Carrie McMillen from T32
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Michelle Shoemaker from T32
+2025-06-04 14:51:52,479 - DEBUG - Matched counselor: Vishal Shukla from T32
+2025-06-04 14:51:52,479 - DEBUG - Removed 1- prefix: 1-617-510-7987 -> 6175107987
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: 1-617-510-7987 -> 617-510-7987
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: (978) 263-5760 -> 978-263-5760
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: (617) 510-7987 -> 617-510-7987
+2025-06-04 14:51:52,479 - DEBUG - Valid email: alisonkbarker@outlook.com
+2025-06-04 14:51:52,479 - DEBUG - Valid email: alisonkbarker@outlook.com
+2025-06-04 14:51:52,479 - DEBUG - Removed 1- prefix: 1-253-254-9997 -> 2532549997
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: 1-253-254-9997 -> 253-254-9997
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: (253) 254-9997 -> 253-254-9997
+2025-06-04 14:51:52,479 - DEBUG - Valid email: T32-Scoutmaster@actonscouts.org
+2025-06-04 14:51:52,479 - DEBUG - Valid email: T32-Scoutmaster@actonscouts.org
+2025-06-04 14:51:52,479 - DEBUG - Removed 1- prefix: 1-253-254-9996 -> 2532549996
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: 1-253-254-9996 -> 253-254-9996
+2025-06-04 14:51:52,479 - DEBUG - Cleaned phone: (253) 254-9996 -> 253-254-9996
+2025-06-04 14:51:52,479 - DEBUG - Valid email: vjhcampbell@gmail.com
+2025-06-04 14:51:52,479 - DEBUG - Valid email: vjhcampbell@gmail.com
+2025-06-04 14:51:52,480 - DEBUG - Removed 1- prefix: 1-978-340-1028 -> 9783401028
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: 1-978-340-1028 -> 978-340-1028
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (978) 340-1028 -> 978-340-1028
+2025-06-04 14:51:52,480 - DEBUG - Valid email: andy@andy.fi
+2025-06-04 14:51:52,480 - DEBUG - Valid email: andy@andy.fi
+2025-06-04 14:51:52,480 - DEBUG - Removed 1- prefix: 1-617-447-4333 -> 6174474333
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: 1-617-447-4333 -> 617-447-4333
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (617) 447-4333 -> 617-447-4333
+2025-06-04 14:51:52,480 - DEBUG - Valid email: carriemcmillen@gmail.com
+2025-06-04 14:51:52,480 - DEBUG - Valid email: carriemcmillen@gmail.com
+2025-06-04 14:51:52,480 - DEBUG - Removed 1- prefix: 1-617-699-4877 -> 6176994877
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: 1-617-699-4877 -> 617-699-4877
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (617) 699-4877 -> 617-699-4877
+2025-06-04 14:51:52,480 - DEBUG - Valid email: herb@philpott.org
+2025-06-04 14:51:52,480 - DEBUG - Valid email: herb@philpott.org
+2025-06-04 14:51:52,480 - DEBUG - Removed 1- prefix: 1-617-699-4826 -> 6176994826
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: 1-617-699-4826 -> 617-699-4826
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (978) 635-1891 -> 978-635-1891
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (617) 699-4826 -> 617-699-4826
+2025-06-04 14:51:52,480 - DEBUG - Valid email: aclarinut@gmail.com
+2025-06-04 14:51:52,480 - DEBUG - Valid email: aclarinut@gmail.com
+2025-06-04 14:51:52,480 - DEBUG - Removed 1- prefix: 1-781-249-6509 -> 7812496509
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: 1-781-249-6509 -> 781-249-6509
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (781) 249-6509 -> 781-249-6509
+2025-06-04 14:51:52,480 - DEBUG - Cleaned phone: (781) 249-6509 -> 781-249-6509
+2025-06-04 14:51:52,480 - DEBUG - Valid email: vshukla@hbs.edu
+2025-06-04 14:51:52,480 - DEBUG - Valid email: vshukla@hbs.edu
+2025-06-04 14:51:52,480 - INFO - Found 8 troop members who are also merit badge counselors
+2025-06-04 14:51:52,480 - INFO - === STARTING find_non_counselor_leaders() ===
+2025-06-04 14:51:52,480 - INFO - TOTAL ADULT ENTRIES FROM ROSTERS: 106
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Sachi Amatya from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Nitin Arora from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Alison Barker from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Georgia Blunt from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Timothy Bradbury from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Jonathan Campbell from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Victoria Campbell from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Brett deBlonk from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Catherine Duffy-Reichert from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Charlotte Duhamel from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Kaitleen Duhamel from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Robert Finley from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: David Fitzgerald from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Christa Frey from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Elizabeth Fuller from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: William Garnett from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Leah Greenberg from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Sean Guarino from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Catherine Hatfield from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Andrew Heiniluoma from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Maria Heiniluoma from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Stephen Hoff from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Gie Lee from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Mark Matson from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Jeffrey Maxwell from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Carrie McMillen from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Christopher Obrien from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Saravanan Parthasarathy from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Herbert Philpott from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Hilary Reid from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Mary Curran Schiefelbein from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Michelle Shoemaker from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Ryan Shoemaker from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Abhinav Shukla from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Vishal Shukla from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Adam Smith from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: John Uhrich from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Timothy Werner from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Ira Wolf from T12
+2025-06-04 14:51:52,480 - DEBUG - Added new adult: Austin Akey from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Sachi Amatya - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Nitin Arora - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Shweta Arora from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Alison Barker - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Vishal Bhatia from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Timothy Bradbury - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Jonathan Campbell - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Victoria Campbell - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Ruchi Chauhan from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Brett deBlonk - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Catherine Duffy-Reichert - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Kaitleen Duhamel - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Megha Durukkar from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Shital Durukkar from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Jenny Fialkoff from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: David Ficociello from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Robert Finley - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Christa Frey - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Elizabeth Fuller - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: David Gacioch from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Katharine Garnett from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged William Garnett - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: David Goetz from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Samantha Guarino from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Sean Guarino - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Catherine Hatfield - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Andrew Heiniluoma - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Maria Heiniluoma - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: James Hodge from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Stephen Hoff - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Malay Kumar from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Smita Kumar from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Gie Lee - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Mark Matson - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Jeffrey Maxwell - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Carrie McMillen - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: William Newsham from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Theodore O'Brien from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Christopher Obrien - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Sundarapandiyan Palanivelu from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Saravanan Parthasarathy - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Benjamin Patterson from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Silvia Piccinotti from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Sarah Pikcilingis from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Lara Pitwood from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Timothy Pitwood from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: James Reichert from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Kristin Sandler from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Mary Curran Schiefelbein - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Michelle Shoemaker - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Ryan Shoemaker - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Abhinav Shukla - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Vishal Shukla - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Sangeetha Subramani from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Rangan Suresh from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Paul Swydan from T32
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Suzanne Tompkins from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged John Uhrich - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Added new adult: Margaret Werner from T32
+2025-06-04 14:51:52,481 - DEBUG - Merged Timothy Werner - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - DEBUG - Merged Ira Wolf - now in ['T12', 'T32']
+2025-06-04 14:51:52,481 - INFO - UNIQUE ADULTS AFTER MERGING: 69
+2025-06-04 14:51:52,481 - INFO - MERIT BADGE COUNSELOR NAMES FOUND: 56
+2025-06-04 14:51:52,481 - INFO - === STARTING PERSON-BY-PERSON ANALYSIS ===
+2025-06-04 14:51:52,481 - DEBUG - CHECKING ('sachi', 'amatya'): NOT COUNSELOR
+2025-06-04 14:51:52,481 - DEBUG - Removed 1- prefix: 1-615-482-1571 -> 6154821571
+2025-06-04 14:51:52,481 - DEBUG - Cleaned phone: 1-615-482-1571 -> 615-482-1571
+2025-06-04 14:51:52,481 - DEBUG - Added ('sachi', 'amatya') to non-counselors list
+2025-06-04 14:51:52,481 - DEBUG - CHECKING ('nitin', 'arora'): NOT COUNSELOR
+2025-06-04 14:51:52,481 - DEBUG - Removed 1- prefix: 1-617-849-2694 -> 6178492694
+2025-06-04 14:51:52,481 - DEBUG - Cleaned phone: 1-617-849-2694 -> 617-849-2694
+2025-06-04 14:51:52,482 - DEBUG - Added ('nitin', 'arora') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('alison', 'barker'): COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - EXCLUDED ('alison', 'barker') - identified as merit badge counselor
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('georgia', 'blunt'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Added ('georgia', 'blunt') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('timothy', 'bradbury'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-978-549-2685 -> 9785492685
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-978-549-2685 -> 978-549-2685
+2025-06-04 14:51:52,482 - DEBUG - Added ('timothy', 'bradbury') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('jonathan', 'campbell'): COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - EXCLUDED ('jonathan', 'campbell') - identified as merit badge counselor
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('victoria', 'campbell'): COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - EXCLUDED ('victoria', 'campbell') - identified as merit badge counselor
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('brett', 'deblonk'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-505-417-4839 -> 5054174839
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-505-417-4839 -> 505-417-4839
+2025-06-04 14:51:52,482 - DEBUG - Added ('brett', 'deblonk') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('catherine', 'duffy-reichert'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-617-312-7015 -> 6173127015
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-617-312-7015 -> 617-312-7015
+2025-06-04 14:51:52,482 - DEBUG - Added ('catherine', 'duffy-reichert') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('charlotte', 'duhamel'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-978-621-6807 -> 9786216807
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-978-621-6807 -> 978-621-6807
+2025-06-04 14:51:52,482 - DEBUG - Added ('charlotte', 'duhamel') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('kaitleen', 'duhamel'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-603-759-2555 -> 6037592555
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-603-759-2555 -> 603-759-2555
+2025-06-04 14:51:52,482 - DEBUG - Added ('kaitleen', 'duhamel') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('robert', 'finley'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 978-264-3907 -> 978-264-3907
+2025-06-04 14:51:52,482 - DEBUG - Added ('robert', 'finley') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('david', 'fitzgerald'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-617-216-4149 -> 6172164149
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-617-216-4149 -> 617-216-4149
+2025-06-04 14:51:52,482 - DEBUG - Added ('david', 'fitzgerald') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('christa', 'frey'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-267-257-6395 -> 2672576395
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-267-257-6395 -> 267-257-6395
+2025-06-04 14:51:52,482 - DEBUG - Added ('christa', 'frey') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('elizabeth', 'fuller'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-617-285-2333 -> 6172852333
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-617-285-2333 -> 617-285-2333
+2025-06-04 14:51:52,482 - DEBUG - Added ('elizabeth', 'fuller') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('william', 'garnett'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-978-263-5065 -> 9782635065
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-978-263-5065 -> 978-263-5065
+2025-06-04 14:51:52,482 - DEBUG - Added ('william', 'garnett') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('leah', 'greenberg'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 978-371-6471 -> 978-371-6471
+2025-06-04 14:51:52,482 - DEBUG - Added ('leah', 'greenberg') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('sean', 'guarino'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-781-696-3320 -> 7816963320
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-781-696-3320 -> 781-696-3320
+2025-06-04 14:51:52,482 - DEBUG - Added ('sean', 'guarino') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('catherine', 'hatfield'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-978-263-0322 -> 9782630322
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-978-263-0322 -> 978-263-0322
+2025-06-04 14:51:52,482 - DEBUG - Added ('catherine', 'hatfield') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('andrew', 'heiniluoma'): COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - EXCLUDED ('andrew', 'heiniluoma') - identified as merit badge counselor
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('maria', 'heiniluoma'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-978-340-8010 -> 9783408010
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-978-340-8010 -> 978-340-8010
+2025-06-04 14:51:52,482 - DEBUG - Added ('maria', 'heiniluoma') to non-counselors list
+2025-06-04 14:51:52,482 - DEBUG - CHECKING ('stephen', 'hoff'): NOT COUNSELOR
+2025-06-04 14:51:52,482 - DEBUG - Removed 1- prefix: 1-978-452-6395 -> 9784526395
+2025-06-04 14:51:52,482 - DEBUG - Cleaned phone: 1-978-452-6395 -> 978-452-6395
+2025-06-04 14:51:52,482 - DEBUG - Added ('stephen', 'hoff') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('gie', 'lee'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-978-844-7270 -> 9788447270
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-978-844-7270 -> 978-844-7270
+2025-06-04 14:51:52,483 - DEBUG - Added ('gie', 'lee') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('mark', 'matson'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-978-635-9873 -> 9786359873
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-978-635-9873 -> 978-635-9873
+2025-06-04 14:51:52,483 - DEBUG - Added ('mark', 'matson') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('jeffrey', 'maxwell'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-617-839-7082 -> 6178397082
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-617-839-7082 -> 617-839-7082
+2025-06-04 14:51:52,483 - DEBUG - Added ('jeffrey', 'maxwell') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('carrie', 'mcmillen'): COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - EXCLUDED ('carrie', 'mcmillen') - identified as merit badge counselor
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('christopher', 'obrien'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 978-274-2108 -> 978-274-2108
+2025-06-04 14:51:52,483 - DEBUG - Added ('christopher', 'obrien') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('saravanan', 'parthasarathy'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-317-565-9047 -> 3175659047
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-317-565-9047 -> 317-565-9047
+2025-06-04 14:51:52,483 - DEBUG - Added ('saravanan', 'parthasarathy') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('herbert', 'philpott'): COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - EXCLUDED ('herbert', 'philpott') - identified as merit badge counselor
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('hilary', 'reid'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-614-306-9091 -> 6143069091
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-614-306-9091 -> 614-306-9091
+2025-06-04 14:51:52,483 - DEBUG - Added ('hilary', 'reid') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('mary curran', 'schiefelbein'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-978-460-5430 -> 9784605430
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-978-460-5430 -> 978-460-5430
+2025-06-04 14:51:52,483 - DEBUG - Added ('mary curran', 'schiefelbein') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('michelle', 'shoemaker'): COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - EXCLUDED ('michelle', 'shoemaker') - identified as merit badge counselor
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('ryan', 'shoemaker'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-978-621-0290 -> 9786210290
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-978-621-0290 -> 978-621-0290
+2025-06-04 14:51:52,483 - DEBUG - Added ('ryan', 'shoemaker') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('abhinav', 'shukla'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 9193217070 -> 919-321-7070
+2025-06-04 14:51:52,483 - DEBUG - Added ('abhinav', 'shukla') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('vishal', 'shukla'): COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - EXCLUDED ('vishal', 'shukla') - identified as merit badge counselor
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('adam', 'smith'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-617-686-6914 -> 6176866914
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-617-686-6914 -> 617-686-6914
+2025-06-04 14:51:52,483 - DEBUG - Added ('adam', 'smith') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('john', 'uhrich'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-978-263-7559 -> 9782637559
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-978-263-7559 -> 978-263-7559
+2025-06-04 14:51:52,483 - DEBUG - Added ('john', 'uhrich') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('timothy', 'werner'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-617-620-7707 -> 6176207707
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-617-620-7707 -> 617-620-7707
+2025-06-04 14:51:52,483 - DEBUG - Added ('timothy', 'werner') to non-counselors list
+2025-06-04 14:51:52,483 - DEBUG - CHECKING ('ira', 'wolf'): NOT COUNSELOR
+2025-06-04 14:51:52,483 - DEBUG - Removed 1- prefix: 1-781-718-8429 -> 7817188429
+2025-06-04 14:51:52,483 - DEBUG - Cleaned phone: 1-781-718-8429 -> 781-718-8429
+2025-06-04 14:51:52,483 - DEBUG - Added ('ira', 'wolf') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('austin', 'akey'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-518-588-1660 -> 5185881660
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-518-588-1660 -> 518-588-1660
+2025-06-04 14:51:52,484 - DEBUG - Added ('austin', 'akey') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('shweta', 'arora'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-781-888-8450 -> 7818888450
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-781-888-8450 -> 781-888-8450
+2025-06-04 14:51:52,484 - DEBUG - Added ('shweta', 'arora') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('vishal', 'bhatia'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-617-548-7165 -> 6175487165
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-617-548-7165 -> 617-548-7165
+2025-06-04 14:51:52,484 - DEBUG - Added ('vishal', 'bhatia') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('ruchi', 'chauhan'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-617-686-9783 -> 6176869783
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-617-686-9783 -> 617-686-9783
+2025-06-04 14:51:52,484 - DEBUG - Added ('ruchi', 'chauhan') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('megha', 'durukkar'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-781-690-9503 -> 7816909503
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-781-690-9503 -> 781-690-9503
+2025-06-04 14:51:52,484 - DEBUG - Added ('megha', 'durukkar') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('shital', 'durukkar'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-978-798-4259 -> 9787984259
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-978-798-4259 -> 978-798-4259
+2025-06-04 14:51:52,484 - DEBUG - Added ('shital', 'durukkar') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('jenny', 'fialkoff'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-978-846-6580 -> 9788466580
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-978-846-6580 -> 978-846-6580
+2025-06-04 14:51:52,484 - DEBUG - Added ('jenny', 'fialkoff') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('david', 'ficociello'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-617-216-2495 -> 6172162495
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-617-216-2495 -> 617-216-2495
+2025-06-04 14:51:52,484 - DEBUG - Added ('david', 'ficociello') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('david', 'gacioch'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-607-222-3061 -> 6072223061
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-607-222-3061 -> 607-222-3061
+2025-06-04 14:51:52,484 - DEBUG - Added ('david', 'gacioch') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('katharine', 'garnett'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-978-263-5065 -> 9782635065
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-978-263-5065 -> 978-263-5065
+2025-06-04 14:51:52,484 - DEBUG - Added ('katharine', 'garnett') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('david', 'goetz'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-415-269-9625 -> 4152699625
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-415-269-9625 -> 415-269-9625
+2025-06-04 14:51:52,484 - DEBUG - Added ('david', 'goetz') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('samantha', 'guarino'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-781-808-6881 -> 7818086881
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-781-808-6881 -> 781-808-6881
+2025-06-04 14:51:52,484 - DEBUG - Added ('samantha', 'guarino') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('james', 'hodge'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-805-636-5729 -> 8056365729
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-805-636-5729 -> 805-636-5729
+2025-06-04 14:51:52,484 - DEBUG - Added ('james', 'hodge') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('malay', 'kumar'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-781-330-9647 -> 7813309647
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-781-330-9647 -> 781-330-9647
+2025-06-04 14:51:52,484 - DEBUG - Added ('malay', 'kumar') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('smita', 'kumar'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-978-393-6079 -> 9783936079
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-978-393-6079 -> 978-393-6079
+2025-06-04 14:51:52,484 - DEBUG - Added ('smita', 'kumar') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('william', 'newsham'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-508-783-9432 -> 5087839432
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-508-783-9432 -> 508-783-9432
+2025-06-04 14:51:52,484 - DEBUG - Added ('william', 'newsham') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('theodore', "o'brien"): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Added ('theodore', "o'brien") to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('sundarapandiyan', 'palanivelu'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-978-905-1304 -> 9789051304
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-978-905-1304 -> 978-905-1304
+2025-06-04 14:51:52,484 - DEBUG - Added ('sundarapandiyan', 'palanivelu') to non-counselors list
+2025-06-04 14:51:52,484 - DEBUG - CHECKING ('benjamin', 'patterson'): NOT COUNSELOR
+2025-06-04 14:51:52,484 - DEBUG - Removed 1- prefix: 1-617-308-0594 -> 6173080594
+2025-06-04 14:51:52,484 - DEBUG - Cleaned phone: 1-617-308-0594 -> 617-308-0594
+2025-06-04 14:51:52,485 - DEBUG - Added ('benjamin', 'patterson') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('silvia', 'piccinotti'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-609-304-2373 -> 6093042373
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-609-304-2373 -> 609-304-2373
+2025-06-04 14:51:52,485 - DEBUG - Added ('silvia', 'piccinotti') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('sarah', 'pikcilingis'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-617-875-7576 -> 6178757576
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-617-875-7576 -> 617-875-7576
+2025-06-04 14:51:52,485 - DEBUG - Added ('sarah', 'pikcilingis') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('lara', 'pitwood'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-408-513-4543 -> 4085134543
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-408-513-4543 -> 408-513-4543
+2025-06-04 14:51:52,485 - DEBUG - Added ('lara', 'pitwood') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('timothy', 'pitwood'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-408-679-4089 -> 4086794089
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-408-679-4089 -> 408-679-4089
+2025-06-04 14:51:52,485 - DEBUG - Added ('timothy', 'pitwood') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('james', 'reichert'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-978-502-5150 -> 9785025150
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-978-502-5150 -> 978-502-5150
+2025-06-04 14:51:52,485 - DEBUG - Added ('james', 'reichert') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('kristin', 'sandler'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-617-905-5678 -> 6179055678
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-617-905-5678 -> 617-905-5678
+2025-06-04 14:51:52,485 - DEBUG - Added ('kristin', 'sandler') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('sangeetha', 'subramani'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 3179415301 -> 317-941-5301
+2025-06-04 14:51:52,485 - DEBUG - Added ('sangeetha', 'subramani') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('rangan', 'suresh'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-978-256-2850 -> 9782562850
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-978-256-2850 -> 978-256-2850
+2025-06-04 14:51:52,485 - DEBUG - Added ('rangan', 'suresh') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('paul', 'swydan'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-720-231-7072 -> 7202317072
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-720-231-7072 -> 720-231-7072
+2025-06-04 14:51:52,485 - DEBUG - Added ('paul', 'swydan') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('suzanne', 'tompkins'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-415-412-9299 -> 4154129299
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-415-412-9299 -> 415-412-9299
+2025-06-04 14:51:52,485 - DEBUG - Added ('suzanne', 'tompkins') to non-counselors list
+2025-06-04 14:51:52,485 - DEBUG - CHECKING ('margaret', 'werner'): NOT COUNSELOR
+2025-06-04 14:51:52,485 - DEBUG - Removed 1- prefix: 1-774-364-0639 -> 7743640639
+2025-06-04 14:51:52,485 - DEBUG - Cleaned phone: 1-774-364-0639 -> 774-364-0639
+2025-06-04 14:51:52,485 - DEBUG - Added ('margaret', 'werner') to non-counselors list
+2025-06-04 14:51:52,485 - INFO - ADULTS EXCLUDED AS COUNSELORS: 8
+2025-06-04 14:51:52,485 - INFO - FINAL NON-COUNSELOR LEADERS: 61
+2025-06-04 14:51:52,485 - INFO - === FINISHED find_non_counselor_leaders() ===
+2025-06-04 14:51:52,485 - INFO - Coverage report: 12 Eagle badges with counselors, 6 Eagle badges without counselors
+2025-06-04 14:51:52,485 - INFO - Step 5: Generating reports...
+2025-06-04 14:51:52,486 - INFO - Saved T12/T32 Merit Badge Counselors to MBC_Reports_2025-06-04_14-51/html/troop_counselors.html
+2025-06-04 14:51:52,486 - INFO - Saved T12/T32 Leaders not Merit Badge Counselors to MBC_Reports_2025-06-04_14-51/html/non_counselors.html
+2025-06-04 14:51:52,486 - INFO - Saved T12/T32 Merit Badge Counselor Coverage to MBC_Reports_2025-06-04_14-51/html/coverage_report.html
+2025-06-04 14:51:52,486 - INFO - Saved summary report to MBC_Reports_2025-06-04_14-51/summary_report.json
+2025-06-04 14:51:52,486 - INFO - Processing complete! Reports saved to: MBC_Reports_2025-06-04_14-51

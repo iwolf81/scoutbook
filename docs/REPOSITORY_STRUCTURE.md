@@ -57,7 +57,8 @@ legacy/
 ├── prototypes/            # Early prototypes and proof-of-concepts
 ├── specifications/        # Original requirements and iterations
 ├── original_code/         # Previous versions (mbc_tool.py, etc.)
-└── sample_outputs/        # Historical outputs for comparison
+├── input_data/            # Source merit badge counselors and troop rosters
+└── test_outputs/          # Historical outputs for comparison
 ```
 
 ### `/scripts/` - Automation and Utilities
