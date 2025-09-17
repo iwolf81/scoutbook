@@ -1,0 +1,8 @@
+# Names to exclude from all reports
+# One name per line, case-insensitive matching
+# Lines starting with # are comments
+
+Herbert Philpott
+Alison Barker
+Jon Campbell
+Maria Heiniluoma

@@ -1,49 +1,122 @@
-# ScoutBook AI-Assisted Integration System
+# ScoutBook Multi-Application Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 
-## Project Overview
+## Overview
 
-Enterprise-grade Python application demonstrating AI-assisted development practices for Scouting America data integration and automated reporting.
+Multi-application platform for ScoutBook data processing, automation, and reporting. Each application focuses on a specific aspect of Scouting data management while sharing common components for efficiency and consistency.
 
-### Initial Effort
-- The initial effort entailed iteratively refining an expansive specification with Claude Sonnet 4 to generate the desired reporting.
-- A simple but effective CLI interface was implemented.
-- Multiple file input formats were experimented with.
-- Claude generated all of the code.
-- Interactive debugging sessions with Claude occurred to successfully resolve all issues and conclude this effort.
+## Applications
 
-### Integration of GitHub, VS Code, and Claude Code into Project
-- The next step was to integrate Claude Code 4 into VS Code and create a ScoutBook repository in GitHub.
-- Claude Sonnet 4 guided this integration effort.
-- The goals of the project were expanded using Claude Sonnet as a development partner. It helped refine details in specifications and recommended repository file hierarchy.
-- The ScoutBook repository is located at https://github.com/iwolf81/scoutbook/tree/main .
-- The specifications from the initial effort are located in https://github.com/iwolf81/scoutbook/tree/main/legacy/specifications .
-- The reports generated from the initial effort are located in https://github.com/iwolf81/scoutbook/tree/main/legacy/test_outputs/MBC_Reports_2025-06-04_14-51/html .
+### Merit Badge Counselor (MBC) Pipeline
+**Location**: `apps/mbc/`
 
-### Refinement of Interactions with Claude
-- As this project progressed, I found Claude's recommended goals, specifications, GitHub file hierarchy, and interactive responses to be over reaching and overly verbose to the point where they became a hindrance to good progress.
-- Additionally, with each new context, I had to 're-initialize' Claude with my background and software development philosophies.
-- With Claude's guidance, I created an ai-context repository to contain all relevant information about my background, philosophies, and desired interaction style with AIs.
-- Claude is directed to process the markdown files located in https://github.com/iwolf81/ai-context at the start of each new context.
+Automated pipeline to scrape Merit Badge Counselor data from ScoutBook, process troop rosters, and generate comprehensive reports.
 
-### Next Steps
-- Re-generate project goals, specification, and GitHub file hierarchy with new context using ai-context markdown files.
-- Carefully scrape data from ScoutBook databases instead of manually downloading reports for processing.
-- Create a GUI interface that supports use by leaders of multiple units.
-- Integrate an automated unit testing framework.
-- Continue to log progress in this README.md file.
+**Features:**
+- Automated ScoutBook scraping with Playwright
+- Roster processing and data joining
+- HTML/PDF report generation with Eagle badge highlighting  
+- Exclusion list support
+- Multi-troop affiliation tracking
 
-## 🤝 Contributing
+**Quick Start:**
+```bash
+cd apps/mbc
+python src/merit_badge_counselor_scraper.py  # Scrape MBC data
+python src/roster_processor.py               # Process rosters
+python src/report_generator.py               # Generate reports
+```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines and AI-assisted workflow.
+**Documentation**: [apps/mbc/README.md](apps/mbc/README.md)
 
-## 📄 License
+## Repository Structure
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+```
+scoutbook/
+├── apps/                              # ScoutBook applications
+│   └── mbc/                           # Merit Badge Counselor pipeline
+│       ├── src/                       # Application code
+│       ├── data/                      # Application data
+│       ├── docs/                      # Application documentation
+│       └── README.md                  # Application overview
+├── shared/                            # Reusable components
+│   ├── scrapers/                      # Common scraping utilities
+│   ├── processors/                    # Data processing functions
+│   ├── reports/                       # Report generation utilities
+│   └── utils/                         # General helper functions
+├── legacy/                            # Historical reference implementations
+├── requirements.txt                   # Python dependencies
+└── README.md                          # This file
+```
+
+## Shared Components
+
+### Scrapers (`shared/scrapers/`)
+Reusable ScoutBook scraping utilities including authentication, pagination, HTML archiving, and common scraping patterns.
+
+### Processors (`shared/processors/`)  
+Common data processing functions for cleaning, validation, name matching, exclusion filtering, and data transformation.
+
+### Reports (`shared/reports/`)
+Shared report generation utilities including templates, PDF generation, HTML formatting, and consistent styling.
+
+### Utils (`shared/utils/`)
+General helper functions for authentication, file handling, timestamp management, and other common tasks.
+
+## Development Guidelines
+
+### Adding New Applications
+
+1. **Create Application Directory:**
+```bash
+mkdir -p apps/{app_name}/{src,data,docs}
+mkdir -p apps/{app_name}/data/{input,scraped,processed,reports}
+```
+
+2. **Follow Standard Structure:**
+- `src/` - Application-specific code
+- `data/input/` - Input files (including exclusion lists)
+- `data/scraped/` - Raw scraped data
+- `data/processed/` - Cleaned/transformed data  
+- `data/reports/` - Generated outputs
+- `docs/` - Application documentation
+
+3. **Leverage Shared Components:**
+- Import utilities from `shared/` packages
+- Follow established patterns from existing applications
+- Contribute reusable code back to shared components
+
+4. **Documentation Requirements:**
+- `README.md` - Application overview and usage
+- `docs/EXECUTION_GUIDE.md` - Step-by-step instructions
+- `docs/REQUIREMENTS.md` - Technical specifications
+
+## Prerequisites
+
+```bash
+pip install -r requirements.txt
+```
+
+## Current Applications Status
+
+| Application | Status | Description |
+|-------------|--------|-------------|
+| **MBC Pipeline** | ✅ **Production** | Merit Badge Counselor data processing and reporting |
+| Training Compliance | 📋 *Planned* | YPT and training requirement tracking |
+| Advancement Analytics | 📋 *Planned* | Eagle Scout and merit badge progression analysis |
+| Unit Membership | 📋 *Planned* | Charter and membership monitoring |
+| Council Analytics | 📋 *Planned* | District-wide reporting and metrics |
+
+## Legacy Reference
+
+The `legacy/` directory contains historical implementations and test outputs from the original development process. These serve as reference materials and examples of expected output formats.
+
+## License
+
+This project is licensed under the MIT License.
 
 ---
 
-*Developed with AI assistance using Claude and modern software engineering practices.*
-
+*Scalable platform for ScoutBook data automation and reporting*

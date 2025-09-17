@@ -3,3 +3,10 @@ venv/
 *.pyc
 __pycache__/
 project-setup.sh
+
+# Personal Information Files - MBC Pipeline
+# Exclude all files containing personal/contact information
+apps/mbc/data/input/rosters/
+apps/mbc/data/scraped/
+apps/mbc/data/processed/
+apps/mbc/data/reports/
