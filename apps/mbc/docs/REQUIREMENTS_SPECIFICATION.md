@@ -109,7 +109,7 @@ Extract the following fields for each counselor:
   2. Eagle Merit Badges without T32/T7012 Counselors  
   3. Non-Eagle Merit Badges with T32/T7012 Counselors
   4. Non-Eagle Merit Badges without T32/T7012 Counselors
-- **Merit Badge Universe**: Complete list of 132 current merit badges
+- **Merit Badge Universe**: Complete list of 139 current merit badges
 - **Counselor Listing**: Show counselors with troop numbers for each badge
 
 ### 3. File Naming Convention
@@ -188,7 +188,7 @@ ScoutBook Website → HTML Pages → JSON Data → Roster Join → Filtered Repo
 ### 2. Performance Metrics ✅ ACHIEVED
 - **Total Adults Processed**: 61 from both rosters
 - **MBC Matches Found**: 8 counselors (13.1% of adults)
-- **Merit Badge Coverage**: 132 badges analyzed
+- **Merit Badge Coverage**: 139 badges analyzed
 - **Execution Time**: 15-30 minutes including manual login
 - **File Output**: 6 files generated per execution (3 HTML + 3 PDF)
 - **Data Processing**: JSON files with cleaned and joined data

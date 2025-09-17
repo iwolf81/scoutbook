@@ -25,7 +25,7 @@ Complete automated pipeline that scrapes Merit Badge Counselor data from ScoutBo
 **Current Results:**
 - **61 adults** processed from T32 and T7012 rosters
 - **8 troop counselors** identified (13.1% of adults)
-- **132 merit badges** analyzed for coverage
+- **139 merit badges** analyzed for coverage
 - **6 reports** generated per run (HTML + PDF)
 
 **Quick Start:**
@@ -110,7 +110,7 @@ pip install -r requirements.txt
 
 | Application | Status | Key Metrics | Description |
 |-------------|--------|-------------|-------------|
-| **MBC Pipeline** | ✅ **Production** | 61 adults, 8 MBCs, 132 badges | Complete automation of Merit Badge Counselor reporting |
+| **MBC Pipeline** | ✅ **Production** | 61 adults, 8 MBCs, 139 badges | Complete automation of Merit Badge Counselor reporting |
 | Training Compliance | 📋 *Planned* | - | YPT and training requirement tracking |
 | Advancement Analytics | 📋 *Planned* | - | Eagle Scout and merit badge progression analysis |
 | Unit Membership | 📋 *Planned* | - | Charter and membership monitoring |
@@ -121,7 +121,7 @@ pip install -r requirements.txt
 ### MBC Pipeline (Production)
 - **Total Adults Processed**: 61 from T32 and T7012 rosters
 - **Troop Members who are MBCs**: 8 (13.1% of adults)
-- **Merit Badge Coverage Analysis**: 132 total badges categorized
+- **Merit Badge Coverage Analysis**: 139 total badges categorized
 - **Multi-Troop Support**: Proper tracking of adults in multiple units
 - **Report Generation**: 3 reports × 2 formats = 6 files per execution
 - **Data Protection**: Personal information automatically excluded from repository

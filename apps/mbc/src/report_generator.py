@@ -108,35 +108,30 @@ class ReportGenerator:
         return filtered
     
     def get_all_merit_badges(self) -> List[str]:
-        """Return comprehensive list of all current merit badges"""
-        return [
-            'Animal Science', 'Animation', 'Archaeology', 'Archery', 'Architecture', 'Art', 
-            'Astronomy', 'Athletics', 'Automotive', 'Aviation', 'Backpacking', 'Basketry', 
-            'Bird Study', 'Bugling', 'Camping', 'Canoeing', 'Chemistry', 'Chess', 
-            'Citizenship in the Community', 'Citizenship in the Nation', 'Citizenship in Society', 
-            'Climbing', 'Coin Collecting', 'Collections', 'Communication', 'Composite Materials', 
-            'Cooking', 'Crime Prevention', 'Cycling', 'Dentistry', 'Digital Technology', 
-            'Disabilities Awareness', 'Dog Care', 'Drafting', 'Electricity', 'Electronics', 
-            'Emergency Preparedness', 'Energy', 'Engineering', 'Entrepreneurship', 
-            'Environmental Science', 'Exploration', 'Family Life', 'Farm Mechanics', 
-            'Fingerprinting', 'Fire Safety', 'First Aid', 'Fish and Wildlife Management', 
-            'Fishing', 'Forestry', 'Game Design', 'Gardening', 'Genealogy', 'Geocaching', 
-            'Geology', 'Golf', 'Graphic Arts', 'Hiking', 'Home Repairs', 'Horsemanship', 
-            'Indian Lore', 'Insect Study', 'Inventing', 'Journalism', 'Kayaking', 
-            'Landscape Architecture', 'Law', 'Leatherwork', 'Lifesaving', 'Mammal Study', 
-            'Medicine', 'Metalwork', 'Model Design and Building', 'Motorboating', 'Music', 
-            'Nature', 'Nuclear Science', 'Oceanography', 'Orienteering', 'Painting', 
-            'Personal Fitness', 'Personal Management', 'Pets', 'Photography', 'Pioneering', 
-            'Plant Science', 'Plumbing', 'Pottery', 'Programming', 'Public Health', 
-            'Public Speaking', 'Pulp and Paper', 'Radio', 'Railroading', 'Reading', 
-            'Reptile and Amphibian Study', 'Rifle Shooting', 'Robotics', 'Rowing', 'Safety', 
-            'Salesmanship', 'Scholarship', 'Scouting Heritage', 'Scuba Diving', 'Sculpture', 
-            'Search and Rescue', 'Shotgun Shooting', 'Signs, Signals, and Codes', 'Skating', 
-            'Small-Boat Sailing', 'Snow Sports', 'Soil and Water Conservation', 'Space Exploration', 
-            'Sports', 'Stamp Collecting', 'Sustainability', 'Swimming', 'Textile', 'Theater', 
-            'Traffic Safety', 'Truck Transportation', 'Veterinary Medicine', 'Water Sports', 
-            'Weather', 'Welding', 'Whitewater', 'Wilderness Survival', 'Wood Carving', 'Woodworking'
+        """Return comprehensive list of all current merit badges from official source"""
+        # Try multiple possible locations for the merit badge file
+        possible_paths = [
+            Path("data/input/all_merit_badges.txt"),
+            Path("../data/input/all_merit_badges.txt"),
+            Path("apps/mbc/data/input/all_merit_badges.txt")
         ]
+        
+        mb_file = None
+        for path in possible_paths:
+            if path.exists():
+                mb_file = path
+                break
+        
+        if not mb_file:
+            print(f"⚠️ Merit badge file not found in any of: {[str(p) for p in possible_paths]}")
+            # Fallback to a basic list if file doesn't exist
+            return ['Camping', 'Hiking', 'First Aid']
+        
+        with open(mb_file, 'r') as f:
+            badges = [line.strip() for line in f if line.strip()]
+        
+        print(f"📋 Loaded {len(badges)} merit badges from {mb_file}")
+        return badges
     
     def get_positions_for_leader(self, leader: Dict) -> str:
         """Extract positions from roster data for a leader across all troops"""
@@ -661,7 +656,7 @@ def main():
     
     print(f"\n🎉 Reports generated successfully!")
     print(f"📁 Location: {output_dir}")
-    print(f"🌐 Open troop_counselors.html to view the main report")
+    print(f"🌐 Open summary_report.json to summary of data analysis")
 
 if __name__ == "__main__":
     main()
