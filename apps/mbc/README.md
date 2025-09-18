@@ -27,6 +27,11 @@ python src/roster_processor.py
 python src/report_generator.py
 ```
 
+4. **Prepare for Google Drive** (Optional):
+```bash
+python src/prepare_gdrive_files.py
+```
+
 ## Directory Structure
 
 ```
@@ -34,14 +39,17 @@ apps/mbc/
 ├── src/                               # Core pipeline scripts
 │   ├── merit_badge_counselor_scraper.py
 │   ├── roster_processor.py
-│   └── report_generator.py
+│   ├── report_generator.py
+│   ├── gdrive_sync.py                 # Google Drive automated sync
+│   └── prepare_gdrive_files.py        # Manual Google Drive prep
 ├── data/                              # Application data
 │   ├── input/                         # Input files
 │   │   ├── rosters/                   # Troop roster HTML files
 │   │   └── exclusion_list.txt         # Names to exclude from reports
 │   ├── scraped/                       # Raw scraped HTML data
 │   ├── processed/                     # Cleaned JSON data
-│   └── reports/                       # Generated HTML/PDF reports
+│   ├── reports/                       # Generated HTML/PDF reports
+│   └── gdrive/                        # Ready-to-upload files (manual)
 └── docs/                              # Documentation
     ├── PIPELINE_EXECUTION_GUIDE.md    # Detailed execution instructions
     └── REQUIREMENTS_SPECIFICATION.md  # Technical requirements

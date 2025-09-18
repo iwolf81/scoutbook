@@ -241,3 +241,101 @@ python src/report_generator.py
 **Manual Intervention Required**: Only during Step 1 for ScoutBook login
 
 **Final Output**: Complete set of HTML and PDF reports ready for distribution
+
+## Optional Step 4: Google Drive Sync (Production Deployment)
+
+⚠️ **Note**: This step is only for production deployment to make reports available via unit website links.
+
+### Prerequisites for Google Drive Sync
+- Google Cloud Project with Drive API enabled
+- Service account credentials OR OAuth credentials
+- Credentials file saved as `credentials.json` in apps/mbc/ directory
+
+### Installation of Google Drive Dependencies
+```bash
+pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+```
+
+### Execution
+```bash
+python src/gdrive_sync.py
+```
+
+**What it does:**
+- Finds the latest report directory (most recent timestamp)
+- Uploads only PDF reports to Google Drive with standardized filenames
+- Overwrites existing files for consistent unit website linking
+
+**File Mapping:**
+```
+Local (timestamped)                                    → Google Drive (standardized)
+T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.pdf   → T32_T7012_MBC_Troop_Counselors.pdf
+T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.pdf     → T32_T7012_MBC_Non_Counselors.pdf
+T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.pdf    → T32_T7012_MBC_Coverage_Report.pdf
+```
+
+**Target Location**: [Unit MBC Reports Folder](https://drive.google.com/drive/folders/1bC3_71dlmp0CvoDFisRpb-Y3WoKHvpiD)
+
+### Authentication Setup
+
+#### Option 1: Service Account (Recommended for automation)
+1. Create service account in Google Cloud Console
+2. Download service account key as `credentials.json`
+3. Share Google Drive folder with service account email
+
+#### Option 2: OAuth (User authentication)
+1. Create OAuth 2.0 credentials in Google Cloud Console
+2. Download as `credentials.json`
+3. First run will open browser for authorization
+4. Token saved as `token.json` for future runs
+
+### Safety Features
+- **Manual execution only** - prevents accidental uploads during development
+- **Separate script** - isolated from main pipeline to avoid interference
+- **Error handling** - graceful failure if Google Drive unavailable
+- **File verification** - validates files before upload
+
+### Complete Production Workflow
+```bash
+# Run main pipeline
+python src/merit_badge_counselor_scraper.py
+python src/roster_processor.py
+python src/report_generator.py
+
+# Verify reports are correct, then deploy to Google Drive
+python src/gdrive_sync.py
+```
+
+**Execution Time**: < 1 minute (for 3 PDF files)
+
+**Manual Verification**: Always review generated reports before running Google Drive sync
+
+### Alternative: Manual File Preparation (No Authentication Required)
+
+For users who prefer manual upload control or cannot set up OAuth authentication:
+
+```bash
+python src/prepare_gdrive_files.py
+```
+
+**What it does:**
+- Finds the latest report directory automatically
+- Copies PDF files to `data/gdrive/` with standardized filenames
+- Removes timestamps for consistent unit website linking
+- Clears old files each run to avoid confusion
+
+**Manual Upload Process:**
+1. Run the preparation script
+2. Open `data/gdrive/` folder
+3. Select all 3 PDF files
+4. Drag and drop to [Google Drive folder](https://drive.google.com/drive/folders/1bC3_71dlmp0CvoDFisRpb-Y3WoKHvpiD)
+
+**File Mapping (Manual Process):**
+```
+Local (timestamped)                                    → data/gdrive/ (standardized)
+T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.pdf   → T32_T7012_MBC_Troop_Counselors.pdf
+T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.pdf     → T32_T7012_MBC_Non_Counselors.pdf
+T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.pdf    → T32_T7012_MBC_Coverage_Report.pdf
+```
+
+**Execution Time**: < 5 seconds (file preparation only)

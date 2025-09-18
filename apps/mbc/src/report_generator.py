@@ -283,10 +283,6 @@ class ReportGenerator:
         
         troop_filename_prefix = "_".join(self.troop_abbrevs)
         html += f"""
-    <div class="controls">
-        <a href="{troop_filename_prefix}_MBC_Non_Counselors_{self.timestamp}.html" class="btn">Non-Counselor Leaders</a>
-        <a href="{troop_filename_prefix}_MBC_Coverage_Report_{self.timestamp}.html" class="btn">Coverage Report</a>
-    </div>
     
     <div class="content">
         <div class="section">
@@ -378,10 +374,6 @@ class ReportGenerator:
         
         troop_filename_prefix = "_".join(self.troop_abbrevs)
         html += f"""
-    <div class="controls">
-        <a href="{troop_filename_prefix}_MBC_Troop_Counselors_{self.timestamp}.html" class="btn">Troop Counselors</a>
-        <a href="{troop_filename_prefix}_MBC_Coverage_Report_{self.timestamp}.html" class="btn">Coverage Report</a>
-    </div>
     
     <div class="content">
         <div class="section">
@@ -479,10 +471,6 @@ class ReportGenerator:
         troop_filename_prefix = "_".join(self.troop_abbrevs)
         
         html += f"""
-    <div class="controls">
-        <a href="{troop_filename_prefix}_MBC_Troop_Counselors_{self.timestamp}.html" class="btn">Troop Counselors</a>
-        <a href="{troop_filename_prefix}_MBC_Non_Counselors_{self.timestamp}.html" class="btn">Non-Counselor Leaders</a>
-    </div>
     
     <div class="content">
         <h2>{troop_prefix} Merit Badge Coverage Report</h2>

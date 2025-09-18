@@ -34,6 +34,7 @@ cd apps/mbc
 python src/merit_badge_counselor_scraper.py  # Scrape MBC data (15-30 min)
 python src/roster_processor.py               # Process rosters (< 1 min)
 python src/report_generator.py               # Generate reports (< 1 min)
+python src/prepare_gdrive_files.py           # Prepare for Google Drive (< 5 sec)
 ```
 
 **Documentation**: [Complete Guide](apps/mbc/README.md) | [Execution Steps](apps/mbc/docs/PIPELINE_EXECUTION_GUIDE.md)
