@@ -25,6 +25,11 @@ The pipeline consists of three main components that must be executed in sequence
 | Troop Rosters | `data/input/rosters/T32 Roster 16Sep2025.html` | T32 adult member roster |
 | | `data/input/rosters/T7012 Roster 16Sep2025.html` | T7012 adult member roster |
 
+**Roster Download Instructions**:
+1. Navigate to https://advancements.scouting.org/roster
+2. Select "Quick Report" -> "Unit Roster" for each unit
+3. Save page via browser as "text files" (current requirement for roster processor)
+
 ### Optional Input Files
 | File | Default Location | Description |
 |------|------------------|-------------|

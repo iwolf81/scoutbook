@@ -4,9 +4,38 @@ venv/
 __pycache__/
 project-setup.sh
 
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 # Personal Information Files - MBC Pipeline
 # Exclude all files containing personal/contact information
 apps/mbc/data/input/rosters/
 apps/mbc/data/scraped/
 apps/mbc/data/processed/
 apps/mbc/data/reports/
+apps/mbc/data/feedback/
+apps/mbc/data/gdrive/
+
+# Google Drive API credentials
+apps/mbc/credentials.json
+apps/mbc/token.json
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+apps/mbc/t1
+apps/mbc/t2
+apps/mbc/t3
+apps/mbc/t4
+apps/mbc/t5
