@@ -9,7 +9,7 @@ Usage:
     python gdrive_sync.py
 
 Requirements:
-    - Google Drive API credentials (service account or OAuth)
+    - Google Drive API credentials (service account)
     - Latest MBC reports generated in data/reports/
 """
 
@@ -25,12 +25,9 @@ try:
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
     from google.oauth2.service_account import Credentials
-    from google.auth.transport.requests import Request
-    from google.oauth2.credentials import Credentials as OAuthCredentials
-    from google_auth_oauthlib.flow import InstalledAppFlow
 except ImportError:
     print("❌ Google Drive API libraries not installed.")
-    print("   Run: pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2")
+    print("   Run: pip install google-api-python-client google-auth")
     sys.exit(1)
 
 
@@ -61,12 +58,10 @@ class GDriveSync:
 
     def authenticate(self) -> None:
         """
-        Authenticate with Google Drive API
-
-        Tries service account first, falls back to OAuth flow
+        Authenticate with Google Drive API using service account
 
         Inputs:
-        - None (looks for credentials.json or token.json files)
+        - None (looks for credentials.json file)
 
         Outputs:
         - Sets self.service to authenticated Drive API service
@@ -76,7 +71,7 @@ class GDriveSync:
         """
         creds = None
 
-        # Try service account authentication first
+        # Service account authentication
         service_account_file = 'credentials.json'
         if os.path.exists(service_account_file):
             try:
@@ -84,55 +79,14 @@ class GDriveSync:
                     service_account_file, scopes=self.SCOPES)
                 print(f"✅ Using service account authentication: {service_account_file}")
             except Exception as e:
-                print(f"⚠️ Service account auth failed: {e}")
-                creds = None
-
-        # Fall back to OAuth flow
-        if not creds:
-            creds = self._oauth_authentication()
-
-        if not creds:
-            raise Exception("❌ Authentication failed. Please check your credentials.")
+                print(f"❌ Service account auth failed: {e}")
+                raise Exception(f"Authentication failed: {e}")
+        else:
+            raise Exception("❌ credentials.json not found. Please download service account credentials from Google Cloud Console.")
 
         self.service = build('drive', 'v3', credentials=creds)
         print("✅ Google Drive API authenticated successfully")
 
-    def _oauth_authentication(self) -> Optional[OAuthCredentials]:
-        """
-        Handle OAuth authentication flow
-
-        Inputs:
-        - None (looks for token.json and credentials.json files)
-
-        Outputs:
-        - OAuth credentials object or None
-        """
-        creds = None
-
-        # Load existing token
-        if os.path.exists('token.json'):
-            creds = OAuthCredentials.from_authorized_user_file('token.json', self.SCOPES)
-
-        # If no valid credentials, run OAuth flow
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                if not os.path.exists('credentials.json'):
-                    print("❌ No credentials.json found for OAuth authentication")
-                    print("   Download from Google Cloud Console and place in current directory")
-                    return None
-
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    'credentials.json', self.SCOPES)
-                creds = flow.run_local_server(port=0)
-
-            # Save credentials for next run
-            with open('token.json', 'w') as token:
-                token.write(creds.to_json())
-
-        print("✅ Using OAuth authentication")
-        return creds
 
     def find_latest_report_directory(self) -> Optional[Path]:
         """

@@ -1,17 +1,32 @@
-# ScoutBook Merit Badge Counselor Pipeline Execution Guide
+# Merit Badge Counselor Pipeline Execution Guide
 
 ## Overview
-This pipeline extracts Merit Badge Counselor data from ScoutBook, processes troop rosters, joins the data, and generates comprehensive reports in both HTML and PDF formats.
 
-## Pipeline Architecture
-The pipeline consists of three main components that must be executed in sequence:
+This guide covers two ways to execute the Merit Badge Counselor (MBC) pipeline:
+1. **Pipeline Manager** (Recommended) - Automated execution with error handling
+2. **Individual Scripts** - Manual step-by-step execution for debugging
 
-1. **Data Acquisition**: Scrape MBC data from ScoutBook website
-2. **Data Processing**: Extract roster data and join with MBC data  
-3. **Report Generation**: Create HTML and PDF reports with exclusion filtering
+The pipeline extracts MBC data from ScoutBook, processes troop rosters, analyzes Scout merit badge requests, identifies coverage gaps, and generates comprehensive reports including priority-based recruitment recommendations.
+
+## Quick Start (Recommended)
+
+```bash
+# Go to the Merit Badge Counselor app in Scoutbook
+cd apps/mbc
+
+# Full automated pipeline
+python src/generate_mbc_reports.py
+
+# Include Google Drive preparation
+python src/generate_mbc_reports.py --google-drive
+
+# Skip scraping (use existing MBC data)
+python src/generate_mbc_reports.py --skip-scraping
+```
 
 ## Prerequisites
-- Python 3.7+
+
+- Python 3.11+
 - Playwright browser automation library
 - Required roster HTML files in `data/input/rosters/`
 - Internet connection for ScoutBook scraping
@@ -20,10 +35,10 @@ The pipeline consists of three main components that must be executed in sequence
 ## Input Files
 
 ### Required Input Files
-| File | Default Location | Description |
-|------|------------------|-------------|
-| Troop Rosters | `data/input/rosters/T32 Roster 16Sep2025.html` | T32 adult member roster |
-| | `data/input/rosters/T7012 Roster 16Sep2025.html` | T7012 adult member roster |
+| File | Location | Description |
+|------|----------|-------------|
+| Troop Rosters | `data/input/rosters/` | Unit rosters downloaded from ScoutBook |
+| Merit Badge List | `data/input/all_merit_badges.txt` | Official merit badge list |
 
 **Roster Download Instructions**:
 1. Navigate to https://advancements.scouting.org/roster
@@ -31,303 +46,246 @@ The pipeline consists of three main components that must be executed in sequence
 3. Save page via browser as "text files" (current requirement for roster processor)
 
 ### Optional Input Files
-| File | Default Location | Description |
-|------|------------------|-------------|
+| File | Location | Description |
+|------|----------|-------------|
+| Scout Requests | `data/input/*.csv` or `*.xlsx` | Scout merit badge request data (for priority analysis) |
 | Exclusion List | `data/input/exclusion_list.txt` | Names to exclude from all reports |
+| Supplemental MBCs | `data/input/unit_associated_mbcs.txt` | MBC-only registrations associated with units |
+| Configuration | `config.json` | Pipeline configuration (future feature) |
 
-### Configuration Parameters
-| Parameter | Default Value | Description |
-|-----------|---------------|-------------|
-| Search URL | `https://scoutbook.scouting.org/mobile/dashboard/admin/counselorresults.asp?UnitID=82190&MeritBadgeID=&formfname=&formlname=&zip=01720&formCouncilID=181&formDistrictID=430&Proximity=25&Availability=Available` | ScoutBook MBC search query |
-| Proximity | 25 miles | Search radius from zip code 01720 |
-| Browser Mode | Non-headless | Allows manual login without command-line credentials |
+**Supplemental MBC Format**:
+```
+# Unit-Associated MBC Supplemental Input
+# Format: FirstName LastName, UnitID
+John Smith, T32
+Jane Doe, T7012
+Bob Wilson, Troop 32
+```
 
-## Execution Steps
+## Pipeline Manager (Recommended)
+
+### Command Line Interface
+
+```bash
+# Go to the Merit Badge Counselor app in Scoutbook
+cd apps/mbc
+
+# Basic usage
+python src/generate_mbc_reports.py                     # Full pipeline
+python src/generate_mbc_reports.py --google-drive      # Include Google Drive prep
+python src/generate_mbc_reports.py --skip-scraping     # Use existing MBC data
+
+# Stage-specific execution
+python src/generate_mbc_reports.py --stage scraping          # Scrape MBC data only
+python src/generate_mbc_reports.py --stage processing        # Process rosters only
+python src/generate_mbc_reports.py --stage scout_demand      # Process Scout requests only
+python src/generate_mbc_reports.py --stage coverage_analysis # Analyze coverage gaps only
+python src/generate_mbc_reports.py --stage reporting         # Generate reports only
+python src/generate_mbc_reports.py --stage gdrive_prep --google-drive  # Prepare Google Drive files
+```
+
+### Arguments Reference
+
+| Argument | Description | Default |
+|----------|-------------|---------|
+| `--stage` | Pipeline stage to run (`scraping`, `processing`, `scout_demand`, `coverage_analysis`, `reporting`, `gdrive_prep`, `all`) | `all` |
+| `--skip-scraping` | Skip scraping stage and use existing MBC data | `false` |
+| `--google-drive` | Include Google Drive file preparation stage | `false` |
+
+### Pipeline Stages
+
+The pipeline consists of 6 stages that execute in sequence:
+
+**Stage 1: Scraping** (15-30 minutes)
+- Scrapes Merit Badge Counselor data from ScoutBook
+- Requires manual browser login to ScoutBook
+- Creates `data/processed/mbc_counselors.json`
+- Can be skipped with `--skip-scraping` flag
+
+**Stage 2: Processing** (< 1 minute)
+- Auto-detects latest roster files in `data/input/rosters/`
+- Joins roster data with MBC data
+- Processes supplemental MBCs from `unit_associated_mbcs.txt`
+- Creates `data/processed/roster_mbc_join.json`
+
+**Stage 3: Scout Demand Analysis** (< 1 minute)
+- Auto-detects Scout request files (CSV/XLSX) in `data/input/`
+- Parses Scout merit badge requests
+- Classifies Eagle vs. non-Eagle badges
+- Creates `data/processed/scout_demand_analysis_YYYYMMDD_HHMMSS.json`
+
+**Stage 4: Coverage Gap Analysis** (< 1 minute)
+- Auto-detects latest scout demand and MBC coverage data
+- Calculates priority scores and gap levels
+- Identifies Critical/High/Medium priority Merit Badges
+- Creates `data/processed/coverage_priority_analysis_YYYYMMDD_HHMMSS.json`
+
+**Stage 5: Reporting** (< 3 seconds)
+- Generates HTML and PDF reports
+- Creates 4 reports: Troop Counselors, Non-Counselors, Coverage, Priority
+- Applies exclusion list filtering
+- Creates timestamped report directory in `data/reports/`
+
+**Stage 6: Google Drive Prep** (< 1 second, optional)
+- Prepares PDF files for Google Drive upload
+- Only runs when `--google-drive` flag is specified
+- Creates standardized filenames in `data/gdrive/`
+- Copy these files to the "T12+T32 Troop Committee / Merit Badge Resources" folder in Google Drive:
+```bash
+https://drive.google.com/drive/u/0/folders/1bC3_71dlmp0CvoDFisRpb-Y3WoKHvpiD
+```
+
+### Status Tracking
+
+Each pipeline execution creates:
+- **Session ID**: `YYYYMMDD_HHMMSS` timestamp
+- **Log file**: `data/logs/generate_mbc_reports_YYYYMMDD_HHMMSS.log`
+- **Status file**: `data/logs/mbc_pipeline_status_YYYYMMDD_HHMMSS.json`
+
+### Explicit File Passing
+
+The pipeline ensures data consistency by explicitly passing file paths between stages:
+- **Scraping** → **Processing**: `--mbc-data data/processed/mbc_counselors.json`
+- **Processing** → **Reporting**: `--data-file data/processed/roster_mbc_join.json`
+- **Reporting** → **Google Drive**: `--reports-dir` with latest report directory
+
+## Individual Scripts (For Debugging)
 
 ### Step 1: Merit Badge Counselor Scraping
+
 ```bash
-cd /Users/iwolf/Repos/scoutbook/apps/mbc
+cd apps/mbc
+
 python src/merit_badge_counselor_scraper.py
 ```
 
 **What it does:**
-- Opens browser in non-headless mode for manual login
-- Navigates to ScoutBook MBC search results
-- Extracts counselor data from all pages (auto-detects page count)
-- Saves individual HTML pages and consolidated JSON data
+- Authenticates with ScoutBook using browser automation
+- Systematically scrapes Merit Badge Counselor database
+- Handles pagination for complete data coverage
+- Archives raw HTML data for debugging/reprocessing
 
-**User Interaction Required:**
-- Manual login to ScoutBook when browser opens
-- Wait for "Press Enter after you've logged in..." prompt
+**Manual Login Required:** Browser will open for interactive ScoutBook login
 
 **Outputs Created:**
 - `data/scraped/mbc_search_YYYYMMDD_HHMMSS/` (timestamped directory)
-  - `page_N.html` (one file per page, e.g., page_1.html, page_2.html, etc.)
-  - `mbc_counselors_raw.json` (consolidated raw data)
-- `data/processed/mbc_counselors_cleaned.json` (cleaned and processed data)
+- `data/processed/mbc_counselors.json` (cleaned and processed data)
 
-**Data Extracted Per Counselor:**
-- Name (first_name, last_name, alt_first_name if available)
-- Location (town, state, zip)
-- Contact (phone, email)
-- Merit badges certified for
-- YPT (Youth Protection Training) expiration date
+**Command Line Options:**
+```bash
+python src/merit_badge_counselor_scraper.py --help
+python src/merit_badge_counselor_scraper.py --output custom_output.json
+```
 
 ### Step 2: Roster Processing and Data Joining
+
 ```bash
 python src/roster_processor.py
 ```
 
 **What it does:**
-- Extracts adult members from T32 and T7012 roster HTML files
+- **Auto-detects roster files** by scanning `data/input/rosters/` directory
+- **Selects latest rosters** automatically per unit (e.g., Sep 21 > Sep 16)
+- **Supports any Scout units** (not limited to T32/T7012)
+- Extracts adult members from roster HTML files
 - Excludes "Unit Participant" positions (18+ scouts, not adult leaders)
 - Creates unified adult list with troop affiliations
 - Joins roster data with MBC data using name matching logic
+- **Includes supplemental MBCs** from `unit_associated_mbcs.txt` (MBC-only registrations)
 - Handles multi-troop affiliations for adults in both troops
 
 **Name Matching Logic:**
-- **MBC Key**: `((first_name) or (alt_first_name)) + (last_name)`
+- **MBC Keys**: Creates multiple keys per counselor for flexible matching:
+  - Primary: `(alt_first_name + last_name)` (if alt_first_name exists and differs from first_name)
+  - Fallback: `(first_name + last_name)` (always created)
 - **Roster Key**: `(first_name + last_name)` (ignoring middle names/initials)
+- **Matching Process**: Roster key is looked up against all available MBC keys
 
 **Outputs Created:**
-- `data/processed/roster_mbc_join.json` (joined dataset)
+- `data/processed/roster_mbc_join.json` (joined dataset with supplemental MBCs)
 
-**Data Structure:**
-```json
-{
-  "troop_counselors": [...],     // Adults who are MBCs
-  "non_counselor_leaders": [...], // Adults who are not MBCs  
-  "total_adults": 61,
-  "mbc_matches": 8
-}
+**Command Line Options:**
+```bash
+# Basic usage (auto-detects latest rosters)
+python src/roster_processor.py
+
+# Specify units
+python src/roster_processor.py --units T32,T7012
+
+# Custom roster directory
+python src/roster_processor.py --roster-dir /path/to/rosters
+
+# Use specific MBC data file
+python src/roster_processor.py --mbc-data data/processed/mbc_counselors.json
+
+# Use configuration file
+python src/roster_processor.py --config config.json
 ```
 
+**Auto-Detection Behavior:**
+- **File Pattern**: Looks for files matching `{UNIT} Roster {DATE}.html`
+- **Date Parsing**: Supports formats like `16Sep2025`, `2025-09-16`, `20250916`
+- **Latest Selection**: Automatically chooses most recent file per unit
+- **Unit Discovery**: Discovers available units from existing filenames
+
 ### Step 3: Report Generation
+
 ```bash
 python src/report_generator.py
 ```
 
 **What it does:**
 - Loads joined data and applies exclusion list filtering
+- **Combines unit members and supplemental MBCs** into unified reports
 - Generates HTML reports with Eagle badge highlighting
+- **Marks supplemental MBCs** with "(MBC-only)" indicator
 - Creates PDF versions using Playwright's built-in PDF generation
 - Uses consistent timestamp across all generated files
 
-**Exclusion List Processing:**
-- Reads `data/input/exclusion_list.txt` (optional)
-- Supports comments with `#` prefix
-- Uses smart name matching (ignores middle names/initials)
-- Currently excludes: Herbert Philpott, Alison Barker
-
 **Outputs Created:**
+- `data/reports/T32_T7012_MBC_Reports_YYYYMMDD_HHMMSS/`
+  - `T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.html` + `.pdf`
+  - `T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.html` + `.pdf`
+  - `T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.html` + `.pdf`
+  - `summary_report.json`
 
-#### HTML Reports (in `data/reports/T32_T7012_MBC_YYYYMMDD_HHMMSS/html/`)
-- `T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.html`
-- `T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.html`  
-- `T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.html`
-
-#### PDF Reports (in `data/reports/T32_T7012_MBC_YYYYMMDD_HHMMSS/pdf/`)
-- `T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.pdf`
-- `T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.pdf`
-- `T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.pdf`
-
-## Report Contents
-
-### 1. Troop Counselors Report
-**Heading**: "T32/T7012 Troop Members who are Merit Badge Counselors"
-- Lists adults from rosters who are also MBCs
-- Shows troop affiliation(s) for each person
-- Displays merit badges, contact info, YPT expiration
-- Highlights Eagle-required merit badges with 🦅 symbol
-
-### 2. Non-Counselors Report  
-**Heading**: "T32/T7012 Troop Members who are NOT Merit Badge Counselors"
-- Lists adults from rosters who are not MBCs
-- Shows troop affiliation(s) for each person
-- Provides recommendation to become MBC
-
-### 3. Coverage Report
-**Heading**: "T32/T7012 Merit Badge Coverage Analysis"
-- **Total Merit Badges**: 132 badges analyzed
-- **Four main sections**:
-  1. **Eagle Merit Badges with T32/T7012 Counselors** (X badges)
-  2. **Eagle Merit Badges without T32/T7012 Counselors** (Y badges)  
-  3. **Non-Eagle Merit Badges with T32/T7012 Counselors** (Z badges)
-  4. **Non-Eagle Merit Badges without T32/T7012 Counselors** (W badges)
-- Lists counselors with troop numbers for each merit badge
-- Matches legacy format exactly
-
-## File Naming Convention
-All generated files use the format:
-`T32_T7012_MBC_<Report_Name>_YYYYMMDD_HHMMSS`
-
-Where:
-- `T32_T7012`: Abbreviated troop numbers from processed rosters
-- `MBC`: Merit Badge Counselor identifier
-- `<Report_Name>`: Capitalized report type (Troop_Counselors, Non_Counselors, Coverage_Report)
-- `YYYYMMDD_HHMMSS`: Timestamp from when report generation started
-
-## Temporary Files Created
-
-### During Scraping
-- Browser session files (automatically cleaned up)
-- Network cache files (automatically cleaned up)
-
-### During Processing  
-- In-memory data structures (no temporary files)
-
-### During Report Generation
-- HTML template rendering (in-memory)
-- PDF conversion buffers (in-memory)
-
-## Error Handling
-
-### Common Issues and Solutions
-
-**1. Browser Login Timeout**
-- Increase login timeout if needed
-- Ensure stable internet connection
-- Manually complete login when prompted
-
-**2. Roster File Not Found**
-- Verify roster files exist in `data/input/rosters/`
-- Check exact filename matches expected format
-
-**3. Missing MBC Data**
-- Ensure Step 1 (scraping) completed successfully
-- Check `data/processed/mbc_counselors_cleaned.json` exists
-
-**4. PDF Generation Fails**
-- Playwright browser may need reinstallation
-- Check system resources for large PDF generation
-
-## Data Quality Metrics
-
-### Current Results (as of last run)
-- **Total Adults in Rosters**: 61
-- **Adults who are MBCs**: 8 (13.1%)
-- **Adults who are not MBCs**: 53 (86.9%)
-- **Merit Badge Coverage**: 132 total badges analyzed
-- **Exclusions Applied**: 2 counselors pending removal
-
-### Name Matching Accuracy
-- Successfully matches names despite middle initials in rosters
-- Handles alternate first names in MBC data
-- Accounts for multi-troop affiliations
-
-## Legacy Compatibility
-This V2.0 pipeline generates reports that exactly match the legacy format found in:
-`legacy/test_outputs/MBC_Reports_2025-06-04_14-51/`
-
-Key improvements over legacy:
-- Automated scraping (no manual HTML saving)
-- Dynamic page detection (no hardcoded page limits)  
-- Enhanced name matching logic
-- PDF generation capability
-- Exclusion list functionality
-- Multi-troop affiliation support
-
-## Complete Pipeline Execution
-To run the entire pipeline from scratch:
-
+**Command Line Options:**
 ```bash
-# Step 1: Scrape current MBC data
-python src/merit_badge_counselor_scraper.py
-
-# Step 2: Process rosters and join data  
-python src/roster_processor.py
-
-# Step 3: Generate reports
-python src/report_generator.py
-```
-
-**Total Execution Time**: ~15-30 minutes (depending on ScoutBook response times and number of pages)
-
-**Manual Intervention Required**: Only during Step 1 for ScoutBook login
-
-**Final Output**: Complete set of HTML and PDF reports ready for distribution
-
-## Optional Step 4: Google Drive Sync (Production Deployment)
-
-⚠️ **Note**: This step is only for production deployment to make reports available via unit website links.
-
-### Prerequisites for Google Drive Sync
-- Google Cloud Project with Drive API enabled
-- Service account credentials OR OAuth credentials
-- Credentials file saved as `credentials.json` in apps/mbc/ directory
-
-### Installation of Google Drive Dependencies
-```bash
-pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
-```
-
-### Execution
-```bash
-python src/gdrive_sync.py
-```
-
-**What it does:**
-- Finds the latest report directory (most recent timestamp)
-- Uploads only PDF reports to Google Drive with standardized filenames
-- Overwrites existing files for consistent unit website linking
-
-**File Mapping:**
-```
-Local (timestamped)                                    → Google Drive (standardized)
-T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.pdf   → T32_T7012_MBC_Troop_Counselors.pdf
-T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.pdf     → T32_T7012_MBC_Non_Counselors.pdf
-T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.pdf    → T32_T7012_MBC_Coverage_Report.pdf
-```
-
-**Target Location**: [Unit MBC Reports Folder](https://drive.google.com/drive/folders/1bC3_71dlmp0CvoDFisRpb-Y3WoKHvpiD)
-
-### Authentication Setup
-
-#### Option 1: Service Account (Recommended for automation)
-1. Create service account in Google Cloud Console
-2. Download service account key as `credentials.json`
-3. Share Google Drive folder with service account email
-
-#### Option 2: OAuth (User authentication)
-1. Create OAuth 2.0 credentials in Google Cloud Console
-2. Download as `credentials.json`
-3. First run will open browser for authorization
-4. Token saved as `token.json` for future runs
-
-### Safety Features
-- **Manual execution only** - prevents accidental uploads during development
-- **Separate script** - isolated from main pipeline to avoid interference
-- **Error handling** - graceful failure if Google Drive unavailable
-- **File verification** - validates files before upload
-
-### Complete Production Workflow
-```bash
-# Run main pipeline
-python src/merit_badge_counselor_scraper.py
-python src/roster_processor.py
+# Basic usage (uses default data file)
 python src/report_generator.py
 
-# Verify reports are correct, then deploy to Google Drive
-python src/gdrive_sync.py
+# Use specific data file
+python src/report_generator.py --data-file path/to/data.json
+
+# Use specific exclusion file
+python src/report_generator.py --exclusion-file path/to/exclusions.txt
 ```
 
-**Execution Time**: < 1 minute (for 3 PDF files)
-
-**Manual Verification**: Always review generated reports before running Google Drive sync
-
-### Alternative: Manual File Preparation (No Authentication Required)
-
-For users who prefer manual upload control or cannot set up OAuth authentication:
+### Step 4: Google Drive File Preparation
 
 ```bash
 python src/prepare_gdrive_files.py
 ```
 
 **What it does:**
-- Finds the latest report directory automatically
-- Copies PDF files to `data/gdrive/` with standardized filenames
+- Auto-detects latest report directory
+- Copies PDF files with standardized names
 - Removes timestamps for consistent unit website linking
-- Clears old files each run to avoid confusion
+- Prepares files for manual drag-and-drop upload
+
+**Outputs Created:**
+- `data/gdrive/T32_T7012_MBC_Troop_Counselors.pdf`
+- `data/gdrive/T32_T7012_MBC_Non_Counselors.pdf`
+- `data/gdrive/T32_T7012_MBC_Coverage_Report.pdf`
+
+**Command Line Options:**
+```bash
+# Basic usage (finds latest report automatically)
+python src/prepare_gdrive_files.py
+
+# Specify custom reports directory
+python src/prepare_gdrive_files.py --reports-dir /path/to/reports
+```
 
 **Manual Upload Process:**
 1. Run the preparation script
@@ -335,12 +293,183 @@ python src/prepare_gdrive_files.py
 3. Select all 3 PDF files
 4. Drag and drop to [Google Drive folder](https://drive.google.com/drive/folders/1bC3_71dlmp0CvoDFisRpb-Y3WoKHvpiD)
 
-**File Mapping (Manual Process):**
-```
-Local (timestamped)                                    → data/gdrive/ (standardized)
-T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.pdf   → T32_T7012_MBC_Troop_Counselors.pdf
-T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.pdf     → T32_T7012_MBC_Non_Counselors.pdf
-T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.pdf    → T32_T7012_MBC_Coverage_Report.pdf
+## Error Handling and Troubleshooting
+
+### Common Issues and Solutions
+
+**🔥 "Network connectivity failed"**
+- Check internet connection
+- BeAScout.org may be temporarily unavailable
+- Retry scraping after a few minutes
+
+**🔥 "Roster File Not Found"**
+- Verify roster files exist in `data/input/rosters/`
+- Check filename matches pattern `{UNIT} Roster {DATE}.html`
+- Use `--roster-dir` to specify custom directory
+- Run with `--units` to see which units are detected
+
+**🔥 "Missing MBC Data"**
+- Ensure Step 1 (scraping) completed successfully
+- Check `data/processed/mbc_counselors.json` exists
+- Use `--mbc-data` to specify explicit file path
+
+**🔥 "PDF Generation Fails"**
+- Playwright browser may need reinstallation: `playwright install`
+- Check system resources for large PDF generation
+- Try HTML generation first to isolate PDF issues
+
+**🔥 "Name Matching Issues"**
+- Check roster file format (should be "text files" not HTML)
+- Verify exclusion list format (one name per line)
+- Review name matching logic in processing logs
+
+**🔥 "Google Drive Prep Fails"**
+- Ensure reporting stage completed successfully
+- Check reports directory exists and contains PDFs
+- Verify file permissions on output directories
+
+### Pipeline-Specific Debugging
+
+**Pipeline won't start:**
+```bash
+# Check working directory
+pwd  # Should be in apps/mbc/
+
+# Verify script exists
+ls src/generate_mbc_reports.py
+
+# Check Python environment
+python --version  # Should be 3.11+
 ```
 
-**Execution Time**: < 5 seconds (file preparation only)
+**Stage dependency failures:**
+```bash
+# Check what files exist
+ls data/processed/
+ls data/input/rosters/
+
+# Run specific stage with explicit files
+python src/generate_mbc_reports.py --stage processing
+```
+
+**File path issues:**
+- Pipeline logs show exact arguments passed to each script
+- Check log file: `data/logs/generate_mbc_reports_YYYYMMDD_HHMMSS.log`
+- Look for "📄 Using explicit file" messages
+
+### Data Quality Validation
+
+**Verify MBC Data Quality:**
+```bash
+# Check number of counselors scraped
+jq '.counselors | length' data/processed/mbc_counselors.json
+
+# Check specific counselor
+grep -i "will garnett" data/processed/mbc_counselors.json
+```
+
+**Verify Roster Processing:**
+```bash
+# Check join statistics
+jq '.total_adults, .mbc_matches' data/processed/roster_mbc_join.json
+
+# Find specific person in joined data
+jq '.troop_counselors[] | select(.name | contains("Garnett"))' data/processed/roster_mbc_join.json
+```
+
+**Verify Report Generation:**
+```bash
+# Check latest report directory
+ls -la data/reports/ | tail -1
+
+# Verify all expected files exist
+ls data/reports/T32_T7012_MBC_Reports_*/
+```
+
+## Data Flow Architecture
+
+### 1. Data Extraction
+- **Input**: ScoutBook counselor search results
+- **Processing**: Browser automation with pagination handling
+- **Output**: `data/processed/mbc_counselors.json`
+- **Duration**: 15-30 minutes
+
+### 2. Data Processing
+- **Input**: MBC data + roster HTML files
+- **Processing**: Name matching and troop affiliation tracking
+- **Output**: `data/processed/roster_mbc_join.json`
+- **Duration**: < 1 minute
+
+### 3. Report Generation
+- **Input**: Joined data + exclusion list + merit badge list
+- **Processing**: HTML template rendering + PDF conversion
+- **Output**: Timestamped report directory with HTML + PDF files
+- **Duration**: < 1 minute
+
+### 4. Google Drive Preparation
+- **Input**: Latest report directory
+- **Processing**: File copying with name standardization
+- **Output**: `data/gdrive/` with standardized filenames
+- **Duration**: < 5 seconds
+
+## Performance Expectations
+
+| Operation | Duration | Notes |
+|-----------|----------|-------|
+| Full Pipeline | 15-35 minutes | Mostly scraping time |
+| Scraping Only | 15-30 minutes | Depends on ScoutBook response |
+| Processing Only | < 1 minute | Fast roster/MBC join |
+| Reporting Only | < 1 minute | HTML + PDF generation |
+| Google Drive Prep | < 5 seconds | File copying only |
+
+### File Size Expectations
+- Scraped HTML: ~2-5MB total
+- MBC JSON data: ~100-200KB
+- Joined data: ~50-100KB
+- PDF reports: ~200-500KB each
+- HTML reports: ~10-50KB each
+
+## Best Practices
+
+### Regular Execution
+- **Weekly runs** to keep MBC data current
+- **After roster updates** when new adults join
+- **Before committee meetings** for current reports
+
+### Data Management
+- **Archive old reports** periodically to save disk space
+- **Keep exclusion list current** for privacy protection
+- **Backup pipeline logs** for troubleshooting
+
+### Quality Assurance
+- **Review reports manually** before distribution
+- **Verify MBC match counts** against expectations
+- **Check exclusion list effectiveness** in generated reports
+- **Validate name matching** for new counselors
+
+## File Locations Reference
+
+**Input Files:**
+- Rosters: `data/input/rosters/`
+- Exclusion list: `data/input/exclusion_list.txt`
+- Supplemental MBCs: `data/input/unit_associated_mbcs.txt`
+- Merit badges: `data/input/all_merit_badges.txt`
+
+**Processing Files:**
+- MBC data: `data/processed/mbc_counselors.json`
+- Joined data: `data/processed/roster_mbc_join.json`
+
+**Output Files:**
+- Reports: `data/reports/T32_T7012_MBC_Reports_YYYYMMDD_HHMMSS/`
+- Google Drive: `data/gdrive/`
+- Logs: `data/logs/`
+
+**Pipeline Status:**
+- Execution logs: `data/logs/generate_mbc_reports_YYYYMMDD_HHMMSS.log`
+- Status tracking: `data/logs/mbc_pipeline_status_YYYYMMDD_HHMMSS.json`
+
+---
+
+**Pipeline Version:** 1.0.0
+**Last Updated:** September 22, 2025
+**Next Enhancement:** Dynamic unit configuration (Issue #5)

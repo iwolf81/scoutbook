@@ -93,7 +93,8 @@ class GDriveFilePrep:
         file_mappings = {
             'Troop_Counselors': 'T32_T7012_MBC_Troop_Counselors.pdf',
             'Non_Counselors': 'T32_T7012_MBC_Non_Counselors.pdf',
-            'Coverage_Report': 'T32_T7012_MBC_Coverage_Report.pdf'
+            'Coverage_Report': 'T32_T7012_MBC_Coverage_Report.pdf',
+            'Priority_Report': 'T32_T7012_MBC_Priority_Report.pdf'
         }
 
         print("📄 Scanning for PDF files...")
@@ -171,7 +172,7 @@ class GDriveFilePrep:
 
             print(f"\n📋 Manual Upload Instructions:")
             print(f"1. Open the folder: {self.output_dir.absolute()}")
-            print(f"2. Select all 3 PDF files")
+            print(f"2. Select all 4 PDF files")
             print(f"3. Drag and drop to Google Drive folder:")
             print(f"   https://drive.google.com/drive/folders/1bC3_71dlmp0CvoDFisRpb-Y3WoKHvpiD")
             print(f"4. Files will have consistent names for unit website links")
