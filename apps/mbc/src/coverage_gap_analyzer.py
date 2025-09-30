@@ -20,8 +20,10 @@ from typing import Dict, List, Tuple, Optional
 class CoverageGapAnalyzer:
     """Analyze merit badge coverage gaps using Scout demand and MBC data"""
 
-    def __init__(self, processed_dir: str = "data/processed"):
+    def __init__(self, processed_dir: str = "data/processed", exclusion_file: str = "data/input/exclusion_list.txt"):
         self.processed_dir = Path(processed_dir)
+        self.exclusion_file = Path(exclusion_file)
+        self.excluded_names = self.load_exclusion_list()
 
         # Badge name mapping to handle discrepancies between Scout signup and MBC data
         self.badge_name_mapping = {
@@ -29,6 +31,65 @@ class CoverageGapAnalyzer:
             'Citizenship in Community': 'Citizenship in the Community',
             # Add more mappings as needed
         }
+
+    def load_exclusion_list(self) -> set:
+        """
+        Load names to exclude from coverage analysis
+
+        Returns:
+            Set of normalized names to exclude
+        """
+        excluded = set()
+        if not self.exclusion_file.exists():
+            return excluded
+
+        with open(self.exclusion_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    # Normalize name for matching (lowercase, remove spaces)
+                    normalized = line.lower().replace(' ', '')
+                    excluded.add(normalized)
+
+        if excluded:
+            print(f"🚫 Loaded {len(excluded)} names to exclude from coverage analysis")
+
+        return excluded
+
+    def is_excluded(self, name: str) -> bool:
+        """
+        Check if a name should be excluded using smart matching
+
+        Matches work even with middle names/initials:
+        - "Jon Campbell" matches "Jon A Campbell"
+        - "Tori Campbell" matches "Tori J Campbell"
+        """
+        if not name:
+            return False
+
+        # Normalize the full name
+        name_lower = name.lower()
+        name_parts = name_lower.split()
+
+        # Check each exclusion pattern
+        for excluded in self.excluded_names:
+            # If exclusion is in the normalized full name (handles exact matches)
+            if excluded == name_lower.replace(' ', ''):
+                return True
+
+            # Check if exclusion matches when ignoring middle names/initials
+            # Split exclusion into parts
+            excluded_with_spaces = excluded.replace('', ' ').strip()  # Convert back for comparison
+
+            # Alternative: check if all words in exclusion appear in name in order
+            # This handles "Jon Campbell" matching "Jon A Campbell"
+            if len(name_parts) >= 2:
+                # Try matching first + last name pattern
+                first_last = f"{name_parts[0]}{name_parts[-1]}"
+                if excluded == first_last:
+                    return True
+
+        return False
 
     def auto_detect_latest_files(self) -> Tuple[Optional[Path], Optional[Path]]:
         """
@@ -85,9 +146,17 @@ class CoverageGapAnalyzer:
             mbc_data.get('supplemental_counselors', [])
         )
 
+        excluded_count = 0
         for counselor in all_counselors:
+            counselor_name = counselor.get('name', '')
+
+            # Skip excluded counselors
+            if self.is_excluded(counselor_name):
+                excluded_count += 1
+                continue
+
             counselor_info = {
-                'name': counselor.get('name', ''),
+                'name': counselor_name,
                 'troops': counselor.get('troops', []),
                 'troop_display': counselor.get('troop_display', ''),
                 'email': counselor.get('email', ''),
@@ -105,6 +174,8 @@ class CoverageGapAnalyzer:
                             badge_coverage[badge] = []
                         badge_coverage[badge].append(counselor_info)
 
+        if excluded_count > 0:
+            print(f"🚫 Excluded {excluded_count} counselors from coverage analysis")
         print(f"📋 Extracted coverage for {len(badge_coverage)} merit badges")
         return badge_coverage
 

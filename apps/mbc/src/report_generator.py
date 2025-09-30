@@ -602,7 +602,8 @@ class ReportGenerator:
 
     <div class="content">
         <h2>{troop_prefix} Merit Badge Coverage Priority Analysis</h2>
-        <p>Based on Scout demand data and current counselor coverage - identifies recruitment priorities</p>
+        <p>Identifies Merit Badge Counselor (MBC) recruitment priorities based on Scout demand data and current MBC coverage.</p>
+        <p>Merit Badges not shown in this report have adequate coverage: Eagle-required merit badges with 2+ counselors, or non-Eagle merit badges with 1+ counselor.</p>
 
         <div class="section">
             <h3>📊 Analysis Summary</h3>
@@ -635,7 +636,7 @@ class ReportGenerator:
             <div class="definitions">
                 <div class="definition-item critical">
                     <div class="definition-label">Critical</div>
-                    <div class="definition-desc">Eagle-required Merit Badges with 0 or 1 Merit Badge Counselors (MBC)</div>
+                    <div class="definition-desc">Eagle-required Merit Badges with 0 or 1 Merit Badge Counselors</div>
                 </div>
                 <div class="definition-item high">
                     <div class="definition-label">High</div>
@@ -654,7 +655,7 @@ class ReportGenerator:
 
         <div class="section">
             <h3>🚨 Critical Priority ({len(critical_gaps)} Merit Badges)</h3>
-            <p>Eagle-required Merit Badges with 0 or 1 Merit Badge Counselors (MBC).</p>
+            <p>Eagle-required Merit Badges with 0 or 1 Merit Badge Counselors.</p>
 
             <table class="priority-table">
                 <thead>
@@ -769,10 +770,9 @@ class ReportGenerator:
             <div class="instructions">
                 <p><strong>Understanding Priority Levels:</strong></p>
                 <ul>
-                    <li><strong>Critical Priority:</strong> Eagle-required Merit Badges with 0 or 1 Merit Badge Counselors (MBC). These are the highest recruitment priority regardless of current Scout requests, as they represent essential advancement requirements with insufficient coverage.</li>
+                    <li><strong>Critical Priority:</strong> Eagle-required Merit Badges with 0 or 1 Merit Badge Counselors. These are the highest recruitment priority regardless of current Scout requests, as they represent essential advancement requirements with insufficient coverage.</li>
                     <li><strong>High Priority:</strong> Non-Eagle Merit Badges with 3 or more Scout requests and no MBC coverage. Popular Merit Badges that Scouts are actively seeking to earn.</li>
                     <li><strong>Medium Priority:</strong> Non-Eagle Merit Badges with 1-2 Scout requests and no MBC coverage. Lower demand but still representing Scout interest.</li>
-                    <li><strong>Adequate Coverage:</strong> Merit Badges with 3+ counselors are considered adequately covered and not shown as priorities in this report.</li>
                 </ul>
 
                 <p><strong>Using This Report for Merit Badge Counselor Recruitment:</strong></p>
