@@ -23,7 +23,7 @@ class CoverageGapAnalyzer:
     def __init__(self, processed_dir: str = "data/processed", exclusion_file: str = "data/input/exclusion_list.txt"):
         self.processed_dir = Path(processed_dir)
         self.exclusion_file = Path(exclusion_file)
-        self.excluded_names = self.load_exclusion_list()
+        self.fully_excluded, self.selective_inclusion = self.load_exclusion_list()
 
         # Badge name mapping to handle discrepancies between Scout signup and MBC data
         self.badge_name_mapping = {
@@ -32,64 +32,89 @@ class CoverageGapAnalyzer:
             # Add more mappings as needed
         }
 
-    def load_exclusion_list(self) -> set:
+    def load_exclusion_list(self) -> tuple[set, dict]:
         """
-        Load names to exclude from coverage analysis
+        Load exclusion and selective inclusion rules from file
 
         Returns:
-            Set of normalized names to exclude
+            Tuple of (fully_excluded_names, selective_inclusion_map)
+            - fully_excluded_names: Set of normalized names to fully exclude
+            - selective_inclusion_map: Dict mapping normalized_name -> allowed_badge
         """
-        excluded = set()
+        fully_excluded = set()
+        selective_inclusion = {}
+
         if not self.exclusion_file.exists():
-            return excluded
+            return fully_excluded, selective_inclusion
 
         with open(self.exclusion_file, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
                 if line and not line.startswith('#'):
-                    # Normalize name for matching (lowercase, remove spaces)
-                    normalized = line.lower().replace(' ', '')
-                    excluded.add(normalized)
+                    # Check if line has comma (selective inclusion format)
+                    if ',' in line:
+                        parts = [p.strip() for p in line.split(',', 1)]
+                        name = parts[0]
+                        badge = parts[1] if len(parts) > 1 else None
 
-        if excluded:
-            print(f"🚫 Loaded {len(excluded)} names to exclude from coverage analysis")
+                        if name and badge:
+                            # Normalize name for matching
+                            normalized_name = name.lower().replace(' ', '')
+                            selective_inclusion[normalized_name] = badge
+                    else:
+                        # Full exclusion (name only)
+                        normalized = line.lower().replace(' ', '')
+                        fully_excluded.add(normalized)
 
-        return excluded
+        total_rules = len(fully_excluded) + len(selective_inclusion)
+        if total_rules > 0:
+            print(f"🚫 Loaded {len(fully_excluded)} full exclusions and {len(selective_inclusion)} selective inclusions")
 
-    def is_excluded(self, name: str) -> bool:
+        return fully_excluded, selective_inclusion
+
+    def get_exclusion_rule(self, name: str) -> tuple[str, str]:
         """
-        Check if a name should be excluded using smart matching
+        Get exclusion rule for a counselor name using smart matching
 
         Matches work even with middle names/initials:
         - "Jon Campbell" matches "Jon A Campbell"
         - "Tori Campbell" matches "Tori J Campbell"
+
+        Returns:
+            Tuple of (rule_type, allowed_badge)
+            - rule_type: 'none' (not excluded), 'full' (fully excluded), or 'selective' (selective inclusion)
+            - allowed_badge: Merit badge name if selective, None otherwise
         """
         if not name:
-            return False
+            return ('none', None)
 
         # Normalize the full name
         name_lower = name.lower()
         name_parts = name_lower.split()
 
-        # Check each exclusion pattern
-        for excluded in self.excluded_names:
-            # If exclusion is in the normalized full name (handles exact matches)
-            if excluded == name_lower.replace(' ', ''):
+        # Helper function to check if normalized name matches
+        def matches_normalized(excluded_name):
+            # Exact match after normalization
+            if excluded_name == name_lower.replace(' ', ''):
                 return True
-
-            # Check if exclusion matches when ignoring middle names/initials
-            # Split exclusion into parts
-            excluded_with_spaces = excluded.replace('', ' ').strip()  # Convert back for comparison
-
-            # Alternative: check if all words in exclusion appear in name in order
-            # This handles "Jon Campbell" matching "Jon A Campbell"
+            # First + last name match (ignoring middle names/initials)
             if len(name_parts) >= 2:
-                # Try matching first + last name pattern
                 first_last = f"{name_parts[0]}{name_parts[-1]}"
-                if excluded == first_last:
+                if excluded_name == first_last:
                     return True
+            return False
 
-        return False
+        # Check fully excluded names
+        for excluded in self.fully_excluded:
+            if matches_normalized(excluded):
+                return ('full', None)
+
+        # Check selective inclusion names
+        for excluded_name, allowed_badge in self.selective_inclusion.items():
+            if matches_normalized(excluded_name):
+                return ('selective', allowed_badge)
+
+        return ('none', None)
 
     def auto_detect_latest_files(self) -> Tuple[Optional[Path], Optional[Path]]:
         """
@@ -147,11 +172,16 @@ class CoverageGapAnalyzer:
         )
 
         excluded_count = 0
+        selective_count = 0
+
         for counselor in all_counselors:
             counselor_name = counselor.get('name', '')
 
-            # Skip excluded counselors
-            if self.is_excluded(counselor_name):
+            # Check exclusion rule for this counselor
+            rule_type, allowed_badge = self.get_exclusion_rule(counselor_name)
+
+            # Handle full exclusion
+            if rule_type == 'full':
                 excluded_count += 1
                 continue
 
@@ -168,14 +198,27 @@ class CoverageGapAnalyzer:
             merit_badges_str = counselor.get('merit_badges', '')
             if merit_badges_str:
                 badges = [badge.strip() for badge in merit_badges_str.split(',')]
-                for badge in badges:
-                    if badge:
-                        if badge not in badge_coverage:
-                            badge_coverage[badge] = []
-                        badge_coverage[badge].append(counselor_info)
+
+                # Handle selective inclusion
+                if rule_type == 'selective':
+                    # Only include the allowed badge
+                    if allowed_badge in badges:
+                        if allowed_badge not in badge_coverage:
+                            badge_coverage[allowed_badge] = []
+                        badge_coverage[allowed_badge].append(counselor_info)
+                        selective_count += 1
+                else:
+                    # Include all badges (no exclusion)
+                    for badge in badges:
+                        if badge:
+                            if badge not in badge_coverage:
+                                badge_coverage[badge] = []
+                            badge_coverage[badge].append(counselor_info)
 
         if excluded_count > 0:
             print(f"🚫 Excluded {excluded_count} counselors from coverage analysis")
+        if selective_count > 0:
+            print(f"🎯 Applied {selective_count} selective inclusions (counselors limited to specific badges)")
         print(f"📋 Extracted coverage for {len(badge_coverage)} merit badges")
         return badge_coverage
 

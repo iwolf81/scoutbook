@@ -162,8 +162,8 @@ class MBCPipeline:
             description="Process Scout merit badge requests and demand analysis",
             script_path="src/scout_demand_processor.py",
             required_files=[
-                "data/input/*.csv",
-                "data/input/*.xlsx"
+                "data/input/requested_merit_badges/*.csv",
+                "data/input/requested_merit_badges/*.xlsx"
             ],
             output_files=[
                 "data/processed/scout_demand_analysis_*.json"

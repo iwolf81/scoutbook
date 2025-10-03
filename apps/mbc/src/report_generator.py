@@ -24,7 +24,7 @@ class ReportGenerator:
         self.exclusion_file = Path(exclusion_file)
         self.priority_file = Path(priority_file) if priority_file else None
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.excluded_names = self.load_exclusion_list()
+        self.fully_excluded, self.selective_inclusion = self.load_exclusion_list()
 
         # Determine troop abbreviations from data
         self.troop_abbrevs = self.get_troop_abbreviations()
@@ -33,22 +33,105 @@ class ReportGenerator:
         self.output_dir = Path(f"data/reports/{troop_prefix}_MBC_Reports_{self.timestamp}")
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
-    def load_exclusion_list(self) -> List[str]:
-        """Load names to exclude from all reports"""
+    def load_exclusion_list(self) -> tuple[List[str], Dict[str, str]]:
+        """
+        Load exclusion and selective inclusion rules from file
+
+        Returns:
+            Tuple of (fully_excluded_names, selective_inclusion_map)
+            - fully_excluded_names: List of names to fully exclude
+            - selective_inclusion_map: Dict mapping name -> allowed_badge
+        """
         if not self.exclusion_file.exists():
-            return []
-        
-        excluded_names = []
+            return ([], {})
+
+        fully_excluded = []
+        selective_inclusion = {}
+
         with open(self.exclusion_file, 'r') as f:
             for line in f:
-                name = line.strip()
-                if name and not name.startswith('#'):  # Allow comments with #
-                    excluded_names.append(name)
-        
-        if excluded_names:
-            print(f"📝 Loaded {len(excluded_names)} names to exclude: {', '.join(excluded_names)}")
-        
-        return excluded_names
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    # Check if line has comma (selective inclusion format)
+                    if ',' in line:
+                        parts = [p.strip() for p in line.split(',', 1)]
+                        name = parts[0]
+                        badge = parts[1] if len(parts) > 1 else None
+
+                        if name and badge:
+                            selective_inclusion[name] = badge
+                    else:
+                        # Full exclusion (name only)
+                        fully_excluded.append(line)
+
+        total_rules = len(fully_excluded) + len(selective_inclusion)
+        if total_rules > 0:
+            all_names = fully_excluded + list(selective_inclusion.keys())
+            print(f"📝 Loaded {len(fully_excluded)} full exclusions and {len(selective_inclusion)} selective inclusions: {', '.join(all_names)}")
+
+        return (fully_excluded, selective_inclusion)
+
+    def filter_badges_for_counselor(self, name: str, badges: str) -> str:
+        """
+        Filter merit badges for a counselor based on exclusion rules
+
+        Args:
+            name: Counselor name
+            badges: Comma-separated string of merit badges
+
+        Returns:
+            Filtered badge string (may be empty if fully excluded, or single badge if selective)
+        """
+        # Check if counselor has selective inclusion rule
+        for excluded_name, allowed_badge in self.selective_inclusion.items():
+            if self.names_match(name, excluded_name):
+                # Only keep the allowed badge
+                badge_list = [b.strip() for b in badges.split(',')]
+                if allowed_badge in badge_list:
+                    return allowed_badge
+                else:
+                    return ""  # Allowed badge not in their list
+
+        # No selective rule, return all badges
+        return badges
+
+    def names_match(self, name1: str, name2: str) -> bool:
+        """
+        Check if two names match (handles middle initials)
+
+        Args:
+            name1: First name to compare
+            name2: Second name to compare
+
+        Returns:
+            True if names match, False otherwise
+        """
+        if not name1 or not name2:
+            return False
+
+        # Normalize names
+        n1_lower = name1.lower()
+        n2_lower = name2.lower()
+
+        # Exact match
+        if n1_lower == n2_lower:
+            return True
+
+        # Remove spaces and compare
+        if n1_lower.replace(' ', '') == n2_lower.replace(' ', ''):
+            return True
+
+        # Compare first + last name (ignoring middle)
+        n1_parts = n1_lower.split()
+        n2_parts = n2_lower.split()
+
+        if len(n1_parts) >= 2 and len(n2_parts) >= 2:
+            n1_first_last = f"{n1_parts[0]} {n1_parts[-1]}"
+            n2_first_last = f"{n2_parts[0]} {n2_parts[-1]}"
+            if n1_first_last == n2_first_last:
+                return True
+
+        return False
 
     def auto_detect_priority_file(self) -> Optional[Path]:
         """Auto-detect latest priority analysis file"""
@@ -94,47 +177,40 @@ class ReportGenerator:
         return sorted(list(troops))
     
     def filter_excluded_names(self, people_list: List[Dict]) -> List[Dict]:
-        """Filter out excluded names from a list of people"""
-        if not self.excluded_names:
+        """
+        Filter out FULLY excluded names from a list of people
+
+        Note: Selective inclusion people are NOT filtered out here - they stay in the list
+        but have their badges filtered separately by filter_badges_for_counselor()
+        """
+        if not self.fully_excluded:
             return people_list
-        
+
         filtered = []
         excluded_count = 0
-        
+
         for person in people_list:
             full_name = person.get('name', '')
             first_name = person.get('first_name', '')
             last_name = person.get('last_name', '')
-            
-            # Check if this person should be excluded
+
+            # Check if this person should be FULLY excluded
             should_exclude = False
-            
-            for excluded_name in self.excluded_names:
-                excluded_parts = excluded_name.lower().split()
-                if len(excluded_parts) >= 2:
-                    # Match first and last name (ignoring middle names/initials)
-                    excluded_first = excluded_parts[0]
-                    excluded_last = excluded_parts[-1]
-                    
-                    if (excluded_first in first_name.lower() and 
-                        excluded_last in last_name.lower()):
-                        should_exclude = True
-                        break
-                else:
-                    # Fallback to simple substring matching
-                    if excluded_name.lower() in full_name.lower():
-                        should_exclude = True
-                        break
-            
+
+            for excluded_name in self.fully_excluded:
+                if self.names_match(full_name, excluded_name):
+                    should_exclude = True
+                    break
+
             if not should_exclude:
                 filtered.append(person)
             else:
                 excluded_count += 1
                 print(f"🚫 Excluded {full_name} from reports")
-        
+
         if excluded_count > 0:
             print(f"📊 Filtered out {excluded_count} excluded names")
-        
+
         return filtered
     
     def get_all_merit_badges(self) -> List[str]:
@@ -350,17 +426,24 @@ class ReportGenerator:
         )
         
         for counselor in filtered_counselors:
+            # Filter badges based on selective inclusion rules
+            filtered_badges = self.filter_badges_for_counselor(
+                counselor['name'],
+                counselor['merit_badges']
+            )
+
             badges_html = f'<div class="badge-list">'
-            for badge in counselor['merit_badges'].split(', '):
-                if badge.strip():
-                    # Mark Eagle required badges
-                    eagle_badges = ['Camping', 'Citizenship in Society', 'Citizenship in the Community', 
-                                   'Citizenship in the Nation', 'Citizenship in the World', 'Communication',
-                                   'Cooking', 'Emergency Preparedness', 'Environmental Science', 'Family Life',
-                                   'First Aid', 'Hiking', 'Lifesaving', 'Personal Fitness', 'Personal Management',
-                                   'Swimming', 'Cycling', 'Sustainability']
-                    badge_class = 'eagle-badge' if badge.strip() in eagle_badges else 'badge'
-                    badges_html += f'<span class="{badge_class}">{badge.strip()}</span>'
+            if filtered_badges:
+                for badge in filtered_badges.split(', '):
+                    if badge.strip():
+                        # Mark Eagle required badges
+                        eagle_badges = ['Camping', 'Citizenship in Society', 'Citizenship in the Community',
+                                       'Citizenship in the Nation', 'Citizenship in the World', 'Communication',
+                                       'Cooking', 'Emergency Preparedness', 'Environmental Science', 'Family Life',
+                                       'First Aid', 'Hiking', 'Lifesaving', 'Personal Fitness', 'Personal Management',
+                                       'Swimming', 'Cycling', 'Sustainability']
+                        badge_class = 'eagle-badge' if badge.strip() in eagle_badges else 'badge'
+                        badges_html += f'<span class="{badge_class}">{badge.strip()}</span>'
             badges_html += '</div>'
             
             # Build phone number display with labels
@@ -483,12 +566,20 @@ class ReportGenerator:
         badge_to_counselors = {}
         for counselor in filtered_counselors:
             counselor_display = f"{counselor['name']} ({counselor['troop_display']})"
-            for badge in counselor['merit_badges'].split(', '):
-                badge = badge.strip()
-                if badge:
-                    if badge not in badge_to_counselors:
-                        badge_to_counselors[badge] = []
-                    badge_to_counselors[badge].append(counselor_display)
+
+            # Filter badges based on selective inclusion rules
+            filtered_badges = self.filter_badges_for_counselor(
+                counselor['name'],
+                counselor['merit_badges']
+            )
+
+            if filtered_badges:
+                for badge in filtered_badges.split(', '):
+                    badge = badge.strip()
+                    if badge:
+                        if badge not in badge_to_counselors:
+                            badge_to_counselors[badge] = []
+                        badge_to_counselors[badge].append(counselor_display)
         
         # Categorize badges
         eagle_with_counselors = []
@@ -954,8 +1045,9 @@ class ReportGenerator:
         summary = {
             "generation_time": datetime.now().isoformat(),
             "troops_processed": self.troop_abbrevs,
-            "exclusions_applied": len(self.excluded_names) > 0,
-            "excluded_names": self.excluded_names,
+            "exclusions_applied": len(self.fully_excluded) > 0 or len(self.selective_inclusion) > 0,
+            "fully_excluded_names": self.fully_excluded,
+            "selective_inclusions": self.selective_inclusion,
             "statistics": {
                 "total_adults_processed": len(filtered_counselors) + len(filtered_supplemental) + len(filtered_leaders),
                 "troop_counselors": len(filtered_counselors),

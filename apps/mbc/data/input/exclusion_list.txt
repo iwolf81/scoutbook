@@ -1,9 +1,18 @@
-# Names to exclude from all reports
-# One name per line, case-insensitive matching
+# Counselor Exclusion and Selective Inclusion List
+#
+# Format Options:
+# 1. Full Exclusion: Name only - excludes counselor from all reports and coverage
+#    Example: Herbert Philpott
+#
+# 2. Selective Inclusion: Name, Merit Badge - includes ONLY specified badge, excludes all others
+#    Example: Jon Campbell, Orienteering
+#    (Jon will ONLY appear for Orienteering, all other badges excluded)
+#
 # Lines starting with # are comments
+# Case-insensitive name matching (handles middle initials)
 
 Herbert Philpott
 Alison Barker
-Jon Campbell
+Jon Campbell, Orienteering
 Maria Heiniluoma
-Tori Campbell
+Tori Campbell, Orienteering

@@ -8,6 +8,7 @@ Archaeology
 Archery
 Architecture
 Art
+Artificial Intelligence
 Astronomy
 Athletics
 Automotive Maintenance
@@ -31,6 +32,7 @@ Communication
 Composite Materials
 Cooking
 Crime Prevention
+Cybersecurity
 Cycling
 Dentistry
 Digital Technology

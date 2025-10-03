@@ -23,7 +23,7 @@ from typing import Dict, List, Optional
 class ScoutDemandProcessor:
     """Process Scout merit badge signup data into structured demand analysis"""
 
-    def __init__(self, input_dir: str = "data/input", output_dir: str = "data/processed"):
+    def __init__(self, input_dir: str = "data/input/requested_merit_badges", output_dir: str = "data/processed"):
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -289,7 +289,7 @@ Examples:
     parser.add_argument(
         '--input-dir',
         help='Directory containing input files',
-        default='data/input',
+        default='data/input/requested_merit_badges',
         type=str
     )
 
