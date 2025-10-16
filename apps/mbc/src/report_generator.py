@@ -1093,6 +1093,13 @@ Examples:
         type=str
     )
 
+    parser.add_argument(
+        '--priority-file',
+        help='Path to coverage priority analysis file (auto-detects if not specified)',
+        default=None,
+        type=str
+    )
+
     return parser.parse_args()
 
 def main():
@@ -1101,7 +1108,8 @@ def main():
 
     generator = ReportGenerator(
         data_file=args.data_file,
-        exclusion_file=args.exclusion_file
+        exclusion_file=args.exclusion_file,
+        priority_file=args.priority_file
     )
     output_dir = generator.generate_all_reports()
 

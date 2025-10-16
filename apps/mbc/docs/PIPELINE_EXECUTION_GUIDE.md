@@ -48,9 +48,10 @@ python src/generate_mbc_reports.py --skip-scraping
 ### Optional Input Files
 | File | Location | Description |
 |------|----------|-------------|
-| Scout Requests | `data/input/*.csv` or `*.xlsx` | Scout merit badge request data (for priority analysis) |
+| Scout Requests | `data/input/requested_merit_badges/*.csv` or `*.xlsx` | Scout merit badge request data (for demand and priority analysis) |
 | Exclusion List | `data/input/exclusion_list.txt` | Names to exclude from all reports |
 | Supplemental MBCs | `data/input/unit_associated_mbcs.txt` | MBC-only registrations associated with units |
+| MBC Signup Forms | `data/input/mbc_signup/*.csv` or `*.xlsx` | Merit Badge signup form submissions (alternative to requested_merit_badges) |
 | Configuration | `config.json` | Pipeline configuration (future feature) |
 
 **Supplemental MBC Format**:
@@ -109,21 +110,28 @@ The pipeline consists of 6 stages that execute in sequence:
 - Creates `data/processed/roster_mbc_join.json`
 
 **Stage 3: Scout Demand Analysis** (< 1 minute)
-- Auto-detects Scout request files (CSV/XLSX) in `data/input/`
-- Parses Scout merit badge requests
-- Classifies Eagle vs. non-Eagle badges
+- Auto-detects Scout request files (CSV/XLSX) in `data/input/requested_merit_badges/` and `data/input/mbc_signup/`
+- Parses Scout merit badge requests from both signup forms and request lists
+- Classifies Eagle-required vs. non-Eagle badges
+- Aggregates demand across all Scouts by merit badge
 - Creates `data/processed/scout_demand_analysis_YYYYMMDD_HHMMSS.json`
 
 **Stage 4: Coverage Gap Analysis** (< 1 minute)
-- Auto-detects latest scout demand and MBC coverage data
-- Calculates priority scores and gap levels
-- Identifies Critical/High/Medium priority Merit Badges
+- Auto-detects latest scout demand analysis and MBC coverage data
+- Calculates priority scores based on Scout demand and MBC availability
+- Identifies coverage gap levels: Critical (no MBCs), High (1-2 MBCs), Medium (3+ MBCs)
+- Ranks merit badges by recruitment priority (Eagle-required given higher weight)
 - Creates `data/processed/coverage_priority_analysis_YYYYMMDD_HHMMSS.json`
 
 **Stage 5: Reporting** (< 3 seconds)
+- Auto-detects latest priority analysis file
 - Generates HTML and PDF reports
-- Creates 4 reports: Troop Counselors, Non-Counselors, Coverage, Priority
-- Applies exclusion list filtering
+- Creates 4 reports:
+  - **Troop Counselors**: Unit members who are registered MBCs
+  - **Non-Counselors**: Unit members not currently registered as MBCs
+  - **Coverage Report**: All 139 merit badges with current MBC coverage
+  - **Priority Report**: Merit badges ranked by recruitment priority with Scout demand data
+- Applies exclusion list filtering to all reports
 - Creates timestamped report directory in `data/reports/`
 
 **Stage 6: Google Drive Prep** (< 1 second, optional)
@@ -247,6 +255,7 @@ python src/report_generator.py
   - `T32_T7012_MBC_Troop_Counselors_YYYYMMDD_HHMMSS.html` + `.pdf`
   - `T32_T7012_MBC_Non_Counselors_YYYYMMDD_HHMMSS.html` + `.pdf`
   - `T32_T7012_MBC_Coverage_Report_YYYYMMDD_HHMMSS.html` + `.pdf`
+  - `T32_T7012_MBC_Priority_Report_YYYYMMDD_HHMMSS.html` + `.pdf` (if priority analysis available)
   - `summary_report.json`
 
 **Command Line Options:**
@@ -259,6 +268,9 @@ python src/report_generator.py --data-file path/to/data.json
 
 # Use specific exclusion file
 python src/report_generator.py --exclusion-file path/to/exclusions.txt
+
+# Use specific priority analysis file
+python src/report_generator.py --priority-file data/processed/coverage_priority_analysis_20251015_120000.json
 ```
 
 ### Step 4: Google Drive File Preparation
@@ -277,6 +289,7 @@ python src/prepare_gdrive_files.py
 - `data/gdrive/T32_T7012_MBC_Troop_Counselors.pdf`
 - `data/gdrive/T32_T7012_MBC_Non_Counselors.pdf`
 - `data/gdrive/T32_T7012_MBC_Coverage_Report.pdf`
+- `data/gdrive/T32_T7012_MBC_Priority_Report.pdf` (if priority report was generated)
 
 **Command Line Options:**
 ```bash
@@ -458,6 +471,8 @@ ls data/reports/T32_T7012_MBC_Reports_*/
 **Processing Files:**
 - MBC data: `data/processed/mbc_counselors.json`
 - Joined data: `data/processed/roster_mbc_join.json`
+- Scout demand analysis: `data/processed/scout_demand_analysis_YYYYMMDD_HHMMSS.json`
+- Coverage priority analysis: `data/processed/coverage_priority_analysis_YYYYMMDD_HHMMSS.json`
 
 **Output Files:**
 - Reports: `data/reports/T32_T7012_MBC_Reports_YYYYMMDD_HHMMSS/`

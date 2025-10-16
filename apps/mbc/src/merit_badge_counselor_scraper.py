@@ -802,18 +802,27 @@ async def main():
     parser.add_argument('--password', help='ScoutBook password (optional - will use manual login if not provided)')
     parser.add_argument('--council-id', default='181', help='Council ID (default: 181)')
     parser.add_argument('--district-id', default='430', help='District ID (default: 430)')
-    
+    parser.add_argument('--session-id', help='Session ID for scraped directory (provided by pipeline)')
+
     args = parser.parse_args()
-    
+
     # Get credentials (optional now)
     username = args.username
     password = args.password
-    
+
     if username and not password:
         password = getpass.getpass("ScoutBook Password: ")
-    
+
     # Initialize scraper
     scraper = ScoutBookMBCScraper(headless=args.headless)
+
+    # Override session timestamp if provided by pipeline
+    if args.session_id:
+        import os
+        scraper.run_timestamp = args.session_id
+        scraper.scraped_dir = f"data/scraped/{args.session_id}"
+        os.makedirs(scraper.scraped_dir, exist_ok=True)
+        print(f"📁 Using pipeline session ID: {args.session_id}")
     
     # Run scraping
     counselors = await scraper.scrape_all_counselors(

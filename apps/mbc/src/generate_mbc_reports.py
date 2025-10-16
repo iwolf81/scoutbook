@@ -277,6 +277,20 @@ class MBCPipeline:
 
         return True
 
+    def find_latest_priority_file(self) -> Optional[Path]:
+        """Find latest coverage priority analysis file by modification time"""
+        processed_dir = Path("data/processed")
+        priority_files = list(processed_dir.glob("coverage_priority_analysis_*.json"))
+
+        if not priority_files:
+            return None
+
+        # Sort by modification time, most recent first
+        priority_files.sort(key=lambda f: f.stat().st_mtime, reverse=True)
+        latest_file = priority_files[0]
+
+        return latest_file
+
     def find_latest_report_directory(self) -> Optional[Path]:
         """Find latest report directory using filename timestamps"""
         reports_dir = Path("data/reports")
@@ -314,11 +328,13 @@ class MBCPipeline:
         if stage_name == "scraping":
             # Track MBC data file and scraped session
             self.mbc_data_file = "data/processed/mbc_counselors.json"
-            # Find the most recent scraped session directory
-            scraped_dirs = list(Path("data/scraped").glob("*"))
-            if scraped_dirs:
-                self.scraped_session_dir = max(scraped_dirs, key=lambda p: p.name)
-                self.logger.info(f"📁 Tracked scraped session: {self.scraped_session_dir}")
+            # Update scraped session directory to current session after successful scraping
+            current_session_dir = Path(f"data/scraped/{self.session_id}")
+            if current_session_dir.exists():
+                self.scraped_session_dir = current_session_dir
+                self.logger.info(f"✅ Updated scraped session directory to current session: {self.scraped_session_dir}")
+            else:
+                self.logger.warning(f"⚠️  Current session directory not found after scraping: {current_session_dir}")
 
         elif stage_name == "processing":
             # Track roster join file
@@ -347,7 +363,12 @@ class MBCPipeline:
             cmd = [sys.executable, stage.script_path]
 
             # Stage-specific arguments using tracked file paths
-            if stage_name == "processing":
+            if stage_name == "scraping":
+                # Pass session ID to ensure scraped directory matches pipeline session
+                cmd.extend(["--session-id", self.session_id])
+                self.logger.info(f"📋 Passing session ID to scraper: {self.session_id}")
+
+            elif stage_name == "processing":
                 # Use explicit MBC data file if available
                 if self.mbc_data_file and Path(self.mbc_data_file).exists():
                     cmd.extend(["--mbc-data", self.mbc_data_file])
@@ -358,6 +379,18 @@ class MBCPipeline:
                 if self.roster_join_file and Path(self.roster_join_file).exists():
                     cmd.extend(["--data-file", self.roster_join_file])
                     self.logger.info(f"📄 Using roster data: {self.roster_join_file}")
+
+                # Find and use latest priority analysis file
+                priority_file = self.find_latest_priority_file()
+                if priority_file:
+                    # Log detailed info about which file was selected
+                    mtime = datetime.fromtimestamp(priority_file.stat().st_mtime)
+                    self.logger.info(f"📊 Using priority analysis: {priority_file.name}")
+                    self.logger.info(f"   📅 File modified: {mtime.strftime('%Y-%m-%d %H:%M:%S')}")
+                    self.logger.info(f"   📂 Full path: {priority_file.absolute()}")
+                    cmd.extend(["--priority-file", str(priority_file)])
+                else:
+                    self.logger.warning("⚠️ No priority analysis file found - priority report will be skipped")
 
             elif stage_name == "gdrive_prep":
                 # Use tracked latest report directory

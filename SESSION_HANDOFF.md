@@ -1,28 +1,28 @@
 # SESSION_HANDOFF.md - ScoutBook Repository
 
 ## Current Session Context
-**Date**: September 18, 2025
+**Date**: October 15, 2025
 **Repository**: `/Users/iwolf/Repos/scoutbook`
-**Primary Focus**: Merit Badge Counselor (MBC) Pipeline Enhancement
+**Primary Focus**: Session ID Traceability Bug Fix
 
 ## Recent Achievements
 
-### Merit Badge List Fixes ✅ COMPLETED
+### Session ID Bug Fix ✅ COMPLETED (Awaiting User Testing)
+- **Issue Identified**: Pipeline session ID not matching scraped data directory (1-second timestamp difference)
+- **Root Cause**: Scraper generated its own timestamp instead of using pipeline's session ID
+- **Solution Applied**: Pipeline now passes `--session-id` parameter to scraper
+- **Files Modified**:
+  - `merit_badge_counselor_scraper.py`: Added `--session-id` argument, override internal timestamp when provided
+  - `generate_mbc_reports.py`: Pass session_id to scraper, track current session directory instead of "most recent"
+  - `PIPELINE_EXECUTION_GUIDE.md`: Updated documentation for Scout demand analysis and coverage priority features
+- **Status**: Code changes committed, awaiting user manual testing
+
+### Previous Session: Merit Badge List Fixes ✅ COMPLETED
 - **Fixed missing merit badge**: Added "Citizenship in the World" to coverage reports
 - **Updated complete list**: Now using all 139 official merit badges from Scouting America website
 - **Fixed naming discrepancy**: Corrected "Fish & Wildlife Management" → "Fish and Wildlife Management" to match ScoutBook format
 - **Externalized badge list**: Created `apps/mbc/data/input/all_merit_badges.txt` for maintainability
 - **Updated documentation**: All references now reflect correct 139 badge count
-
-### Code Improvements ✅ COMPLETED
-- **Dynamic badge loading**: Updated `report_generator.py` to load badges from external file
-- **Multi-path support**: Added fallback logic for different working directories
-- **Enhanced error handling**: Graceful fallback if badge file missing
-
-### Documentation Updates ✅ COMPLETED
-- **README.md**: Updated metrics to show 139 badges vs previous 132
-- **REQUIREMENTS_SPECIFICATION.md**: Updated performance metrics and badge counts
-- **Production status**: Marked as production-ready with real metrics
 
 ### GitHub Issues Created
 - **Issue #1**: "Extract merit badge lists from official Scouting America website"
@@ -42,12 +42,17 @@
 - **Report Generation**: Professional HTML/PDF reports with Eagle badge highlighting
 - **Data Protection**: Personal information properly excluded from repository
 
-### Key Files Modified (Recent Session)
-- `apps/mbc/src/report_generator.py` - Dynamic merit badge loading
-- `apps/mbc/data/input/all_merit_badges.txt` - Complete official badge list
-- `apps/mbc/data/input/exclusion_list.txt` - Updated exclusions
-- `apps/mbc/docs/REQUIREMENTS_SPECIFICATION.md` - Updated metrics
-- `README.md` - Updated production metrics
+### Key Files Modified (Recent Sessions)
+- **Session ID Fix (Oct 15, 2025)**:
+  - `apps/mbc/src/merit_badge_counselor_scraper.py` - Added `--session-id` parameter
+  - `apps/mbc/src/generate_mbc_reports.py` - Pass session_id to scraper, track current session
+  - `apps/mbc/docs/PIPELINE_EXECUTION_GUIDE.md` - Updated pipeline documentation
+- **Merit Badge Fixes (Sep 18, 2025)**:
+  - `apps/mbc/src/report_generator.py` - Dynamic merit badge loading
+  - `apps/mbc/data/input/all_merit_badges.txt` - Complete official badge list
+  - `apps/mbc/data/input/exclusion_list.txt` - Updated exclusions
+  - `apps/mbc/docs/REQUIREMENTS_SPECIFICATION.md` - Updated metrics
+  - `README.md` - Updated production metrics
 
 ## Technical Context
 
@@ -59,15 +64,13 @@
 
 ### Known Issues Identified
 1. **ScoutBook vs Public Website Naming**: Different naming conventions require careful handling
-2. **VS Code Workspace Context**: File completion issues with multi-folder workspace setup
-3. **Claude Code Extension**: May not be properly installed/configured
+2. ~~**Session ID Mismatch**~~: ✅ FIXED - Pipeline now passes session_id to scraper
 
 ## Next Steps & Priorities
 
 ### Immediate Tasks
-1. **Install Claude Code Extension**: Resolve VS Code integration issues
-2. **Test Merit Badge Fixes**: Verify "Citizenship in the World" now appears in reports
-3. **Validate Fish and Wildlife**: Confirm correct naming matches ScoutBook data
+1. **User Testing**: Manual testing of session ID fix to verify scraped directory matches pipeline session
+2. **Commit Session ID Fix**: Commit changes after successful user testing
 
 ### Enhancement Development (GitHub Issues)
 1. **Issue #1 Implementation**: Dynamic merit badge extraction from official sources
@@ -106,6 +109,9 @@
 - **GitHub Integration**: Issues created with comprehensive enhancement plans
 
 ### Key Insights Discovered
+- **Session ID Traceability**: Critical for deterministic pipeline debugging and data lineage
+- **Beascout Reference Pattern**: Commit b76b54a provided template for session_id parameter passing
+- **Pipeline Architecture**: Parent process must pass session context to child processes for consistency
 - **Naming Inconsistencies**: ScoutBook uses different names than public website
 - **Data Validation**: Importance of using authoritative ScoutBook source for accuracy
 - **User Experience**: Need for counselor prioritization to reduce unit leader burden
@@ -114,7 +120,8 @@
 - **Issue-Driven Development**: Using GitHub issues for enhancement planning
 - **Documentation-First**: Updating docs alongside code changes
 - **Production Focus**: Emphasizing real-world usability over legacy recreation
+- **Cross-Repository Learning**: Leveraging beascout fixes for scoutbook improvements
 
 ---
 
-**For Next Session**: Continue with Issue #1 or #2 implementation, or address any urgent Merit Badge pipeline issues discovered during testing.
+**For Next Session**: After user validates session ID fix, commit changes and proceed with Issue #1 or #2 implementation.
