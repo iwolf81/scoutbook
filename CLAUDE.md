@@ -1,7 +1,15 @@
 # CLAUDE.md - AI Development Context
 
 ## Context Initialization
-Process the markdown files in ~/Repos/ai-context at the start of each new session.
+
+**CRITICAL: Process the following markdown files from ../ai-context repository at the start of each new session:**
+AI_INTERACTION_GUIDELINES.md
+DEVELOPMENT_PRINCIPLES.md
+CLAUDE_COMMANDS_REFERENCE.md
+
+Read all files **in their entirety** before working on any ScoutBook tasks. The ai-context repository contains essential AI-human collaboration guidelines and development methodologies that inform all work on this project.
+
+**Then** process the project documentation structure below to understand the ScoutBook system.
 
 ## Project Overview
 
@@ -38,7 +46,7 @@ scoutbook/
 **Key Metrics:**
 - **61 adults** processed from T32 and T7012 rosters
 - **8 troop counselors** identified (13.1% match rate)
-- **139 merit badges** analyzed for coverage
+- **141 merit badges** analyzed for coverage
 - **6 reports** generated per execution (HTML + PDF formats)
 
 **Technical Features:**
