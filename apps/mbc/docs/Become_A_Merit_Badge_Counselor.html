@@ -66,8 +66,8 @@
             color: #003f87;
             font-size: 24px;
             font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
         }
 
         ul {
@@ -129,9 +129,35 @@
             font-weight: normal;
         }
 
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
         @media print {
             body {
                 padding: 20px;
+            }
+
+            .page-break {
+                padding-top: 45px;
+            }
+
+            .footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 10px;
+                background: white;
             }
         }
     </style>
@@ -167,7 +193,7 @@
     <ul>
         <li>Be 18 or older and of good character</li>
         <li>Be proficient in the subject matter</li>
-        <li>Be registered with Scouting America as a Merit Badge Counselor (Postion Code 42)</li>
+        <li>Be registered with Scouting America (Position Code 42)</li>
         <li>Complete and maintain Safeguarding Youth Training (SYT), formerly Youth Protection Training (YPT)</li>
     </ul>
 
@@ -189,14 +215,24 @@
             </ul>
         </li>
 
-        <li><strong>Submit all documents</strong> to the advancement team, listed below, for review. From there, we'll send them to <a href="mailto:lori.sullivan@scouting.org">Lori Sullivan</a> in the Heart of New England (HNE) Council office who will update Scoutbook.</li>
+        <li><strong>Submit all documents</strong> to the advancement team, listed below, for review.</li>
 
     </ol>
 
-    <h3>Youth Protection</h3>
-    <p>
-        All sessions must follow Safeguard Youth Training — always use the buddy system and never meet with a Scout one-on-one.
-    </p>
+    <h3 class="page-break">Next Steps</h3>
+    <ul>
+        <li>The advancement team will forward your documentation to the Heart of New England (HNE) Council Registrar, <a href="mailto:lori.sullivan@scouting.org">Lori Sullivan</a>.</li>
+        <li>Once approved, the Registrar will enter your information into Scoutbook.</li>
+        <li>It may take one to two weeks for the submission process to complete.</li>
+        <li>The advancement team and the Scoutmaster Corps can verify your information is present and correct.</li>
+        <li>You can then start working with Scouts on merit badges!</li>
+    </ul>
+
+    <h3>Safeguarding Youth</h3>
+    <ul>
+        <li>All sessions must follow Safeguarding Youth Training.</li>
+        <li>Always use the buddy system and never meet with a Scout one-on-one.</li>
+    </ul>
 
     <div class="contact-section">
         <p><strong>For help or to submit your paperwork, contact:</strong></p>
@@ -212,6 +248,10 @@
             <p>Troop Committee, Troop 32<br>
             <a href="mailto:samatya108@gmail.com" class="contact-email">samatya108@gmail.com</a></p>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>Last Updated: <script>document.write(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));</script></p>
     </div>
 </body>
 </html>
